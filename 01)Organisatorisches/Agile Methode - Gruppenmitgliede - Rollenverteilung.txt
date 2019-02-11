@@ -1,5 +1,17 @@
-Niklas Fichtner
-Stefan Roth
-Salam Al Hamoud
-Daniel Wenzl
-Sven Hornung
+Scrum
+
+Offizielle Rollen:
+Niklas Fichtner - Programmier
+Stefan Roth - Vorstand
+Salam Al Hamoud - IT-Architektin
+Daniel Wenzl - Manager
+Sven Hornung - Projektleiter
+
+Scrum Rollen:
+Ganze Gruppe ist Product Owner
+
+Niklas Fichtner - Entwickler
+Stefan Roth - Scrum Master
+Salam Al Hamoud - Entwicklerin
+Daniel Wenzl - Entwickler
+Sven Hornung - Entwickler
