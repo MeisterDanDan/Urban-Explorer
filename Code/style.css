@@ -1,11 +1,59 @@
 html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: 'Nunito', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
 }
-.navbar-brand img {max-width: 50px; height: auto;}
-.navbar h2 {margin-bottom: 0px; }
-.form-inline {float:right;}
-.main-startseite {background-image: url("img/paris.jpg"); height: 100%;}
-.commit {padding: 50px 0px 0px 0px; }
+
+ /* Startseite  */
+.navbar-brand img {
+    max-width: 50px;
+    height: auto;
+}
+.navbar-brand-folgeseiten img{
+    max-height: 50px;
+}
+.navbar h2 {
+    margin-bottom: 0px;
+}
+.form-inline {
+    float:right;
+}
+.main-startseite {background-image: url("img/paris.jpg");
+height: 100%;
+}
+.commit {
+    padding: 50px 0px 0px 0px;
+}
+
+/* Suche */
+.suche-box{
+    padding-top: 100px;
+}
+.tab-pane{
+    border: solid 2px #000;
+    background-color: rgba(255,255,255,0.2);
+    width: 500px;
+	height: 250px;
+}
+
+.nav-tabs{
+border-bottom: 0px;
+}
+#home-tab{
+    border-bottom: solid 1px;
+    background-color: rgba(255,255,255,0.2);
+    border-color: #000;
+    color: #000;
+}
+button{
+    font-size: 1.3em;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+    border:  solid 1px;
+    background-color: rgba(255,255,255,0.5);
+}
+button:hover{
+    background-color: rgba(255,255,255,1);
+    cursor: pointer;
+}

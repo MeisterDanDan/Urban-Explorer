@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <title>Urban Explorer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" type="image/ico" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+    <link href="style.css" rel="stylesheet" />
+
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
+    <script src="index.js"></script>
+
+  </head>
+        <body>
+                <nav class="navbar navbar-light bg-light justify-content-between">
+                    <a href="index.html" class="navbar-brand-folgeseiten"><img src="img/logo3.png" /></a>
+                    <h2>Stadt</h2>
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Suche..." aria-label="Search">
+                        <a href="suche.html"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Los</button></a>
+                    </form>
+                </nav>
+
+            <div class="main-startseite">
+                <div class="container">
+                    <div class="suche-box">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Stadt</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <button type="button" name="button">Eigene Tagesplaung</button>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <button type="button" name="button">Dream Day</button>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <button type="button" name="button">Eintrag hinzufügen</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </body>
+    </html>
