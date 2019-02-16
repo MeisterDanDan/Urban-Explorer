@@ -4,8 +4,8 @@ html, body {
   padding: 0;
   font-family: 'Nunito', sans-serif;
 }
-
 .navbar-brand img {max-width: 50px; height: auto;}
+.navbar h2 {margin-bottom: 0px; }
 .form-inline {float:right;}
 .main-startseite {background-image: url("img/paris.jpg"); height: 100%;}
-.main-startseite p {padding: 10px 10px 10px 10px; }
+.commit {padding: 50px 0px 0px 0px; }
