@@ -1,0 +1,11 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+.navbar-brand img {max-width: 50px; height: auto;}
+.form-inline {float:right;}
+.main-startseite {background-image: url("img/paris.jpg"); height: 100%;}
+.main-startseite p {padding: 10px 10px 10px 10px; }
