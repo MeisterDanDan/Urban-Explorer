@@ -55,7 +55,7 @@ button.choose{
     width: 250px;
     height: auto;
 }
-button:hover{
+button.choose:hover{
     background-color: rgba(255,255,255,1);
     cursor: pointer;
 }
