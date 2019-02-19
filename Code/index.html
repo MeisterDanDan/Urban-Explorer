@@ -19,6 +19,22 @@
 
   </head>
         <body>
+
+                <!-- Vorläufig eingebauter Java-Script Code, wird später ausgelagert-->
+                <script>
+                    window.addEventListener("DOMContentLoaded", function() {
+                        // Create a random var between 1 and 10
+                        var random = Math.floor((Math.random() * 10) + 1);
+                        // Create an Array with the relative paths of the background pictures
+                        var bgIMG = ["error", "/img/bg/london.jpg", "/img/bg/paris.jpg", "/img/bg/rom.jpg", "/img/bg/berlin.jpg", "/img/bg/newyork.jpg", "/img/bg/barcelona.jpg", "/img/bg/telaviv.jpg", "/img/bg/helsinki.jpg", "/img/bg/losangeles.jpg", "/img/bg/tokyo.jpg"];
+
+                        // Set the background with random number and bgIMG Array
+                        //document.getElementById('bgID').style.background-image = url("img/paris.jpg");
+
+                        document.getElementById("demo").innerHTML = bgIMG[random];
+                    }, false);
+                </script>
+
                 <nav class="navbar navbar-light bg-light justify-content-between">
                     <a class="navbar-brand"><img src="img/logo1.png" /></a>
                     <a href="suche.html"><h2>Urban Explorer</h2></a>
@@ -31,8 +47,11 @@
             <div class="main-startseite" id="startseite">
                 <div class="container">
                     <div id="commit">
-                        
+
                     </div>
+
+                    <!-- Test der Random Hintergrundbildfunktion -->
+                    <p id="demo"></p>
                 </div>
 
             </div>

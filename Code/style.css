@@ -19,8 +19,9 @@ html, body {
 .form-inline {
     float:right;
 }
-.main-startseite {background-image: url("img/paris.jpg");
-height: 100%;
+.main-startseite {
+    background-image: url("img/paris.jpg");
+    height: 100%;
 }
 #commit {
     padding: 50px 0px 0px 0px;
