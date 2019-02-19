@@ -8,8 +8,17 @@
     messagingSenderId: "683954933321"
   };
   firebase.initializeApp(config);
-  
-var db = firebase.firestore();
-const firestore = firebase.firestore();
-const settings = {timestampsInSnapshots: true};
-firestore.settings(settings);
+
+  var db = firebase.firestore();
+  const firestore = firebase.firestore();
+  const settings = {timestampsInSnapshots: true};
+  firestore.settings(settings);
+
+//get zitat
+db.collection("Zitate").get().then(function(querySnapshot) {
+    querySnapshot.forEach(function(doc) {
+        const list_div = document.getElementById("commit");
+        var info ="<h3>"+doc.data().Zitat+"</h3><em>"+doc.data().Autor+"</em>" ;
+        list_div.innerHTML = info
+    });
+});
