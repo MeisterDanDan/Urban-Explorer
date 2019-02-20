@@ -18,7 +18,7 @@
 db.collection("Zitate").get().then(function(querySnapshot) {
     querySnapshot.forEach(function(doc) {
         const list_div = document.getElementById("commit");
-        var info ="<h3>"+doc.data().Zitat+"</h3><em>"+doc.data().Autor+"</em>" ;
+        var info ="<h3><mark>"+doc.data().Zitat+"</mark></h3><em><mark>"+doc.data().Autor+"</mark></em>";
         list_div.innerHTML = info
     });
 });

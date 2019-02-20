@@ -19,10 +19,13 @@ html, body {
 .form-inline {
     float:right;
 }
+/*
 .main-startseite {
-    background-image: url("img/paris.jpg");
+    background-image: url("img/bg/amsterdam.jpg");
     height: 100%;
+    background-size: cover;
 }
+*/
 #commit {
     padding: 50px 0px 0px 0px;
 }

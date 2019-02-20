@@ -1,62 +1,42 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <title>Urban Explorer</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="icon" type="image/ico" href="img/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
-    <link href="style.css" rel="stylesheet" />
+    <head>
+        <title>Urban Explorer</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
-    <script src="index.js"></script>
+        <link rel="icon" type="image/ico" href="img/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+        <link href="style.css" rel="stylesheet" />
 
-  </head>
-        <body>
+        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
+        <script src="index.js"></script>
+        <script src="bg.js"></script>
 
-                <!-- Vorläufig eingebauter Java-Script Code, wird später ausgelagert-->
-                <script>
-                    window.addEventListener("DOMContentLoaded", function() {
-                        // Create a random var between 1 and 10
-                        var random = Math.floor((Math.random() * 10) + 1);
-                        // Create an Array with the relative paths of the background pictures
-                        var bgIMG = ["error", "/img/bg/london.jpg", "/img/bg/paris.jpg", "/img/bg/rom.jpg", "/img/bg/berlin.jpg", "/img/bg/newyork.jpg", "/img/bg/barcelona.jpg", "/img/bg/telaviv.jpg", "/img/bg/helsinki.jpg", "/img/bg/losangeles.jpg", "/img/bg/tokyo.jpg"];
+    </head>
 
-                        // Set the background with random number and bgIMG Array
-                        //document.getElementById('bgID').style.background-image = url("img/paris.jpg");
+    <body>
+        <nav class="navbar navbar-light bg-light justify-content-between">
+            <a class="navbar-brand"><img src="img/logo1.png" /></a>
+            <a href="suche.html"><h2>Urban Explorer</h2></a>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Suche..." aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Los</button>
+            </form>
+        </nav>
 
-                        document.getElementById("demo").innerHTML = bgIMG[random];
-                    }, false);
-                </script>
-
-                <nav class="navbar navbar-light bg-light justify-content-between">
-                    <a class="navbar-brand"><img src="img/logo1.png" /></a>
-                    <a href="suche.html"><h2>Urban Explorer</h2></a>
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Suche..." aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Los</button>
-                    </form>
-                </nav>
-
-            <div class="main-startseite" id="startseite">
-                <div class="container">
-                    <div id="commit">
-
-                    </div>
-
-                    <!-- Test der Random Hintergrundbildfunktion -->
-                    <p id="demo"></p>
+        <div class="main-startseite" id="startseite">
+            <div class="container">
+                <div id="commit">
                 </div>
-
             </div>
+        </div>
+    </body>
 
-
-
-        </body>
-    </html>
+</html>
