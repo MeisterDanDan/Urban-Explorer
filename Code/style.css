@@ -19,13 +19,7 @@ html, body {
 .form-inline {
     float:right;
 }
-/*
-.main-startseite {
-    background-image: url("img/bg/amsterdam.jpg");
-    height: 100%;
-    background-size: cover;
-}
-*/
+
 .box  {
     padding: 50px 0px 0px 0px;
 }
@@ -39,14 +33,25 @@ html, body {
 .suche-box{
     padding-top: 100px;
 }
-.tab-pane{
+.search-tab{
     border: solid 2px #000;
     background-color: rgba(255,255,255,0.2);
     width: 650px;
 	height: 250px;
 }
+.list{
+    border: solid 2px #000;
+    background-color: rgba(255,255,255,0.1);
+    width: 100%;
+	height: auto;
+}
 
-.nav-tabs{
+.nav-tabs a{
+border-bottom: 0px;
+background-color: rgba(255,255,255,0.2);
+}
+
+.nav-tabs {
 border-bottom: 0px;
 }
 #home-tab{
@@ -67,4 +72,20 @@ button.choose{
 button.choose:hover{
     background-color: rgba(255,255,255,1);
     cursor: pointer;
+}
+
+/* DreamDay */
+#list img{
+    max-width:20%;
+}
+#list {
+    display: inline-flex;
+    background-color: rgba(255,255,255,0.8);
+    padding: 5px;
+    margin: 10px;
+}
+
+/** responsive design **/
+@media only screen and (max-width: 592px) {
+ .navbar{display: grid;}
 }
