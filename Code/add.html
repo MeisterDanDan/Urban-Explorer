@@ -18,76 +18,11 @@
     <script src="index.js"></script>
 
     <style>
-        /* Style the tab */
-        .tab {
-         overflow: hidden;
-         border: 1px solid #ccc;
-         background-color: #f1f1f1;
-        }
-
-        /* Style the buttons that are used to open the tab content */
-        .tab button {
-         background-color: inherit;
-         float: left;
-         border: none;
-         outline: none;
-         cursor: pointer;
-         padding: 14px 16px;
-         transition: 0.3s;
-        }
-
-        /* Change background color of buttons on hover */
-        .tab button:hover {
-         background-color: #ddd;
-        }
-
-        /* Create an active/current tablink class */
-        .tab button.active {
-         background-color: #ccc;
-        }
-
-        /* Style the tab content */
-        .tabcontent {
-         display: none;
-         padding: 6px 12px;
-         border: 1px solid #ccc;
-         border-top: none;
-         background-color: rgba(255,255,255,0.2);
-         animation: fadeEffect 1s; /* Fading effect takes 1 second */
-        }
-
-        /* Go from zero to full opacity */
-        @keyframes fadeEffect {
-          from {opacity: 0;}
-          to {opacity: 1;}
+        .h3 {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
         }
     </style>
-
-    <script>
-        function openCity(evt, cityName) {
-        // Declare all variables
-        var i, tabcontent, tablinks;
-
-        // Get all elements with class="tabcontent" and hide them
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-        }
-
-        // Get all elements with class="tablinks" and remove the class "active"
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-
-        // Show the current tab, and add an "active" class to the button that opened the tab
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-        }
-
-        // Get the element with id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
-    </script>
 
   </head>
         <body>
@@ -103,33 +38,81 @@
             <div class="main-startseite">
                 <div class="container">
                     <div class="suche-box">
-                        <!-- Tab links -->
-                        <div class="tab">
-                         <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
-                         <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-                         <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true">Eintrag hinzufügen</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="myTabContent">
+                            <div class="list tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+
+
+                                <div class="col-md-12 col-xs-12">
+
+                                    <h3 style="margin-top: 0.5em; margin-bottom: 0.5em;">Eintrag für "STADT"</h3>
+
+                                    <form>
+                                        <select class="custom-select">
+                                            <option selected>Kategorie wählen...</option>
+                                            <option value="1">Frühstück</option>
+                                            <option value="2">Mittagessen</option>
+                                            <option value="3">Abendessen</option>
+                                            <option value="4">Sehenswürdigkeit</option>
+                                            <option value="5">Museum</option>
+                                            <option value="6">Besonderer Ort</option>
+                                            <option value="7">Bar</option>
+                                        </select>
+
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadioInline1">Morgens</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadioInline2">Mittags</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadioInline3">Abends</label>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Name:</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eingabe Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Informationen:</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eingabe Informationen">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Adresse:</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Straße Nr., Stadt Postleitzahl">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Preise:</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eingabe Preise">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Öffnungszeiten:</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eingabe Öffnungszeiten">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Tipps:</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eingabe Tipps">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+
+                                </div>
+                            </div>
                         </div>
 
-                        <!-- Tab content -->
-                        <div id="London" class="tabcontent">
-                         <h3>London</h3>
-                         <p>London is the capital city of England.</p>
-                        </div>
-
-                        <div id="Paris" class="tabcontent">
-                         <h3>Paris</h3>
-                         <p>Paris is the capital of France.</p>
-                        </div>
-
-                        <div id="Tokyo" class="tabcontent">
-                         <h3>Tokyo</h3>
-                         <p>Tokyo is the capital of Japan.</p>
-                        </div>
                     </div>
-
-
-
-
+                </div>
+            </div>
 
 
 
