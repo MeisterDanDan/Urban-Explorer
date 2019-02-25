@@ -31,19 +31,23 @@ html, body {
 
 /* Suche */
 .suche-box{
-    padding-top: 100px;
+    margin-top: 100px;
+}
+.card{
+    margin: 20px;
 }
 .search-tab{
     border: solid 2px #000;
-    background-color: rgba(255,255,255,0.2);
-    width: 650px;
-	height: 250px;
+    background-color: rgba(255,255,255,0.7);
+    width: 100%;
+	height:auto;
 }
 .list{
     border: solid 2px #000;
     background-color: rgba(255,255,255,0.1);
     width: 100%;
 	height: auto;
+    margin-bottom: 20px;
 }
 
 .nav-tabs a{
@@ -56,23 +60,11 @@ border-bottom: 0px;
 }
 #home-tab{
     border-bottom: solid 1px;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.7);
     border-color: #000;
     color: #000;
 }
-button.choose{
-    font-size: 1.3em;
-    padding: 10px 10px 10px 10px;
-    margin: 45px 10px 10px 10px;
-    border:  solid 1px;
-    background-color: rgba(255,255,255,0.5);
-    width: 250px;
-    height: auto;
-}
-button.choose:hover{
-    background-color: rgba(255,255,255,1);
-    cursor: pointer;
-}
+
 
 /* DreamDay */
 #list img{
@@ -85,12 +77,14 @@ button.choose:hover{
     padding: 5px;
     margin: 10px;
 }
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
 
 /** responsive design **/
-@media  (max-width: 592px) {
- .navbar{display: grid;}
-}
+
 @media (max-width:767px) {
     .search-tab{
         max-width: 100%;

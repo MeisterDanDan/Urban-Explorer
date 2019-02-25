@@ -2,63 +2,93 @@
 
 <html lang="de">
 
-    <head>
-        <title>Urban Explorer</title>
+  <head>
 
-        <meta charset="utf-8">
+    <title>Urban Explorer</title>
+
+    <meta charset="utf-8">
 
 
-        <link rel="icon" type="image/ico" href="img/favicon.png">
 
-        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+    <link rel="icon" type="image/ico" href="img/favicon.png">
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-        <link href="style/style.css" rel="stylesheet" />
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
 
-        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 
-        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
 
-        <script src="js/index.js"></script>
-    </head>
+    <link href="style/style.css" rel="stylesheet" />
 
-    <body>
-        <nav class="navbar navbar-light bg-light justify-content-between">
 
-            <a class="navbar-brand"><img src="img/logo1.png" /></a>
 
-            <a href="suche.html"><h2>Urban Explorer</h2></a>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
 
-            <form class="form-inline">
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
 
-                <input class="form-control mr-sm-2" type="search" placeholder="Suche..." aria-label="Search">
+    <script src="js/index.js"></script>
 
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Los</button>
 
-            </form>
 
-        </nav>
+  </head>
 
-        <div class="main-startseite" id="startseite">
+        <body>
 
-            <div class="container">
+<nav class="navbar navbar-light bg-light justify-content-between">
+<div class="row">
+    <div class="navi col-lg-4 col-md-2 col-xs-6">
+        <a class="navbar-brand"><img src="img/logo1.png" /></a>
+    </div>
 
-                <div class="box">
+    <div class="col-lg-4 col-md-4 col-xs-6">
+        <a href="suche.html"><h2>Urban Explorer</h2></a>
+    </div>
 
-                    <div id="commit"></div>
+    <div class="col-lg-4 col-md-6 col-xs-12">
+        <form class="form-inline">
+
+            <input class="form-control mr-sm-2" type="search" placeholder="Suche..." aria-label="Search">
+
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Los</button>
+
+        </form>
+    </div>
+
+
+</div>
+
+                </nav>
+
+
+
+            <div class="main-startseite" id="startseite">
+
+                <div class="container">
+
+                        <div class="box">
+
+                            <div id="commit">
+
+                        </div>
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
-    </body>
 
-</html>
+
+
+
+
+
+        </body>
+
+    </html>
