@@ -2,84 +2,63 @@
 
 <html lang="de">
 
-  <head>
+    <head>
+        <title>Urban Explorer</title>
 
-    <title>Urban Explorer</title>
-
-    <meta charset="utf-8">
-
+        <meta charset="utf-8">
 
 
+        <link rel="icon" type="image/ico" href="img/favicon.png">
 
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-    <link rel="icon" type="image/ico" href="img/favicon.png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
 
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 
-     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
 
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <link href="style/style.css" rel="stylesheet" />
 
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
 
-    <link href="style.css" rel="stylesheet" />
+        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
 
+        <script src="js/index.js"></script>
+    </head>
 
+    <body>
+        <nav class="navbar navbar-light bg-light justify-content-between">
 
-    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+            <a class="navbar-brand"><img src="img/logo1.png" /></a>
 
-    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
+            <a href="suche.html"><h2>Urban Explorer</h2></a>
 
-    <script src="index.js"></script>
+            <form class="form-inline">
 
+                <input class="form-control mr-sm-2" type="search" placeholder="Suche..." aria-label="Search">
 
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Los</button>
 
-  </head>
+            </form>
 
-        <body>
+        </nav>
 
-                <nav class="navbar navbar-light bg-light justify-content-between">
+        <div class="main-startseite" id="startseite">
 
-                    <a class="navbar-brand"><img src="img/logo1.png" /></a>
+            <div class="container">
 
-                    <a href="suche.html"><h2>Urban Explorer</h2></a>
+                <div class="box">
 
-                    <form class="form-inline">
-
-                        <input class="form-control mr-sm-2" type="search" placeholder="Suche..." aria-label="Search">
-
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Los</button>
-
-                    </form>
-
-                </nav>
-
-
-
-            <div class="main-startseite" id="startseite">
-
-                <div class="container">
-
-                        <div class="box">
-
-                            <div id="commit">
-
-                        </div>
-
-                    </div>
+                    <div id="commit"></div>
 
                 </div>
 
             </div>
 
+        </div>
+    </body>
 
-
-
-
-
-
-        </body>
-
-    </html>
+</html>
