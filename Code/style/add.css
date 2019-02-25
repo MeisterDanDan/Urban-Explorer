@@ -1,4 +1,36 @@
-.h3 {
+h3 {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+}
+
+.btn{
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+.tab-content{
+    margin-bottom: 20px;
+}
+
+.custom-control{
+    font-weight: bold;
+}
+
+.form-group{
+    font-weight: bold;
+}
+
+#imgGroup{
+    margin-top: 12px;
+    text-align: center;
+}
+
+#radioGroup{
+    margin-top: 12px;
+    text-align: center;
+}
+
+#pic{
+    margin-left: 1.7em;
+    margin-right: 1.7em;
 }
