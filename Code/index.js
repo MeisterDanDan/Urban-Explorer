@@ -30,10 +30,14 @@ var db = firebase.firestore();
           var randomcom = Math.floor((Math.random() * 10) + 1);
 
           // Create an Array with the relative paths of the background pictures
+<<<<<<< HEAD
 
           var commit = ["error", "<h3>Reisen ist das beste, ja das einzige Heilmittel gegen Kummer.</h3><em>-Alfred de Musset</em>", "<h3>Zögere nie, weit fortzugehen, hinter alle Meere, alle Grenzen, alle Länder, allen Glaubens.</h3><em>- Amin Maalouf</em>", "<h3>Was ist Reisen? Ein Ortswechsel? Keineswegs! Beim Reisen wechselt man seine Meinungen und Vorurteile.</h3><em>-  Anatole France</em>", "<h3>Man entdeckt keine neuen Erdteile, ohne den Mut zu haben, alte Küsten aus den Augen zu verlieren.</h3><em>-  André Gide</em>", "<h3>Eine lange Reise hört nicht am Ziel auf. Ein Stück von uns wird im Geiste immer weiterreisen.</h3><em>-  Andreas Bechstein</em>", "<h3>Das Reisen lehrt Toleranz. </h3><em>- Benjamin Disraeli</em>", "<h3>Wir reisen an weit entfernte Orte um fasziniert die Menschen zu beobachten, die wir daheim zu ignorieren. </h3><em>- Dagobert D. Runes</em>", "<h3>Einmal im Jahr solltest du einen Ort besuchen, an dem du noch nie warst.</h3><em>- Dalai Lama</em>", "<h3>Abenteuer ohne Risiko ist Disneyland.</h3><em>- Doug Coupland</em>", "<h3>Die beste Bildung findet ein gescheiter Mensch auf Reisen.</h3><em>- Johann Wolfgang von Goethe</em>"];
 
 
+=======
+          var commit = ["error", "<h3>Reisen ist das beste, ja das einzige Heilmittel gegen Kummer.</h3><em>-Alfred de Musset</em>", "<h3>Zögere nie, weit fortzugehen, hinter alle Meere, alle Grenzen, alle Länder, allen Glaubens.</h3><em>Amin Maalouf</em>", "<h3>Was ist Reisen? Ein Ortswechsel? Keineswegs! Beim Reisen wechselt man seine Meinungen und Vorurteile.</h3><em>-  Anatole France</em>", "<h3>Man entdeckt keine neuen Erdteile, ohne den Mut zu haben, alte Küsten aus den Augen zu verlieren.</h3><em>-  André Gide</em>", "<h3>Eine lange Reise hört nicht am Ziel auf. Ein Stück von uns wird im Geiste immer weiterreisen.</h3><em>-  Andreas Bechstein</em>", "<h3>Das Reisen lehrt Toleranz. </h3><em>- Benjamin Disraeli</em>", "<h3>Wir reisen an weit entfernte Orte um fasziniert die Menschen zu beobachten, die wir daheim zu ignorieren. </h3><em>- Dagobert D. Runes</em>", "<h3>Einmal im Jahr solltest du einen Ort besuchen, an dem du noch nie warst.</h3><em>- Dalai Lama</em>", "<h3>Abenteuer ohne Risiko ist Disneyland.</h3><em>- Doug Coupland</em>", "<h3>Die beste Bildung findet ein gescheiter Mensch auf Reisen.</h3><em>- Johann Wolfgang von Goethe</em>"];
+>>>>>>> a49436367108329be8711b2098974742f6c76327
 
           // Set the background with random number and bgIMG Array
 

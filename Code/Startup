@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Firebase</title>
+</head>
+<body>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAlsu8WQwzfgwHy8k--CnnaXO2xYZ-B0yc",
+    authDomain: "urban-explorer-f661d.firebaseapp.com",
+    databaseURL: "https://urban-explorer-f661d.firebaseio.com",
+    projectId: "urban-explorer-f661d",
+    storageBucket: "urban-explorer-f661d.appspot.com",
+    messagingSenderId: "683954933321"
+  };
+  firebase.initializeApp(config);
+</script>
+</body>
+</html>
