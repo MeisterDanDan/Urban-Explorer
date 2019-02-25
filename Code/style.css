@@ -86,6 +86,7 @@ button.choose:hover{
     margin: 10px;
 }
 
+
 /** responsive design **/
 @media  (max-width: 592px) {
  .navbar{display: grid;}
