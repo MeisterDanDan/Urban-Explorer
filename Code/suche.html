@@ -11,6 +11,7 @@
      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" >
     <link href="style/style.css" rel="stylesheet" />
 
     <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
@@ -19,14 +20,25 @@
 
   </head>
         <body>
-                <nav class="navbar navbar-light bg-light justify-content-between">
-                    <a href="index.html" class="navbar-brand-folgeseiten"><img src="img/logo3.png" /></a>
-                    <h2>Stadt</h2>
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Suche..." aria-label="Search">
-                        <a href="suche.html"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Los</button></a>
-                    </form>
-                </nav>
+
+            <nav class="navbar navbar-light bg-light justify-content-between">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="navi col-lg-4 col-md-2 col-xs-6">
+                            <a href="index.html" class="navbar-brand-folgeseiten"><img src="img/logo3.png" /></a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xs-6">
+                            <h2>Stadt</h2>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-xs-12">
+                            <form class="form-inline">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Suche..." aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Los</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </nav>
 
             <div class="main-startseite">
                 <div class="container">
@@ -41,31 +53,31 @@
                                 <div class="row text-center">
                                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                                             <div class="card">
-                                             <img class="card-img-top" src="..." alt="Card image cap">
+                                            <i class="fas fa-tools"></i>
                                              <div class="card-body">
                                                <h5 class="card-title">Eigene Tagesplanung</h5>
-                                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                               <a href="tagesplanung.html" class="btn btn-primary">Go somewhere</a>
+                                               <p class="card-text">Du willst deine Tagesplanung selbst in die Hand nehmen? Dann plane hier ganz einfach deinen Tag selbst!</p>
+                                               <a href="tagesplanung.html" class="btn btn-primary">zur Tagesplanung</a>
                                              </div>
                                            </div>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                                         <div class="card">
-                                            <img class="card-img-top" src="..." alt="Card image cap">
+                                            <i class="fas fa-heart"></i>
                                             <div class="card-body">
                                               <h5 class="card-title">Dream Day</h5>
-                                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                              <a href="dreamday.html" class="btn btn-primary">Go somewhere</a>
+                                              <p class="card-text">Keine Lust selbst zu planen? Kein Problem, wir erstellen dir deinen perfekten Tag! <br /><br /> </p>
+                                              <a href="dreamday.html" class="btn btn-primary">zum Dream Day</a>
                                             </div>
                                           </div>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
                                         <div class="card">
-                                        <img class="card-img-top" src="..." alt="Card image cap">
+                                        <i class="fas fa-calendar-plus"></i>
                                         <div class="card-body">
                                           <h5 class="card-title">Eintrag hinzufügen</h5>
-                                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                          <a href="add.html" class="btn btn-primary">Go somewhere</a>
+                                          <p class="card-text">Füge hier einfach eine Sehenswürdigkeit hinzu, die du empfehlen kannst. <br /><br /></p>
+                                          <a href="add.html" class="btn btn-primary">Zum Eintrag</a>
                                         </div>
                                       </div>
                                     </div>
