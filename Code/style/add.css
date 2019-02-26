@@ -20,17 +20,7 @@ h3 {
     font-weight: bold;
 }
 
-#imgGroup{
-    margin-top: 12px;
-    text-align: center;
-}
-
-#radioGroup{
-    margin-top: 12px;
-    text-align: center;
-}
-
-#pic{
-    margin-left: 1.7em;
-    margin-right: 1.7em;
+.row{
+    margin-top: 1.5em;
+    margin-bottom: 1em;
 }
