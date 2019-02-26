@@ -20,7 +20,7 @@ html, body {
     margin-bottom: 0px;
     margin-top: 10px;
 }
-.form-inline {
+.form-index {
     float:right;
     margin-top: 10px;
 }
@@ -112,6 +112,10 @@ border-bottom: 0px;
 body {
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+.form-control-nav{
+    width: auto;
+    margin-right: 5px;
 }
 
 
