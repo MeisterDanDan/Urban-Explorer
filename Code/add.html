@@ -131,7 +131,7 @@
                                                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eingabe Tipps">
                                             </div>
 
-                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                            <button type="submit" class="btn btn-primary" id="formBtn">Submit</button>
 
                                         </form>
 
@@ -140,33 +140,13 @@
 
                                 <!-- Spalte für Bild hochladen -->
                                 <div class="col-sm-5">
-
                                     <div class="imgFrame">
                                         <img src="img/picture_icon.png" height="200" alt="Image preview..." class="imgSelector">
                                     </div>
                                     <input type="file" onchange="previewFile()"><br>
-
-                                    <script>
-                                       function previewFile(){
-                                           var preview = document.querySelector(".imgSelector"); //selects the query named img
-                                           var file    = document.querySelector('input[type=file]').files[0]; //sames as here
-                                           var reader  = new FileReader();
-
-                                           reader.onloadend = function () {
-                                               preview.src = reader.result;
-                                           }
-
-                                           if (file) {
-                                               reader.readAsDataURL(file); //reads the data as a URL
-                                           } else {
-                                               preview.src = "";
-                                           }
-                                      }
-
-                                      previewFile();  //calls the function named previewFile()
-                                     </script>
                                 </div>
 
+                                <!-- Zusatzspalte um alles besser auszurichten -->
                                 <div class="col-sm-1">
 
                                 </div>
