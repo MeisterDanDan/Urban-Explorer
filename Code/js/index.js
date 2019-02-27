@@ -47,3 +47,12 @@ var config = {
           document.body.style.backgroundSize = "cover";
 
       }, false);
+
+//suchBar
+
+var bS = document.getElementById('suchButton');
+bS.addEventListener('click',function(){
+    var sucheingabe = document.getElementById('suchBar').value;
+    var newURL = 'suche.html?search=' + sucheingabe;
+    document.location.href = newURL;
+});

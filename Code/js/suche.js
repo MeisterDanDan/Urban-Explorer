@@ -62,6 +62,7 @@ function start(){
             document.getElementById("home-tab").innerHTML = "Paris";
         break;
         default:
+        break;
         // code block
 }
 }
