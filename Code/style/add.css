@@ -1,11 +1,10 @@
 h3 {
-    margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
 
-.btn{
+#formBtn{
     margin-top: 0.5em;
-    margin-bottom: 1.5em;
+    margin-bottom: 0.5em;
 }
 
 .tab-content{
@@ -20,7 +19,28 @@ h3 {
     font-weight: bold;
 }
 
-.row{
+#rowForm{
     margin-top: 1.5em;
     margin-bottom: 1em;
+}
+
+#rowRadioBtn{
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+.col-sm-6{
+    margin-left: 1em;
+
+}
+
+.imgFrame{
+    border: 2px solid grey;
+    background-color: white;
+}
+
+#uploadPicture{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

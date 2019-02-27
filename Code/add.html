@@ -22,22 +22,13 @@
     </head>
 
     <body>
-        <nav class="navbar fixed-top navbar-light bg-light justify-content-between">
+        <nav class="navbar navbar-light bg-light justify-content-between">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="navi col-lg-4 col-md-2 col-xs-6">
-                        <a href="index.html" class="navbar-brand-folgeseiten"><img src="img/logo3.png" /></a>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-xs-6">
-                        <h2>Stadt</h2>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12">
-                        <form class="form-inline">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Suche..." aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Los</button>
-                        </form>
-                    </div>
-                </div>
+                <a href="index.html" class="navbar-brand-folgeseiten"><img src="img/logo3.png" /></a>
+                    <form class="form-inline">
+                        <input class="form-control-nav form-control mr-sm-2" type="search" placeholder="Suche..." aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Los</button>
+                    </form>
             </div>
         </nav>
 
@@ -53,82 +44,103 @@
 
                     <div class="tab-content" id="myTabContent">
                         <div class="search-tab tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <div class="col-md-12 col-xs-12">
-                                <h3>Eintrag für </h3>
-                                <div id="cityName"> </div>
 
-                                <form>
-                                    <select class="custom-select">
-                                        <option selected>Kategorie wählen...</option>
-                                        <option value="1">Frühstück</option>
-                                        <option value="2">Mittagessen</option>
-                                        <option value="3">Abendessen</option>
-                                        <option value="4">Sehenswürdigkeit</option>
-                                        <option value="5">Museum</option>
-                                        <option value="6">Besonderer Ort</option>
-                                        <option value="7">Bar</option>
-                                    </select>
+                            <div class="row" id="rowForm">
+
+                                <!-- Spalte für die Informationen -->
+                                <div class="col-sm-6">
+
+                                        <h3>Eintrag für </h3>
+                                        <div id="cityName"> </div>
+
+                                        <form>
+                                            <select class="custom-select">
+                                                <option selected>Kategorie wählen...</option>
+                                                <option value="1">Frühstück</option>
+                                                <option value="2">Mittagessen</option>
+                                                <option value="3">Abendessen</option>
+                                                <option value="4">Sehenswürdigkeit</option>
+                                                <option value="5">Museum</option>
+                                                <option value="6">Besonderer Ort</option>
+                                                <option value="7">Bar</option>
+                                            </select>
 
 
-                                    <div class="row text-center">
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                                            <img src="img/morgens.png" alt="morgens" height="62" width="62">
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                                                <label class="custom-control-label" for="customRadioInline1">Morgen</label>
+                                            <div class="row text-center" id="rowRadioBtn">
+                                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                                    <img src="img/morgens.png" alt="morgens" height="62" width="62">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadioInline1">Morgen</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                                    <img src="img/mittags.png" alt="mittags" height="62" width="62">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadioInline2">Mittags</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+                                                    <img src="img/abends.png" alt="abends" height="62" width="62">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadioInline3">Abends</label>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                                            <img src="img/mittags.png" alt="mittags" height="62" width="62">
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                                                <label class="custom-control-label" for="customRadioInline2">Mittags</label>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Name:</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eingabe Name">
                                             </div>
-                                        </div>
 
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
-                                            <img src="img/abends.png" alt="abends" height="62" width="62">
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
-                                                <label class="custom-control-label" for="customRadioInline3">Abends</label>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Informationen:</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eingabe Informationen">
                                             </div>
-                                        </div>
+
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Adresse:</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Straße Nr., Stadt Postleitzahl">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Preise:</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eingabe Preise">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Öffnungszeiten:</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eingabe Öffnungszeiten">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Tipps:</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eingabe Tipps">
+                                            </div>
+
+                                            <button type="submit" class="btn btn-primary" id="formBtn">Speichern</button>
+
+                                        </form>
+
+
+                                </div>
+
+                                <!-- Spalte für Bild hochladen -->
+                                <div class="col-sm-5">
+                                    <div class="imgFrame">
+                                        <img src="img/picture_icon.png" height="200" alt="Image preview..." class="imgSelector" id="uploadPicture">
                                     </div>
+                                    <input type="file" onchange="previewFile()"><br>
+                                </div>
 
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Name:</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eingabe Name">
-                                    </div>
+                                <!-- Zusatzspalte um alles besser auszurichten -->
+                                <div class="col-sm-1">
 
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Informationen:</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eingabe Informationen">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Adresse:</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Straße Nr., Stadt Postleitzahl">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Preise:</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eingabe Preise">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Öffnungszeiten:</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eingabe Öffnungszeiten">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Tipps:</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eingabe Tipps">
-                                    </div>
-
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-
-                                </form>
+                                </div>
 
                             </div>
                         </div>
