@@ -16,6 +16,7 @@
         <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
         <script src="js/index.js"></script>
+        <script src="js/start.js"></script>
     </head>
 
     <body>
@@ -31,8 +32,17 @@
                     <div class="col-lg-4 col-md-6 col-xs-12">
                         <form class="form-index form-inline">
                             <input class="form-control mr-sm-2" type="search" id="suchBar" placeholder="Suche..." aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" id="suchButton" type="submit" >Los</button>
+                            <button class="btn btn-outline-success my-2 my-sm-0" id="suchButton">Los</button>
+                            <script>
+                                document.getElementById("suchButton").addEventListener("click", function() {
+                                    var sucheingabe = document.getElementById("suchBar").value;
+                                    var newURL = "suche.html?search=" + sucheingabe;
+                                    document.location.href = newURL;
+                                    alert(newURL);
+                                });
+                            </script>
                         </form>
+
                     </div>
                 </div>
             </div>

@@ -1,4 +1,3 @@
-document.getElementById("cityName").innerHTML = "Rom";
 
 function previewFile(){
     var preview = document.querySelector(".imgSelector"); //selects the query named img
