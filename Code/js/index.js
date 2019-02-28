@@ -17,5 +17,5 @@ var config = {
       document.getElementById("suchButton").addEventListener("click", function() {
           var sucheingabe = document.getElementById("suchBar").value;
           var newURL = "suche.html?search=" + sucheingabe;
-          window.document.location.href = newURL;
+          document.location.href = newURL;
       });
