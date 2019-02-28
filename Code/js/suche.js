@@ -1,10 +1,9 @@
 function start(){
     var search = decodeURIComponent(window.location.href.slice(window.location.href.indexOf('?') + 8));
-    //search.toLowerCase();
+    search.toLowerCase();
     switch(search) {
         case 'amsterdam':
-            //anpassung(search);
-            var bg = "url(\'" + "img/bg/"search+".jpg" +"\')";
+            var bg = "url(\'" + "img/bg/amsterdam.jpg" +"\')";
             document.body.style.backgroundImage = bg;
             document.body.style.backgroundSize = "cover";
             document.getElementById("home-tab").innerHTML = "Amsterdam";
@@ -38,8 +37,9 @@ function start(){
         // code block
 }
 }
-/*function anpassung(stadt){
-    var bg = "url(\'" + "img/bg/"stadt+".jpg" +"\')";
+/*
+function anpassung(search){
+    var bg = "url(\'" + "img/bg/"search+".jpg" +"\')";
     document.body.style.backgroundImage = bg;
     document.body.style.backgroundSize = "cover";
 }

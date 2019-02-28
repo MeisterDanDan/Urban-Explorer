@@ -15,8 +15,9 @@
         <link href="style/style.css" rel="stylesheet" />
         <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
-        <script src="js/index.js"></script>
-        <script src="js/start.js"></script>
+
+
+
     </head>
 
     <body>
@@ -33,15 +34,7 @@
                         <form class="form-index form-inline">
                             <input class="form-control mr-sm-2" type="search" id="suchBar" placeholder="Suche..." aria-label="Search">
                             <button class="btn btn-outline-success my-2 my-sm-0" id="suchButton">Los</button>
-                            <script>
-                                document.getElementById("suchButton").addEventListener("click", function() {
-                                    var sucheingabe = document.getElementById("suchBar").value;
-                                    var newURL = "suche.html?search=" + sucheingabe;
-                                    document.location.href = newURL;
-                                    //console.log(document.location.href);
-                                    alert(newURL);
-                                });
-                            </script>
+
                         </form>
 
                     </div>
@@ -62,4 +55,7 @@
         </div>
 
     </body>
+    <script src="js/start.js"></script>
+    <script src="js/index.js"></script>
+
 </html>
