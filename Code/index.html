@@ -16,8 +16,8 @@
         <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
 
-
         <script src="js/start.js"></script>
+        <script src="js/index.js"></script>
 
     </head>
 
@@ -32,11 +32,10 @@
                         <a href="suche.html"><h2>Urban Explorer</h2></a>
                     </div>
                     <div class="col-lg-4 col-md-6 col-xs-12">
-                        <form class="form-index form-inline">
+                        <div class="form-index form-inline">
                             <input class="form-control mr-sm-2" type="search" id="suchBar" placeholder="Suche..." aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" id="suchButton">Los</button>
-
-                        </form>
+                            <button class="btn btn-outline-success my-2 my-sm-0" id="suchButton" onclick="suche()">Los</button>
+                        </div>
 
                     </div>
                 </div>

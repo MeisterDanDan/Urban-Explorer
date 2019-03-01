@@ -18,6 +18,8 @@
     <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
 
     <script src="js/suche.js"></script>
+    <script src="js/index.js"></script>
+
 
   </head>
         <body onload="start()">
@@ -25,10 +27,10 @@
             <nav class="navbar navbar-light bg-light justify-content-between">
                 <div class="container-fluid">
                             <a href="index.html" class="navbar-brand-folgeseiten"><img src="img/logo3.png" /></a>
-                            <form class="form-inline">
+                            <div class="form-inline">
                                 <input id="suchBar" class="form-control-nav form-control mr-sm-2" type="search" placeholder="Suche..." aria-label="Search">
-                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="suchButton">Los</button>
-                            </form>
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="suchButton" onclick="suche()">Los</button>
+                            </div>
                     </div>
             </nav>
 

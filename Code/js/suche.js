@@ -1,46 +1,21 @@
-function start(){
-    var search = decodeURIComponent(window.location.href.slice(window.location.href.indexOf('?') + 8));
-    search.toLowerCase();
-    switch(search) {
-        case 'amsterdam':
-            var bg = "url(\'" + "img/bg/amsterdam.jpg" +"\')";
-            document.body.style.backgroundImage = bg;
-            document.body.style.backgroundSize = "cover";
-            document.getElementById("home-tab").innerHTML = "Amsterdam";
-        break;
-        case 'dubai':
-            var bg = "url(\'" + "img/bg/dubai.jpg" +"\')";
-            document.body.style.backgroundImage = bg;
-            document.body.style.backgroundSize = "cover";
-            document.getElementById("home-tab").innerHTML = "Dubai";
-        break;
-        case 'new york':
-            var bg = "url(\'" + "img/bg/newyork.jpg" +"\')";
-            document.body.style.backgroundImage = bg;
-            document.body.style.backgroundSize = "cover";
-            document.getElementById("home-tab").innerHTML = "New York";
-        break;
-        case 'rom':
-            var bg = "url(\'" + "img/bg/rom.jpg" +"\')";
-            document.body.style.backgroundImage = bg;
-            document.body.style.backgroundSize = "cover";
-            document.getElementById("home-tab").innerHTML = "Rom";
-        break;
-        case 'paris':
-            var bg = "url(\'" + "img/bg/paris.jpg" +"\')";
-            document.body.style.backgroundImage = bg;
-            document.body.style.backgroundSize = "cover";
-            document.getElementById("home-tab").innerHTML = "Paris";
-        break;
-        default:
-        break;
-        // code block
+let search;
+let cities = ['amsterdam', 'dubai', 'new york', 'rom', 'paris'];
+
+function start() {
+    search = decodeURIComponent(window.location.href.slice(window.location.href.indexOf('?') + 8));
+    if (cities.includes(search.toLowerCase())) {
+        showTextAndJpg()
+    } else {
+
+    }
 }
-}
-/*
-function anpassung(search){
-    var bg = "url(\'" + "img/bg/"search+".jpg" +"\')";
-    document.body.style.backgroundImage = bg;
+
+function showTextAndJpg() {
+    document.body.style.backgroundImage = "url(\'" + "img/bg/" + search.replace(' ', '') + ".jpg" + "\')";
     document.body.style.backgroundSize = "cover";
+    if (search === "new york") {
+        document.getElementById("home-tab").innerHTML = "New York";
+    } else {
+        document.getElementById("home-tab").innerHTML = search.charAt(0).toUpperCase() + search.slice(1);
+    }
 }
-*/
