@@ -1,3 +1,7 @@
+function cursor(){
+    document.getElementById("suchBar").focus();
+}
+
 function suche(){
     console.log("js");
     var sucheingabe = document.getElementById("suchBar").value;
