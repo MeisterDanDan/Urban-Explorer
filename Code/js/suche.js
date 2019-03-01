@@ -6,7 +6,10 @@ function start() {
     if (cities.includes(search.toLowerCase())) {
         showTextAndJpg()
     } else {
-
+        document.body.style.backgroundImage = "url(\'" +"img/bg/welt.jpg"+"\')";
+        document.body.style.backgroundSize = "cover";
+        alert('Diese Stadt ist leider noch nicht vorhanden!');
+        document.location.href = 'index.html';
     }
 }
 
