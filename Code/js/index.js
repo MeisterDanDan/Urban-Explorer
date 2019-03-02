@@ -3,7 +3,6 @@ function cursor(){
 }
 
 function suche(){
-    console.log("js");
     var sucheingabe = document.getElementById("suchBar").value;
     var newURL = "suche.html?search=" + sucheingabe;
     document.location.href = newURL;
