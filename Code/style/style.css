@@ -4,6 +4,31 @@ html, body {
     padding: 0;
     font-family: 'Nunito', sans-serif;
 }
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
 .row{
     margin: 0px;
     flex-grow: 1;
@@ -109,10 +134,12 @@ border-bottom: 0px;
 .liste:hover{
     box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
+
 body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
 .form-control-nav{
     width: auto;
     margin-right: 5px;

@@ -11,12 +11,7 @@
           // Set the Quote
           document.getElementById("commit").innerHTML = commit[randomcom];
 
-      }, false);
 
-
-// Random Hintergrundbilder
-
-      window.addEventListener("DOMContentLoaded", function() {
 
           // Create a random var between 1 and 10
           var random = Math.floor((Math.random() * 10) + 1);
@@ -30,5 +25,7 @@
           // Set the background with random number and bgIMG Array
           document.body.style.backgroundImage = bg;
           document.body.style.backgroundSize = "cover";
+          document.body.style.WebkitAnimation = "fadein 3s";
+          document.body.style.animation = "fadein 3s";
 
       }, false);
