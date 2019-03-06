@@ -8,4 +8,16 @@ function start() {
     } else {
         document.getElementById("home-tab").innerHTML = "Dream Day für " + search.charAt(0).toUpperCase() + search.slice(1);
     }
+    /*firebase.database().ref("staedte/"+search.replace(' ', '')).once('value', function(snapshot){
+        snapshot.forEach(function(kategorie){
+         if(kategorie === restaurant){
+             snapshot.forEach(function(restaurant){
+                 if(restaurant.val().dreamdayMorgens1 === "true"){
+                     document.getElementById('nameMorgens1').value = "Name: "+ restaurant.val().name;
+                     document.getElementById('informationenMorgens1').value = "Informationen: "+ value = restaurant.val().informationen;
+                }
+             })
+         }
+     })
+ });*/
 }
