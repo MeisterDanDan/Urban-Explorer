@@ -11,11 +11,11 @@ function start() {
 
     firebase.database().ref("staedte/"+search.replace(' ', '')).once('value', function(snapshot){
         snapshot.forEach(function(kategorie){
-            if(kategorie == restaurant){
+            if(kategorie === restaurant){
                 snapshot.forEach(function(restaurant){
                     if(restaurant.val().dreamdayMorgens1 === "true"){
-                        document.getElementById('nameMorgens1').value = "Name: "+ restaurant.val().name;
-                        document.getElementById('informationenMorgens1').value = "Informationen: "+ value = restaurant.val().informationen;
+                        document.getElementById("nameMorgens1").value = "Name: " + restaurant.val().name;
+                        document.getElementById("informationenMorgens1").value = "Informationen: " + restaurant.val().informationen;
                     }
                 })
             }
