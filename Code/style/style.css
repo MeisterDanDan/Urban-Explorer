@@ -5,30 +5,6 @@ html, body {
     font-family: 'Nunito', sans-serif;
 }
 
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-
 .row{
     margin: 0px;
     flex-grow: 1;
@@ -52,11 +28,6 @@ html, body {
 
 .box  {
     padding: 50px 0px 0px 0px;
-}
-#commit  {
-    background-color: rgba(255,255,255,0.5);
-    max-width: 300px;
-    padding: 10px 10px 10px 10px;
 }
 
 /* Suche */
