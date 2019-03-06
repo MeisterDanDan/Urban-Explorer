@@ -4,12 +4,13 @@ html, body {
     padding: 0;
     font-family: 'Nunito', sans-serif;
 }
-
-.row{
-    margin: 0px;
-    flex-grow: 1;
+/* background-img fixed */
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
- /* Startseite  */
+
+ /* navbar  */
 .navbar-brand img {
     max-width: 50px;
     height: auto;
@@ -21,59 +22,21 @@ html, body {
     margin-bottom: 0px;
     margin-top: 10px;
 }
-.form-index {
-    float:right;
-    margin-top: 10px;
-}
-
-.box  {
-    padding: 50px 0px 0px 0px;
-}
-
-/* Suche */
-.card{
-    transition: box-shadow .3s;
-    border: 1px solid darkgrey;
-    border-radius: 0.5em;
-    background: rgba(245, 245, 245);
-    padding: 0.5em;
-    transition: transform 0.5s, background 0.5s;
-}
-.card:hover{
-    box-shadow: 0 0 11px rgba(33,33,33,.2);
-}
-.card-text{
-    font-size: 0.7em;
-}
-.card i {
-    font-size: 5em;
-    margin-top: 5px;
-}
 .suche-box{
     margin-top: 100px;
 }
-.card{
-    margin: 20px;
-}
+/* boxen transparent */
 .search-tab{
     border: solid 2px #000;
     background-color: rgba(255,255,255,0.7);
     width: 100%;
 	height:auto;
 }
-.list-box{
-    border: solid 2px #000;
-    background-color: rgba(255,255,255,0.7);
-    width: 100%;
-	height: auto;
-    margin-bottom: 20px;
-}
-
+/* boxen-reiter */
 .nav-tabs a{
-border-bottom: 0px;
-background-color: rgba(255,255,255,0.7);
+    border-bottom: 0px;
+    background-color: rgba(255,255,255,0.7);
 }
-
 .nav-tabs {
 border-bottom: 0px;
 }
@@ -83,48 +46,19 @@ border-bottom: 0px;
     border-color: #000;
     color: #000;
 }
-
-
-/* DreamDay */
-.liste img{
-    max-width:100%;
-    height: auto;
-}
-.liste {
-    display: flex;
-    max-width: 100%;
-    height: auto;
-    padding: 5px;
-    margin: 10px;
-    transition: box-shadow .3s;
-    border: 1px solid darkgrey;
-    border-radius: 0.5em;
-    background: rgba(245, 245, 245,1);
-    transition: transform 0.5s, background 0.5s;
-}
-.liste:hover{
-    box-shadow: 0 0 11px rgba(33,33,33,.2);
-}
-
-body {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
+/* navi-button-responsive*/
 .form-control-nav{
     width: auto;
     margin-right: 5px;
 }
 
-
-/** responsive design **/
-
+/* responsive box */
 @media (max-width:767px) {
     .search-tab{
         max-width: 100%;
         height: auto;
-
     }
+/* responsive navi */
     .form-inline {
         float:left;
     }

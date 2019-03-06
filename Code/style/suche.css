@@ -1,0 +1,20 @@
+/* cards */
+.card{
+    transition: box-shadow .3s;
+    border: 1px solid darkgrey;
+    border-radius: 0.5em;
+    background: rgba(245, 245, 245);
+    padding: 0.5em;
+    margin: 20px;
+    transition: transform 0.5s, background 0.5s;
+}
+.card:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+.card-text{
+    font-size: 0.7em;
+}
+.card i {
+    font-size: 5em;
+    margin-top: 5px;
+}

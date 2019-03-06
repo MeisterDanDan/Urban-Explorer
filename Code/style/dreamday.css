@@ -1,0 +1,28 @@
+/* box transparent */
+.list-box{
+    border: solid 2px #000;
+    background-color: rgba(255,255,255,0.7);
+    width: 100%;
+	height: auto;
+    margin-bottom: 20px;
+}
+
+.liste img{
+    max-width:100%;
+    height: auto;
+}
+.liste {
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    padding: 5px;
+    margin: 10px;
+    transition: box-shadow .3s;
+    border: 1px solid darkgrey;
+    border-radius: 0.5em;
+    background: rgba(245, 245, 245,1);
+    transition: transform 0.5s, background 0.5s;
+}
+.liste:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
