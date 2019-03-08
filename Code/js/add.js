@@ -29,35 +29,58 @@ function previewFile(){
 
 previewFile();  //calls the function named previewFile()
 
+// Funktion um die eingegeben Daten auszulesen und an Firebase zu senden
 function addFirebaseEntry(){
+    // Grundlegenden Pfad für die Datenbankeinträge erzuegen
+    var dataPath = search;
+    if (search === "new york") {
+        dataPath = "staedte/" + dataPath.replace(/\s/g, '');
+    }else{
+        dataPath = dataPath.replace(/\s/g, '');
+        dataPath = "staedte/" + dataPath.toLowerCase();
+    }
+    console.log(dataPath);
 
-
-
-    // Ausgewählte Kategorie auslesen
+    // Ausgewählte Kategorie auslesen und Parameter setzen
+    var categories = ['sehenswuerdigkeiten', 'restaurants', 'bars'];
     var e = document.getElementById("selectKategorie");
-    var kategorie = e.options[e.selectedIndex].text;
+    var catValue = e.options[e.selectedIndex].value;
+    var categorieP = categories[catValue];
 
-    // Ausgewählte Tageszeit auslesen
-    var tageszeit = document.querySelector('input[name="daytimeRadio"]:checked').value;
+    // Ausgewählte Tageszeit auslesen und Parameter setzen
+    var daytime = document.querySelector('input[name="daytimeRadio"]:checked').value;
+    if (daytime === "morgens"){
+        morningP="true";
+        middayP="false";
+        eveningP="false";
+    }else if(daytime === "mittags"){
+        morningP="false";
+        middayP="true";
+        eveningP="false";
+    }else{
+        morningP="false";
+        middayP="false";
+        eveningP="true";
+    }
 
-    // Name auslesen
-    var name = document.getElementById("name").value;
+    // Name auslesen und Parameter setzen
+    var nameP = document.getElementById("name").value;
+    /*if (name2.value == "" || !isNaN(name2.value)) {
+      document.getElementById("name-error2").innerHTML = "Bitte geben Sie Ihren Nachnamen ein";
+      return false;
+    }*/
 
-    // Name auslesen
-    var info = document.getElementById("info").value;
+    // Informationen auslesen und Parameter setzen
+    var infoP = document.getElementById("info").value;
 
-    // Name auslesen
-    var adress = document.getElementById("adress").value;
+    // Name auslesen und Parameter setzen
+    var adressP = document.getElementById("adress").value;
 
-    // Name auslesen
-    var price = document.getElementById("price").value;
+    // Preis auslesen und Parameter setzen
+    var priceP = document.getElementById("price").value;
 
-    // Name auslesen
-    var opening = document.getElementById("opening").value;
-
-    // Name auslesen
-    var tips = document.getElementById("tips").value;
-
+    // Öffnungszeiten auslesen und Parameter setzen
+    var openingP = document.getElementById("opening").value;
 
     //validation
     /*
@@ -113,22 +136,46 @@ function addFirebaseEntry(){
       }
     */
 
-    //Ausgabe aller  Daten in der Konsole
-    console.log(kategorie);
-    console.log(tageszeit);
-    console.log(name);
-    console.log(info);
-    console.log(adress);
-    console.log(price);
-    console.log(opening);
-    console.log(tips);
-    console.log(firebase);
-    // Weiterleitung bei erfolgreichem Speichern auf die "Suche Seite" der entsprechenden Stadt
-    /*
-    if(true){
-        alert('Der Eintrag wurde hinzugefügt!');
-        var newURL = "suche.html?search=" + search;
-        document.location.href = newURL;
+    // Ausgabe der Parameter in der Konsole
+    console.log(categorieP);
+    console.log(morningP);
+    console.log(middayP);
+    console.log(eveningP);
+    console.log(nameP);
+    console.log(infoP);
+    console.log(adressP);
+    console.log(priceP);
+    console.log(openingP);
+
+    // Methodenaufruf zum speichern der Parameter in Firebase
+    writeData(categorieP, eveningP, adressP, infoP, middayP, morningP, nameP, openingP, priceP);
+
+    // Nach dem Speichern in Firebase -> Erfolgsmeldung und Weiterleitung zurück zur Suche-Seite
+    //alert('Der Eintrag wurde hinzugefügt!');
+    //var newURL = "suche.html?search=" + search;
+    //document.location.href = newURL;
+
+    // Eintrag an Firebase pushen
+    function writeData(categorieP, eveningP, adressP, infoP, middayP, morningP, nameP, openingP, priceP){
+        var postData ={
+            abends: eveningP,
+            adresse: adressP,
+            informationen: infoP,
+            mittags: middayP,
+            morgens: morningP,
+            name: nameP,
+            oeffnungszeiten: openingP,
+            preise: priceP
+        };
+
+        // Get a key for a new Post.
+        var newPostKey = firebase.database().ref().child(categorieP).push().key;
+
+        // Write the new post's data simultaneously in the posts list and the user's post
+        var updates = {};
+            updates[dataPath +'/' +categorieP +'/' +newPostKey] = postData;
+
+        return firebase.database().ref().update(updates);
     }
-    */
+
 }
