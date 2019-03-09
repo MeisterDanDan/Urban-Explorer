@@ -1,116 +1,57 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
+<head>
     <title>Urban Explorer</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="icon" type="image/ico" href="img/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
-    <link href="style/style.css" rel="stylesheet" />
-    <link href="style/dreamday.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="style/style.css" rel="stylesheet"/>
+    <link href="style/dreamday.css" rel="stylesheet"/>
 
     <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
     <script src="js/database.js"></script>
     <script src="js/dreamday.js"></script>
 
-  </head>
-        <body onload="start()">
-            <nav class="navbar navbar-light bg-light justify-content-between">
-                <div class="container-fluid">
-                    <a href="index.html" class="navbar-brand-folgeseiten"><img src="img/logo3.png" /></a>
-                    <div class="form-index form-inline">
-                        <input class="form-control-nav form-control mr-sm-2" type="search" id="suchBar" placeholder="Stadt suchen..." aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" id="suchButton" onclick="suche()">Los</button>
-                    </div>
-                </div>
-            </nav>
+</head>
+<body onload="start()">
+<nav class="navbar navbar-light bg-light justify-content-between">
+    <div class="container-fluid">
+        <a href="index.html" class="navbar-brand-folgeseiten"><img src="img/logo3.png"/></a>
+        <div class="form-index form-inline">
+            <input class="form-control-nav form-control mr-sm-2" type="search" id="suchBar"
+                   placeholder="Stadt suchen..." aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" id="suchButton" onclick="suche()">Los</button>
+        </div>
+    </div>
+</nav>
 
-            <div class="main-startseite">
-                <div class="container">
-                    <div class="suche-box">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="home-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true"></a>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="myTabContent">
-                            <div class="list-box tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <div class="row">
-                                    <div class="col-md-12 col-xs-12">
-                                        <div class="liste">
-                                            <img src="img/liste/amsterdam.jpg" />
-                                            <ul>
-                                            <li id="nameMorgens1"></li>
-                                            <li id="informationenMorgens1"></li>
-                                            </ul>
-                                    </div>
-                                    </div>
-                                    <div class="col-md-12 col-xs-12">
-                                        <div class="liste">
-                                            <img src="img/liste/amsterdam.jpg" />
-                                            <ul>
-                                            <li>Frühstück</li>
-                                            <li>Geöffnet</li>
-                                            <li>Preis</li>
-                                            </ul>
-                                    </div>
-                                    </div>
-                                    <div class="col-md-12 col-xs-12">
-                                        <div class="liste">
-                                            <img src="img/liste/amsterdam.jpg" />
-                                            <ul>
-                                            <li>Frühstück</li>
-                                            <li>Geöffnet</li>
-                                            <li>Preis</li>
-                                            </ul>
-                                    </div>
-                                    </div>
-                                    <div class="col-md-12 col-xs-12">
-                                        <div class="liste">
-                                            <img src="img/liste/amsterdam.jpg" />
-                                            <ul>
-                                            <li>Frühstück</li>
-                                            <li>Geöffnet</li>
-                                            <li>Preis</li>
-                                            </ul>
-                                    </div>
-                                    </div>
-                                    <div class="col-md-12 col-xs-12">
-                                        <div class="liste">
-                                            <img src="img/liste/amsterdam.jpg" />
-                                            <ul>
-                                            <li>Frühstück</li>
-                                            <li>Geöffnet</li>
-                                            <li>Preis</li>
-                                            </ul>
-                                    </div>
-                                    </div>
-                                    <div class="col-md-12 col-xs-12">
-                                        <div class="liste">
-                                            <img src="img/liste/amsterdam.jpg" />
-                                            <ul>
-                                            <li>Frühstück</li>
-                                            <li>Geöffnet</li>
-                                            <li>Preis</li>
-                                            </ul>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
+<div class="main-startseite">
+    <div class="container">
+        <div class="suche-box">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" role="tab" aria-controls="home"
+                       aria-selected="true"></a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="list-box tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row" id="dreamDay">
                     </div>
                 </div>
 
             </div>
+        </div>
+
+    </div>
 
 
-
-        </body>
-        <script src="js/index.js"></script>
-    </html>
+</body>
+<script src="js/index.js"></script>
+</html>
