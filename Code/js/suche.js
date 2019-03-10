@@ -25,7 +25,7 @@ function showTextAndJpg() {
 
 // Weiterleitung auf die Seite Tagesplanung
 function tagesplanungSeite(){
-    var newURL = "Tagesplanung.html?search=" + search;
+    var newURL = "tagesplanung.html?search=" + search;
     document.location.href = newURL;
 }
 
