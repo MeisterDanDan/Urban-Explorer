@@ -354,7 +354,8 @@
           "morgens" : "true",
           "name" : "230 Fifth Rooftop Lounge",
           "oeffnungszeiten" : "Montag – Freitag: 10:00 AM - 2:00 AM",
-          "preise" : "$$$"
+          "preise" : "$$$",
+          "dreamday": 7
         },
         "McSorley's Old Ale House" : {
           "abends" : "true",
@@ -407,7 +408,8 @@
           "morgens" : "true",
           "name" : "Breads Bakery",
           "oeffnungszeiten" : "Sonntag: 7:30 AM - 8:00 PM Montag- Freitag: 6:30 AM - 9:00 PMSamstag: 6:30 AM - 8:00 PM",
-          "preise" : "$$-$$$"
+          "preise" : "$$-$$$",
+          "dreamday": 1
         },
         "Club A Steakhouse" : {
           "abends" : "true",
@@ -418,7 +420,8 @@
           "morgens" : "false",
           "name" : "Club A Steakhouse",
           "oeffnungszeiten" : "Samstag-Sonntag: 5:00 PM - 10:00 PM Montag-Freitag: 5:00 PM – 9:00 PM",
-          "preise" : "$$$$"
+          "preise" : "$$$$",
+          "dreamday": 6
         },
         "Diana of Little Chef, Little Kitchen" : {
           "abends" : "true",
@@ -459,7 +462,8 @@
           "morgens" : "true",
           "name" : "Best Bagel and Coffee",
           "oeffnungszeiten" : "Montag – Freitag: 6:00 AM - 4:00 PM",
-          "preise" : "$"
+          "preise" : "$",
+          "dreamday": 3
         }
       },
       "sehenswuerdigkeiten" : {
@@ -484,7 +488,8 @@
           "name" : "Freiheitsstatue",
           "oeffnungszeiten" : "8:30 bis 16:00 Uhr",
           "preise" : "18,50 Euro für Erwachsene, Kinder 8 Euro (4-12 Jahre)",
-          "tipps" : "Man kann nach oben in die Krone"
+          "tipps" : "Man kann nach oben in die Krone",
+          "dreamday": 4
         },
         "One World Trade Center mit dem National 9 11 Memorial" : {
           "abends" : "true",
@@ -507,7 +512,8 @@
           "name" : "Times Square",
           "oeffnungszeiten" : "Dauerhaft zugänglich",
           "preise" : "Kostenlos",
-          "tipps" : "Im Dunkeln wirkt der Times Square am coolsten!"
+          "tipps" : "Im Dunkeln wirkt der Times Square am coolsten!",
+          "dreamday": 5
         },
         "empirestatebuilding" : {
           "abends" : "true",
@@ -519,7 +525,8 @@
           "name" : "Empire State Building",
           "oeffnungszeiten" : "365 Tage im Jahr geöffnet, 8:00 morgens – 2:00 nachts",
           "preise" : "Ab 34 Euro für Erwachsene, Ab 30 Euro für Kinder (6-12 Jahre)",
-          "tipps" : "Am besten früh morgens oder spät abends gehen"
+          "tipps" : "Am besten früh morgens oder spät abends gehen",
+          "dreamday": 2
         }
       }
     },
