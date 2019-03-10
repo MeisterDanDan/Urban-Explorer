@@ -1,4 +1,6 @@
 //Generiert Hintergrundbild und Text für Tab beim Laden der Seite Dreamday html
+let htmlListe = '';
+
 function start() {
     search = decodeURIComponent(window.location.href.slice(window.location.href.indexOf('?') + 8));
     document.body.style.backgroundImage = "url(\'" + "img/bg/" + search.replace(' ', '') + ".jpg" + "\')";
@@ -9,8 +11,7 @@ function start() {
         document.getElementById("home-tab").innerHTML = "Dream Day für " + search.charAt(0).toUpperCase() + search.slice(1);
     }
 
-//Alle Restaurants,Bars und Sehenswürdigkeiten der Datenbank durchsuchen nach dem Attribut dreamday und Treffer in ein Array speichern
-    let htmlListe = '';
+
     let dreamdayArray = [];
     let databaseEntries = firebase.database().ref("staedte/" + search.replace(' ', ''));
     databaseEntries.on("value", function (snapshot) {
@@ -23,11 +24,10 @@ function start() {
             });
 
         });
-//Array sortieren
         dreamdayArray.sort(compare);
         dreamdayArray.forEach(function (element) {
-            //firebase.storage().ref().child('centralpark.jpg').getDownloadURL().then(url => {
-            //    console.log(url);
+            firebase.storage().ref().child('centralpark.jpg').getDownloadURL().then(url => {
+                console.log(url);
             });
             writeHtml(element);
         });
@@ -39,7 +39,6 @@ let id;
 let pictureUrl;
 let i = 0;
 
-//Befüllt die HTML Fenster mit den Infos über die Restaurants,... 
 function writeHtml(element) {
     id = 'dreamDayZeile' + i;
     htmlListe += '<div class="col-md-12 col-xs-12">'
@@ -51,7 +50,6 @@ function writeHtml(element) {
         + '<li>' + "Adresse: " + element.adresse + '</li>'
         + '<li>' + "Preise: " + element.preise + '</li>'
         + '<li>' + "Öffnungszeiten: " + element.oeffnungszeiten + '</li>'
-        + '<li>' + "Tipps: " + element.tipps + '</li>'
         + '<li>' + '<button onclick="test()">' + "Neue Atraktion Laden" + '</button>' + '</li>'
         + '</ul>'
         + '</div>'
