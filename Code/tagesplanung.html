@@ -16,7 +16,7 @@
     <link href="style/tagesplanung.css" rel="stylesheet" />
     <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
-    <script src="js/tagesplanung.js"></script>
+
 
     </head>
 
@@ -31,7 +31,7 @@
                 </div>
             </nav>
 
-            <div class="main-startseite">
+            <div class="main">
                 <div class="container">
                     <div class="suche-box">
 
@@ -43,11 +43,36 @@
 
                         <div class="tab-content" id="myTabContent">
                             <div class="search-tab tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <div class="col-md-12 col-xs-12">
+                                <div id="carousel">
 
-                                    <h3>Hier kann Stefan den Content für die Tagesplanung hintun</h3>
+                                    <div class="hideLeft">
+                                        <img src="img/amsterdam.jpg">
+                                    </div>
 
-                                </div>
+                                    <div class="prevLeftSecond">
+                                        <img src="img/amsterdam.jpg">
+                                    </div>
+
+                                    <div class="prev">
+                                        <img src="img/amsterdam.jpg">
+                                    </div>
+
+                                    <div class="selected">
+                                        <img src="img/amsterdam.jpg">
+                                    </div>
+
+                                    <div class="next">
+                                        <img src="img/amsterdam.jpg">
+                                    </div>
+
+                                    <div class="nextRightSecond">
+                                        <img src="img/amsterdam.jpg">
+                                    </div>
+
+                                    <div class="hideRight">
+                                        <img src="img/amsterdam.jpg">
+                                    </div>
+
                             </div>
                         </div>
 
@@ -60,4 +85,5 @@
 
         </body>
         <script src="js/index.js"></script>
+        <script src="js/tagesplanung.js"></script>
     </html>

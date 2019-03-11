@@ -24,7 +24,7 @@ h3 {
     margin-bottom: 1em;
 }
 
-#rowRadioBtn{
+#rowCheckBtn{
     margin-top: 1.5em;
     margin-bottom: 1em;
 }
@@ -43,4 +43,9 @@ h3 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.error{
+    color: red;
+    font-weight: bold;
 }

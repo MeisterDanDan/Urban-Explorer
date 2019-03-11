@@ -1,4 +1,4 @@
-
+// Funktion beim Laden der Seite
 function start() {
     search = decodeURIComponent(window.location.href.slice(window.location.href.indexOf('?') + 8));
     document.body.style.backgroundImage = "url(\'" + "img/bg/" + search.replace(' ', '') + ".jpg" + "\')";
@@ -26,109 +26,162 @@ function previewFile(){
         preview.src = "";
     }
 }
-
 previewFile();  //calls the function named previewFile()
 
+// Funktion um die eingegeben Daten auszulesen und an Firebase zu senden
 function addFirebaseEntry(){
-
-
-
-    // Ausgewählte Kategorie auslesen
-    var e = document.getElementById("selectKategorie");
-    var kategorie = e.options[e.selectedIndex].text;
-
-    // Ausgewählte Tageszeit auslesen
-    var tageszeit = document.querySelector('input[name="daytimeRadio"]:checked').value;
-
-    // Name auslesen
-    var name = document.getElementById("name").value;
-
-    // Name auslesen
-    var info = document.getElementById("info").value;
-
-    // Name auslesen
-    var adress = document.getElementById("adress").value;
-
-    // Name auslesen
-    var price = document.getElementById("price").value;
-
-    // Name auslesen
-    var opening = document.getElementById("opening").value;
-
-    // Name auslesen
-    var tips = document.getElementById("tips").value;
-
-
-    //validation
-    /*
-      var name= document.querySelector("#employeeName");
-      if (name.value == "" || !isNaN(name.value)) {
-        document.getElementById("name-error").innerHTML = "Bitte geben Sie Ihren Vornamen ein";
-        return false;
-      }
-
-      else{
-        document.getElementById("name-error").innerHTML = "";
-      }
-      var name2= document.querySelector("#employeeName2");
-     if (name2.value == "" || !isNaN(name2.value)) {
-       document.getElementById("name-error2").innerHTML = "Bitte geben Sie Ihren Nachnamen ein";
-       return false;
-     }
-     else{
-       document.getElementById("name-error2").innerHTML = "";
-     }
-
-      var tel= document.querySelector("#employeePhone");
-      if (tel.value == "" || isNaN(tel.value)){
-        document.getElementById("tel-error").innerHTML = "Bitte geben Sie Ihre Telefonnummer ein";
-        return false;
-      }
-
-      else{
-        document.getElementById("tel-error").innerHTML = "";
-      }
-
-      var email= document.querySelector("#employeeMail");
-      if (email.value == "" || email.value.indexOf("@") <= 0){
-        document.getElementById("email-error").innerHTML = "Bitte geben Sie Ihre Emailadresse ein";
-        return false;
-      }
-
-      else{
-        document.getElementById("email-error").innerHTML = "";
-      }
-      var stellenbezeichnung= document.querySelector("#employeeJobTitle");
-      if (stellenbezeichnung.value == ""){
-        stellenbezeichnung.value = "-";
-      }
-      else{
-
-      }
-      var raum= document.querySelector("#employeeRoom");
-      if (raum.value ==""){
-        raum.value = "-";
-      }
-      else{
-      }
-    */
-
-    //Ausgabe aller  Daten in der Konsole
-    console.log(kategorie);
-    console.log(tageszeit);
-    console.log(name);
-    console.log(info);
-    console.log(adress);
-    console.log(price);
-    console.log(opening);
-    console.log(tips);
-    console.log(firebase);
-    // Weiterleitung bei erfolgreichem Speichern auf die "Suche Seite" der entsprechenden Stadt
-    /*
-    if(true){
-        alert('Der Eintrag wurde hinzugefügt!');
-        var newURL = "suche.html?search=" + search;
-        document.location.href = newURL;
+    // Grundlegenden Pfad für die Datenbankeinträge erzuegen
+    var dataPath = search;
+    if (search === "new york") {
+        dataPath = "staedte/" + dataPath.replace(/\s/g, '');
+    }else{
+        dataPath = dataPath.replace(/\s/g, '');
+        dataPath = "staedte/" + dataPath.toLowerCase();
     }
-    */
+    console.log(dataPath);
+
+    // Ausgewählte Kategorie auslesen und Parameter setzen
+    var categories = ['sehenswuerdigkeiten', 'restaurants', 'bars'];
+    var e = document.getElementById("selectKategorie");
+    var catValue = e.options[e.selectedIndex].value;
+    var categorieP = categories[catValue];
+
+    // Ausgewählte Tageszeiten auslesen und Parameter setzen
+    var morningP = document.getElementById("morningCheck").checked;
+    var middayP = document.getElementById("middayCheck").checked;
+    var eveningP = document.getElementById("eveningCheck").checked;
+
+    // Name auslesen und Parameter setzen
+    var nameP = document.getElementById("name").value;
+
+    // Informationen auslesen und Parameter setzen
+    var infoP = document.getElementById("info").value;
+
+    // Name auslesen und Parameter setzen
+    var adressP = document.getElementById("adress").value;
+
+    // Preis auslesen und Parameter setzen
+    var priceP = document.getElementById("price").value;
+
+    // Öffnungszeiten auslesen und Parameter setzen
+    var openingP = document.getElementById("opening").value;
+
+    // Methodenaufruf zum speichern der Parameter in Firebase
+    if(checkValues()){
+        writeData(categorieP, eveningP, adressP, infoP, middayP, morningP, nameP, openingP, priceP);
+
+        // Nach dem Speichern in Firebase -> Erfolgsmeldung und Weiterleitung zurück zur Suche-Seite
+        alert('Der Eintrag wurde hinzugefügt!');
+        setTimeout(function() {
+            // Code, der erst nach 2 Sekunden ausgeführt wird
+            var newURL = "suche.html?search=" + search;
+            document.location.href = newURL;
+        }, 1000);
+    }else {
+        return;
+    }
+
+    // Validation der eingegeben Werte
+    function checkValues(){
+        // Kategorie prüfen
+        if (categorieP === undefined) {
+            console.log("Kategorie Error");
+            document.getElementById("categorieError").innerHTML = "Bitte Kategorie auswählen";
+            return false;
+        }else{
+            document.getElementById("categorieError").innerHTML = "";
+        }
+
+        // Tageszeit prüfen
+        if (morningP == false && middayP == false && eveningP == false) {
+            console.log("Tageszeit Error");
+            document.getElementById("daytimeError").innerHTML = "Bitte passende Tageszeit(en) auswählen";
+            return false;
+        }else{
+            document.getElementById("daytimeError").innerHTML = "";
+        }
+
+        // Name prüfen
+        if (nameP == '' || !isNaN(nameP)) {
+            console.log("Name Error");
+            document.getElementById("nameError").innerHTML = "Bitte geben Sie den Namen ein";
+            return false;
+        }else{
+            document.getElementById("nameError").innerHTML = "";
+        }
+
+        // Informationen prüfen
+        if (infoP == "" || !isNaN(infoP)) {
+            console.log("Information Error");
+            document.getElementById("informationError").innerHTML = "Bitte geben Sie eine Information ein";
+            return false;
+        }else{
+            document.getElementById("informationError").innerHTML = "";
+        }
+
+        // Adresse prüfen
+        if (adressP == "" || !isNaN(adressP)) {
+            console.log("Adresse Error");
+            document.getElementById("adressError").innerHTML = "Bitte geben Sie eine Adresse ein";
+            return false;
+        }else{
+            document.getElementById("adressError").innerHTML = "";
+        }
+
+        // Preis prüfen
+        if (priceP == "" || !isNaN(priceP)) {
+            console.log("Preis Error");
+            document.getElementById("priceError").innerHTML = "Bitte geben Sie eine Preisklasse ein";
+            return false;
+        }else{
+            document.getElementById("priceError").innerHTML = "";
+        }
+
+        // Öffnungszeiten prüfen
+        if (openingP == "" || !isNaN(openingP)) {
+            console.log("Öffnungszeit Error");
+            document.getElementById("openingError").innerHTML = "Bitte geben Sie die Öffnungszeiten ein";
+            return false;
+        }else{
+            document.getElementById("openingError").innerHTML = "";
+        }
+
+        // Ausgabe der Parameter in der Konsole
+        console.log(categorieP);
+        console.log(morningP);
+        console.log(middayP);
+        console.log(eveningP);
+        console.log(nameP);
+        console.log(infoP);
+        console.log(adressP);
+        console.log(priceP);
+        console.log(openingP);
+
+        // Methode mit positivem Rückgabewert verlassen
+        return true;
+    }
+
+    // Eintrag an Firebase pushen
+    function writeData(categorieP, eveningP, adressP, infoP, middayP, morningP, nameP, openingP, priceP){
+        var postData ={
+            abends: eveningP,
+            adresse: adressP,
+            informationen: infoP,
+            mittags: middayP,
+            morgens: morningP,
+            name: nameP,
+            oeffnungszeiten: openingP,
+            preise: priceP
+        };
+
+        // Get a key for a new Post.
+        var newPostKey = firebase.database().ref().child(categorieP).push().key;
+
+        // Write the new post's data simultaneously in the posts list and the user's post
+        var updates = {};
+            updates[dataPath +'/' +categorieP +'/' +newPostKey] = postData;
+
+        return firebase.database().ref().update(updates);
+    }
+
 }
