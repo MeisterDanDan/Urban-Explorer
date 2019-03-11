@@ -25,32 +25,40 @@ function start() {
 
         });
         dreamdayArray.sort(compare);
+        let iCount = 0;
+        let test = 'centralpark.jpg';
         dreamdayArray.forEach(function (element) {
-            firebase.storage().ref().child('centralpark.jpg').getDownloadURL().then(url => {
+            let sPath = element.name.replace(/ /g,'')
+        sPath = sPath.toLowerCase();
+        sPath = sPath +'.jpg';
+            firebase.storage().ref().child(sPath).getDownloadURL().then(url => {
                 console.log(url);
+                writeHtml(element, url);
+                iCount++;
+                if (iCount >= dreamdayArray.length ) {
+                    document.getElementById("dreamDay").innerHTML = htmlListe;
+                }
             });
-            writeHtml(element);
         });
         document.getElementById("dreamDay").innerHTML = htmlListe
     })
 }
 
 let id;
-let pictureUrl;
 let i = 0;
 
-function writeHtml(element) {
+function writeHtml(element, url) {
     id = 'dreamDayZeile' + i;
     htmlListe += '<div class="col-md-12 col-xs-12">'
         + '<div class="liste">'
-        + "<img src='" + pictureUrl + "' width=300 height=180/>"
+        + "<img src='" + url + "' width=300 height=180/>"
         + "<ul id='" + id + "'>"
         + '<li>' + "Name: " + '<b>' + element.name + '</b>' + '</li>'
         + '<li>' + "Informationen: " + element.informationen + '</li>'
         + '<li>' + "Adresse: " + element.adresse + '</li>'
         + '<li>' + "Preise: " + element.preise + '</li>'
         + '<li>' + "Öffnungszeiten: " + element.oeffnungszeiten + '</li>'
-        + '<li>' + '<button onclick="test()">' + "Neue Atraktion Laden" + '</button>' + '</li>'
+        + '<li>' + '<button onclick="test()">' + "Neue Attraktion Laden" + '</button>' + '</li>'
         + '</ul>'
         + '</div>'
         + '</div>';
