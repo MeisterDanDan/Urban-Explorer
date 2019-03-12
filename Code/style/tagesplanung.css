@@ -1,8 +1,70 @@
+.next #text{
+   display: none;
+}
+.nextRightSecond #text{
+   display: none;
+}
+.hideRight #text{
+   display: none;
+}
+
+.prev #text{
+   display: none;
+}
+.prevLeftSecond #text{
+   display: none;
+}
+.hideLeft #text{
+   display: none;
+}
+
+#text h5 {
+   text-align:center;
+    margin-top: 5px;
+}
+#text hr {
+    width: 80%;
+    text-align: center;
+}
+
+.selected #text{
+    width:100% ;
+    -webkit-transition: width 2s;
+    border-bottom: 1px solid ;
+    border-right: 1px solid ;
+    border-left: 1px solid;
+    background: white;
+}
+
+.selected #text:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+.selected img:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+.selected img{
+    width:100% ;
+    border-bottom: 1px solid ;
+    border-right: 1px solid ;
+    border-left: 1px solid;
+    background: white;
+}
+
+.selected form {
+    float:right;
+    border: solid 1px;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+
 #carousel {
   position: relative;
-  height: 400px;
+  height: 600px;
   top: 50%;
   overflow: hidden;
+  padding-top: 20px;
 }
 #carousel div {
   position: absolute;
