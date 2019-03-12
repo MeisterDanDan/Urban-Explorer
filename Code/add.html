@@ -15,6 +15,7 @@
         <link href="style/add.css" rel="stylesheet" />
         <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
         <script src="js/database.js"></script>
+        <script src="js/addValidation.js"></script>
         <script src="js/add.js"></script>
     </head>
 
@@ -121,7 +122,8 @@
                                     <div class="imgFrame">
                                         <img src="img/picture_icon.png" height="200" alt="Image preview..." class="imgSelector" id="uploadPicture">
                                     </div>
-                                    <input type="file" onchange="previewFile()"><br>
+                                    <input type="file" onchange="previewFile()"><br />
+                                    <diy class="error" id="fileError"></diy>
                                 </div>
 
                                 <!-- Zusatzspalte um alles besser auszurichten -->

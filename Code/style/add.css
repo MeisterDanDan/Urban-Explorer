@@ -39,6 +39,11 @@ h3 {
     background-color: white;
 }
 
+img{
+    max-height: 200px;
+    max-width: auto;
+}
+
 #uploadPicture{
     display: block;
     margin-left: auto;
