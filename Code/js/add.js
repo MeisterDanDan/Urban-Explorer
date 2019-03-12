@@ -10,7 +10,7 @@ function start() {
     }
 }
 
-// Funktion für das Bild hochladen mit Vorschau
+// Funktion um die Bildvorschau anzuzeigen
 function previewFile(){
     var preview = document.querySelector(".imgSelector"); //selects the query named img
     var file    = document.querySelector('input[type=file]').files[0]; //sames as here
@@ -26,7 +26,6 @@ function previewFile(){
         preview.src = "";
     }
 }
-previewFile();  //calls the function named previewFile()
 
 // Funktion um die eingegeben Daten auszulesen und an Firebase zu senden
 function addFirebaseEntry(){
@@ -38,7 +37,6 @@ function addFirebaseEntry(){
         dataPath = dataPath.replace(/\s/g, '');
         dataPath = "staedte/" + dataPath.toLowerCase();
     }
-    console.log(dataPath);
 
     // Ausgewählte Kategorie auslesen und Parameter setzen
     var categories = ['sehenswuerdigkeiten', 'restaurants', 'bars'];
@@ -66,14 +64,22 @@ function addFirebaseEntry(){
     // Öffnungszeiten auslesen und Parameter setzen
     var openingP = document.getElementById("opening").value;
 
+    // Das Bild mit der FileAPI laden
+    var file = document.querySelector('input[type=file]').files[0];
+
+    // Den passenden Bildnamen generieren
+    var fileTerm = nameP.replace(/\s/g, '');
+    var fileType = decodeURIComponent(file.name.slice(file.name.indexOf('.')));
+    var fileName = fileTerm.toLowerCase() + fileType.toLowerCase();
+
     // Methodenaufruf zum speichern der Parameter in Firebase
-    if(checkValues()){
+    if(checkValues(categorieP, eveningP, adressP, infoP, middayP, morningP, nameP, openingP, priceP, file)){
         writeData(categorieP, eveningP, adressP, infoP, middayP, morningP, nameP, openingP, priceP);
 
         // Nach dem Speichern in Firebase -> Erfolgsmeldung und Weiterleitung zurück zur Suche-Seite
         alert('Der Eintrag wurde hinzugefügt!');
         setTimeout(function() {
-            // Code, der erst nach 2 Sekunden ausgeführt wird
+            // Code, der erst nach 1 Sekunde ausgeführt wird
             var newURL = "suche.html?search=" + search;
             document.location.href = newURL;
         }, 1000);
@@ -81,88 +87,9 @@ function addFirebaseEntry(){
         return;
     }
 
-    // Validation der eingegeben Werte
-    function checkValues(){
-        // Kategorie prüfen
-        if (categorieP === undefined) {
-            console.log("Kategorie Error");
-            document.getElementById("categorieError").innerHTML = "Bitte Kategorie auswählen";
-            return false;
-        }else{
-            document.getElementById("categorieError").innerHTML = "";
-        }
-
-        // Tageszeit prüfen
-        if (morningP == false && middayP == false && eveningP == false) {
-            console.log("Tageszeit Error");
-            document.getElementById("daytimeError").innerHTML = "Bitte passende Tageszeit(en) auswählen";
-            return false;
-        }else{
-            document.getElementById("daytimeError").innerHTML = "";
-        }
-
-        // Name prüfen
-        if (nameP == '' || !isNaN(nameP)) {
-            console.log("Name Error");
-            document.getElementById("nameError").innerHTML = "Bitte geben Sie den Namen ein";
-            return false;
-        }else{
-            document.getElementById("nameError").innerHTML = "";
-        }
-
-        // Informationen prüfen
-        if (infoP == "" || !isNaN(infoP)) {
-            console.log("Information Error");
-            document.getElementById("informationError").innerHTML = "Bitte geben Sie eine Information ein";
-            return false;
-        }else{
-            document.getElementById("informationError").innerHTML = "";
-        }
-
-        // Adresse prüfen
-        if (adressP == "" || !isNaN(adressP)) {
-            console.log("Adresse Error");
-            document.getElementById("adressError").innerHTML = "Bitte geben Sie eine Adresse ein";
-            return false;
-        }else{
-            document.getElementById("adressError").innerHTML = "";
-        }
-
-        // Preis prüfen
-        if (priceP == "" || !isNaN(priceP)) {
-            console.log("Preis Error");
-            document.getElementById("priceError").innerHTML = "Bitte geben Sie eine Preisklasse ein";
-            return false;
-        }else{
-            document.getElementById("priceError").innerHTML = "";
-        }
-
-        // Öffnungszeiten prüfen
-        if (openingP == "" || !isNaN(openingP)) {
-            console.log("Öffnungszeit Error");
-            document.getElementById("openingError").innerHTML = "Bitte geben Sie die Öffnungszeiten ein";
-            return false;
-        }else{
-            document.getElementById("openingError").innerHTML = "";
-        }
-
-        // Ausgabe der Parameter in der Konsole
-        console.log(categorieP);
-        console.log(morningP);
-        console.log(middayP);
-        console.log(eveningP);
-        console.log(nameP);
-        console.log(infoP);
-        console.log(adressP);
-        console.log(priceP);
-        console.log(openingP);
-
-        // Methode mit positivem Rückgabewert verlassen
-        return true;
-    }
-
-    // Eintrag an Firebase pushen
+    // Einträge an Firebase Datenbank pushen
     function writeData(categorieP, eveningP, adressP, infoP, middayP, morningP, nameP, openingP, priceP){
+        addImage();
         var postData ={
             abends: eveningP,
             adresse: adressP,
@@ -184,4 +111,12 @@ function addFirebaseEntry(){
         return firebase.database().ref().update(updates);
     }
 
+    // Bild an Firebase Storage pushen
+    function addImage(){
+        // Die entsprechende Referenz zum Firebase Storage herstellen
+        var storageRef = firebase.storage().ref(fileName);
+
+        // Bild in Firebase pushen
+        storageRef.put(file);
+    }
 }
