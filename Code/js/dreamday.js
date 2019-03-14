@@ -11,9 +11,9 @@ function start() {
         document.getElementById("home-tab").innerHTML = "Dream Day für " + search.charAt(0).toUpperCase() + search.slice(1);
     }
 
-
+    let stadtName = search.replace(' ', '')
     let dreamdayArray = [];
-    let databaseEntries = firebase.database().ref("staedte/" + search.replace(' ', ''));
+    let databaseEntries = firebase.database().ref("staedte/" + stadtName.toLowerCase());
     databaseEntries.on("value", function (snapshot) {
         snapshot.forEach(function (kategorie) {
             Object.keys(kategorie.val()).map((key) => {
