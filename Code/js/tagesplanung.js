@@ -9,6 +9,7 @@ function start() {
         document.getElementById("home-tab").innerHTML = "Eigene Tagesplanung für " + search.charAt(0).toUpperCase() + search.slice(1);
     }
 }
+
 //carousel
 
    function moveToSelected(element) {
@@ -39,8 +40,6 @@ function start() {
 
 }
 
-
-
 $('#carousel div').click(function() {
   moveToSelected($(this));
 });
@@ -53,6 +52,22 @@ $('#next').click(function() {
   moveToSelected('next');
 
 });
+
+
+//checkboxes
+
+var checkboxes = document.querySelectorAll('input[name="speichern"]');
+var num = checkboxes.length;
+var checkitem = 0;
+
+
+for (var i=0; i<num; i++) {
+      if (checkboxes[i].checked === true) {
+       checkitem += checkboxes[i].value;
+          
+   }
+}
+document.getElementById("home").innerHTML = "Hallo "+checkitem
 
 
 

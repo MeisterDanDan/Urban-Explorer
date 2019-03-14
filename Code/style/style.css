@@ -46,6 +46,12 @@ border-bottom: 0px;
     border-color: #000;
     color: #000;
 }
+#tab{
+    border-bottom: solid 1px;
+    background-color: rgba(255,255,255,0.7);
+    border-color: #000;
+    color: #000;
+}
 /* navi-button-responsive*/
 .form-control-nav{
     width: auto;

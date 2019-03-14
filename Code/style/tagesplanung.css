@@ -1,3 +1,4 @@
+/* carousel hacks*/
 .next #text{
    display: none;
 }
@@ -29,12 +30,12 @@
 
 .selected #text{
     width:100% ;
-    -webkit-transition: width 2s;
     border-bottom: 1px solid ;
     border-right: 1px solid ;
     border-left: 1px solid;
     background: white;
 }
+
 
 .selected #text:hover{
     box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -50,12 +51,46 @@
     background: white;
 }
 
+form p{
+    margin-bottom: 0px;
+    display: inline;
+}
+
 .selected form {
     float:right;
     border: solid 1px;
     margin: 5px;
     padding: 5px;
 }
+
+/* tabs */
+#home-tab{
+    margin-left: 587px;
+}
+#tab:focus {
+    background-color: rgba(255,255,255,1);
+}
+@media print{
+    #home-tab{ display: none}
+    #tab {display: none}
+}
+@media (max-width:1199px){
+    #home-tab{
+    margin-left: 407px;
+}
+}
+@media (max-width:991px){
+    #home-tab{
+    margin-left: 167px;
+}
+}
+@media (max-width:767px){
+    #home-tab{
+    margin-left: -13px;
+}
+}
+
+
 
 
 
