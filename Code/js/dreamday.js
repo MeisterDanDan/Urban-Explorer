@@ -25,40 +25,40 @@ function start() {
 
         });
         dreamdayArray.sort(compare);
-        let iCount = 0;
-        let test = 'centralpark.jpg';
         dreamdayArray.forEach(function (element) {
-            let sPath = element.name.replace(/ /g,'')
-        sPath = sPath.toLowerCase();
-        sPath = sPath +'.jpg';
-            firebase.storage().ref().child(sPath).getDownloadURL().then(url => {
-                console.log(url);
-                writeHtml(element, url);
-                iCount++;
-                if (iCount >= dreamdayArray.length ) {
-                    document.getElementById("dreamDay").innerHTML = htmlListe;
-                }
-            });
+            writeHtml(element);
         });
-        document.getElementById("dreamDay").innerHTML = htmlListe
+        dreamdayArray.forEach(function (element) {
+            let name = element.name.replace(/ /g,'');
+            let sPath = name;
+            sPath = sPath.toLowerCase();
+            sPath = sPath +'.jpg';
+                firebase.storage().ref().child(sPath).getDownloadURL().then(url => {
+                    console.log(url);
+                    document.getElementById(name).src = url;
+                });
+        });
+        document.getElementById("dreamDay").innerHTML = htmlListe;
+
     })
 }
 
 let id;
 let i = 0;
 
-function writeHtml(element, url) {
+function writeHtml(element) {
     id = 'dreamDayZeile' + i;
+    let name = element.name.replace(/ /g,'');
     htmlListe += '<div class="col-md-12 col-xs-12">'
         + '<div class="liste">'
-        + "<img src='" + url + "' width=300 height=180/>"
-        + "<ul id='" + id + "'>"
+        + "<img id="+name+" src='' width=300 height=180/>"
+        + "<ul id='" + element.dreamday + "'>"
         + '<li>' + "Name: " + '<b>' + element.name + '</b>' + '</li>'
         + '<li>' + "Informationen: " + element.informationen + '</li>'
         + '<li>' + "Adresse: " + element.adresse + '</li>'
         + '<li>' + "Preise: " + element.preise + '</li>'
         + '<li>' + "Öffnungszeiten: " + element.oeffnungszeiten + '</li>'
-        + '<li>' + '<button onclick="test()">' + "Neue Attraktion Laden" + '</button>' + '</li>'
+        + '<li>' + '<button onclick="austausch(id)">' + ",," + element.name + "''" +" austauschen" + '</button>' + '</li>'
         + '</ul>'
         + '</div>'
         + '</div>';
@@ -73,6 +73,9 @@ function compare(objectA, objectB) {
     return 0;
 }
 
-function test() {
-    alert("test")
+function drucken() {
+    window.print();
+}
+function austausch(id){
+    console.log(id);
 }
