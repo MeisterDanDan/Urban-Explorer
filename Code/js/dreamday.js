@@ -53,7 +53,7 @@ function writeHtml(element) {
         + '<div class="liste">'
         + "<img id="+name+" src='' width=300 height=180/>"
         + "<ul id='" + element.dreamday + "'>"
-        + '<li>' + "Name: " + '<b>' + element.name + '</b>' + '</li>'
+        + '<b>' + element.name + '</b>' + '</li>'
         + '<li>' + "Informationen: " + element.informationen + '</li>'
         + '<li>' + "Adresse: " + element.adresse + '</li>'
         + '<li>' + "Preise: " + element.preise + '</li>'

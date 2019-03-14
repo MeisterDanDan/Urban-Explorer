@@ -37,11 +37,12 @@ h3 {
 .imgFrame{
     border: 2px solid grey;
     background-color: white;
+    overflow: hidden;
 }
 
 img{
     max-height: 200px;
-    max-width: auto;
+    z-index: -1;
 }
 
 #uploadPicture{
