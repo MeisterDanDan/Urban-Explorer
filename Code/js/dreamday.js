@@ -51,12 +51,12 @@ function writeHtml(element) {
         + '<div class="liste">'
         + "<img id="+name+" src='' width=300 height=180/>"
         + "<ul>"
-        + '<b>' + element.name + '</b>' + '</li>'
+        + '<b>' + element.name + '</b>'
         + '<li>' + "Informationen: " + element.informationen + '</li>'
         + '<li>' + "Adresse: " + element.adresse + '</li>'
         + '<li>' + "Preise: " + element.preise + '</li>'
         + '<li>' + "Öffnungszeiten: " + element.oeffnungszeiten + '</li>'
-        + '<li>' + '<button onclick="austausch('+counter+')";>' + ",," + element.name + "''" +" austauschen" + '</button>' + '</li>'
+        + '<button onclick="austausch('+counter+')";>' + ",," + element.name + "''" +" austauschen" + '</button>'
         + '</ul>'
         + '</div>'
         + '</div>';
@@ -247,12 +247,12 @@ function neuesHtmlSchreiben(element,auslöser){
         + '<div class="liste">'
         + "<img id="+name+" src='' width=300 height=180/>"
         + "<ul>"
-        + '<b>' + element.name + '</b>' + '</li>'
+        + '<b>' + element.name + '</b>' 
         + '<li>' + "Informationen: " + element.informationen + '</li>'
         + '<li>' + "Adresse: " + element.adresse + '</li>'
         + '<li>' + "Preise: " + element.preise + '</li>'
         + '<li>' + "Öffnungszeiten: " + element.oeffnungszeiten + '</li>'
-        + '<li>' + '<button onclick="austausch('+auslöser+')";>' + ",," + element.name + "''" +" austauschen" + '</button>' + '</li>'
+        + '<button onclick="austausch('+auslöser+')";>' + ",," + element.name + "''" +" austauschen" + '</button>'
         + '</ul>'
         + '</div>'
         + '</div>';
