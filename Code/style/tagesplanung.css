@@ -51,17 +51,53 @@
     background: white;
 }
 
-form p{
-    margin-bottom: 0px;
-    display: inline;
-}
 
-.selected form {
+.selected button {
     float:right;
     border: solid 1px;
     margin: 5px;
     padding: 5px;
 }
+.selected button:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+    transition: 1s;
+}
+
+
+
+/*druckansicht*/
+.druckansicht{
+    margin: 10px;
+}
+.druckansicht h4 {
+    margin: 5px;
+}
+.druckansicht img {
+    max-width: 300px;
+    padding: 5px;
+}
+.druckansicht #text{
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+}
+.druckansicht #speichern{
+    display: none;
+}
+.druckansicht #drucken{
+    display: block;
+    border:1px solid;
+    margin: 15px 0px 5px 0px;
+}
+.druckansicht #drucken:hover{
+ box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+.druckansicht .box{
+    background: white;
+    border:1px solid;
+    margin: 5px;
+}
+
 
 /* tabs */
 #home-tab{

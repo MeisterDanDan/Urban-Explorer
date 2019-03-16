@@ -13,7 +13,7 @@ function start() {
 //carousel
 
    function moveToSelected(element) {
-
+       
   if (element == "next") {
     var selected = $(".selected").next();
   } else if (element == "prev") {
@@ -53,21 +53,57 @@ $('#next').click(function() {
 
 });
 
+function storeMorgens(){
+    
+    var textMorgens = document.getElementById("storeMorgens").innerHTML;
 
-//checkboxes
-
-var checkboxes = document.querySelectorAll('input[name="speichern"]');
-var num = checkboxes.length;
-var checkitem = 0;
-
-
-for (var i=0; i<num; i++) {
-      if (checkboxes[i].checked === true) {
-       checkitem += checkboxes[i].value;
-          
-   }
+    sessionStorage.setItem("textMorgens",textMorgens);
+ 
+    displayMorgens(textMorgens);
 }
-document.getElementById("home").innerHTML = "Hallo "+checkitem
+    
+function displayMorgens(textMorgens){
+    var listMorgens = document.getElementById("content-morgens");
+    var getMorgens = sessionStorage.getItem("textMorgens");
+    listMorgens.innerHTML+="<div class='box'>"+getMorgens+"</div>";
+}
+
+function storeMittags(){
+    var textMittags = document.getElementById("storeMittags").innerHTML;
+
+    sessionStorage.setItem("textMittags",textMittags);
+    
+    displayMittags(textMittags);
+}
+    
+function displayMittags(textMittags){
+    var listMittags = document.getElementById("content-mittags");
+    var getMittags = sessionStorage.getItem("textMittags");
+    listMittags.innerHTML+="<div class='box'>"+getMittags+"</div>";
+}
+
+function storeAbends(){
+    var textAbends = document.getElementById("storeAbends").innerHTML;
+
+    sessionStorage.setItem("textAbends",textAbends);
+    
+    displayAbends(textAbends);
+}
+    
+function displayAbends(textAbends){
+    var listAbends = document.getElementById("content-abends");
+    var getAbends = sessionStorage.getItem("textAbends");
+    listAbends.innerHTML+="<div class='box'>"+getAbends+"</div>";
+}
+
+//drucken
+function drucken() {
+    window.print();
+}
+
+
+
+
 
 
 
