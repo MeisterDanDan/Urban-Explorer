@@ -101,7 +101,7 @@
 
 /* tabs */
 #home-tab{
-    margin-left: 587px;
+    margin-left: 537px;
 }
 #tab:focus {
     background-color: rgba(255,255,255,1);
@@ -112,17 +112,17 @@
 }
 @media (max-width:1199px){
     #home-tab{
-    margin-left: 407px;
+    margin-left: 357px;
 }
 }
 @media (max-width:991px){
     #home-tab{
-    margin-left: 167px;
+    margin-left: 117px;
 }
 }
 @media (max-width:767px){
     #home-tab{
-    margin-left: -13px;
+    margin-left: -63px;
 }
 }
 
