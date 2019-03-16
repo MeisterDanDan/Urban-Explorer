@@ -65,19 +65,32 @@ function addFirebaseEntry(){
     var openingP = document.getElementById("opening").value;
 
     // Das Bild mit der FileAPI laden
-    var file = document.querySelector('input[type=file]').files[0];
+    try {
+        var file = document.querySelector('input[type=file]').files[0];
 
-    // Den passenden Bildnamen generieren
-    var fileTerm = nameP.replace(/\s/g, '');
-    var fileType = decodeURIComponent(file.name.slice(file.name.indexOf('.')));
-    var fileName = fileTerm.toLowerCase() + fileType.toLowerCase();
+        // Den passenden Bildnamen generieren
+        var fileTerm = nameP.replace(/\s/g, '');
+        var fileType = decodeURIComponent(file.name.slice(file.name.indexOf('.')));
+        var fileName = fileTerm.toLowerCase() + fileType.toLowerCase();
+
+        document.getElementById("fileError").innerHTML = "";
+    } catch (e) {
+        console.log(e);
+        console.log("Kein Bild Error");
+        document.getElementById("fileError").innerHTML = "Bitte ein Bild hochladen";
+    } finally {
+
+    }
+
 
     // Methodenaufruf zum speichern der Parameter in Firebase
     if(checkValues(categorieP, eveningP, adressP, infoP, middayP, morningP, nameP, openingP, priceP, file)){
         writeData(categorieP, eveningP, adressP, infoP, middayP, morningP, nameP, openingP, priceP);
 
         // Nach dem Speichern in Firebase -> Erfolgsmeldung und Weiterleitung zurück zur Suche-Seite
-        alert('Der Eintrag wurde hinzugefügt!');
+        var modal = document.getElementById('myModal');
+        modal.style.display = "block";
+
         setTimeout(function() {
             // Code, der erst nach 1 Sekunde ausgeführt wird
             var newURL = "suche.html?search=" + search;
@@ -114,7 +127,8 @@ function addFirebaseEntry(){
     // Bild an Firebase Storage pushen
     function addImage(){
         // Die entsprechende Referenz zum Firebase Storage herstellen
-        var storageRef = firebase.storage().ref(fileName);
+        var imgPath = search.toLowerCase();
+        var storageRef = firebase.storage().ref(imgPath.replace(/\s/g, '') +"/" +fileName);
 
         // Bild in Firebase pushen
         storageRef.put(file);

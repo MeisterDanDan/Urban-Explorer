@@ -64,15 +64,15 @@ function checkValues(categorieP, eveningP, adressP, infoP, middayP, morningP, na
     }
 
     // Typ des hochzuladenden Bilds prüfen
-    if(file.type =="image/jpg" || file.type =="image/png" || file.type =="image/jpeg"){
+    if(file.type =="image/jpeg"){
         document.getElementById("fileError").innerHTML = "";
     }else{
         console.log("Bildformat Error");
-        document.getElementById("fileError").innerHTML = "Bitte ein Bild vom Typ .jpg, .jpeg oder .png hochladen";
+        document.getElementById("fileError").innerHTML = "Bitte ein Bild vom Typ .jpg/ .jpeg hochladen";
         return false;
     }
 
-    // Größe des hochzuladenden Bilds in Byte prüfen 
+    // Größe des hochzuladenden Bilds in Byte prüfen
     if(file.size > 1000000){
         console.log("Bildgröße Error");
         document.getElementById("fileError").innerHTML = "Bitte nur Bilder bis max. 1MiB hochladen";
