@@ -86,7 +86,6 @@
 }
 .druckansicht #drucken{
     display: block;
-    border:1px solid;
     margin: 15px 0px 5px 0px;
 }
 .druckansicht #drucken:hover{
@@ -96,6 +95,9 @@
     background: white;
     border:1px solid;
     margin: 5px;
+}
+.druckansicht #home{
+    margin-bottom: 10px;
 }
 
 
