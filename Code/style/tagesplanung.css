@@ -99,6 +99,10 @@
 .druckansicht #home{
     margin-bottom: 10px;
 }
+.druckansicht #delete{
+    margin: 10px;
+    float: right;
+}
 
 
 /* tabs */

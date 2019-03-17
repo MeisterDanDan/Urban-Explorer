@@ -65,7 +65,7 @@ function storeMorgens(){
 function displayMorgens(textMorgens){
     var listMorgens = document.getElementById("content-morgens");
     var getMorgens = sessionStorage.getItem("textMorgens");
-    listMorgens.innerHTML+="<div class='box'>"+getMorgens+"<button id='delete' onclick='delete(this)'>Löschen</button></div>";
+    listMorgens.innerHTML+="<div class='box'>"+getMorgens+"<button id='delete' onClick='removeDiv(this)' >Löschen</button></div>";
 }
 
 function storeMittags(){
@@ -79,7 +79,7 @@ function storeMittags(){
 function displayMittags(textMittags){
     var listMittags = document.getElementById("content-mittags");
     var getMittags = sessionStorage.getItem("textMittags");
-    listMittags.innerHTML+="<div class='box'>"+getMittags+"<button id='delete' onclick='delete(this)'>Löschen</button></div>";
+    listMittags.innerHTML+="<div class='box'>"+getMittags+"<button id='delete' onClick='removeDiv(this)'>Löschen</button></div>";
 }
 
 function storeAbends(){
@@ -93,7 +93,7 @@ function storeAbends(){
 function displayAbends(textAbends){
     var listAbends = document.getElementById("content-abends");
     var getAbends = sessionStorage.getItem("textAbends");
-    listAbends.innerHTML+="<div class='box'>"+getAbends+"<button id='delete' onclick='delete(this)'>Löschen</button></div>";
+    listAbends.innerHTML+="<div class='box'>"+getAbends+"<button id='delete' onClick='removeDiv(this)'>Löschen</button></div>";
 }
 
 //drucken
@@ -101,8 +101,9 @@ function drucken() {
     window.print();
 }
 
-//delete
-
+function removeDiv(elem){
+    $(elem).parent('div').remove();
+}
 
 
 
