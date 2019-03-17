@@ -49,6 +49,24 @@ function addFirebaseEntry(){
     var middayP = document.getElementById("middayCheck").checked;
     var eveningP = document.getElementById("eveningCheck").checked;
 
+    if (morningP == true) {
+        morningP="true";
+    } else {
+        morningP="false";
+    }
+
+    if (middayP == true) {
+        middayP = "true";
+    } else {
+        middayP = "false";
+    }
+
+    if (eveningP == true) {
+        eveningP = "true";
+    } else {
+        eveningP = "false";
+    }
+
     // Name auslesen und Parameter setzen
     var nameP = document.getElementById("name").value;
 
