@@ -4,9 +4,9 @@ function start() {
     document.body.style.backgroundImage = "url(\'" + "img/bg/" + search.replace(' ', '') + ".jpg" + "\')";
     document.body.style.backgroundSize = "cover";
     if (search === "new york") {
-        document.getElementById("home-tab").innerHTML = "Eigene Tagesplanung für New York";
+        document.getElementById("home-tab").innerHTML = "Tagesplanung für New York";
     } else {
-        document.getElementById("home-tab").innerHTML = "Eigene Tagesplanung für " + search.charAt(0).toUpperCase() + search.slice(1);
+        document.getElementById("home-tab").innerHTML = "Tagesplanung für " + search.charAt(0).toUpperCase() + search.slice(1);
     }
 }
 
@@ -53,9 +53,9 @@ $('#next').click(function() {
 
 });
 
-function storeMorgens(){
+function storeMorgens(elem){
     
-    var textMorgens = document.getElementById("storeMorgens").innerHTML;
+    var textMorgens = $(elem).parents("#storeMorgens").html();
 
     sessionStorage.setItem("textMorgens",textMorgens);
  
@@ -68,8 +68,8 @@ function displayMorgens(textMorgens){
     listMorgens.innerHTML+="<div class='box'>"+getMorgens+"<button id='delete' onClick='removeDiv(this)' >Löschen</button></div>";
 }
 
-function storeMittags(){
-    var textMittags = document.getElementById("storeMittags").innerHTML;
+function storeMittags(elem){
+    var textMittags = $(elem).parents("#storeMittags").html();
 
     sessionStorage.setItem("textMittags",textMittags);
     
@@ -82,8 +82,8 @@ function displayMittags(textMittags){
     listMittags.innerHTML+="<div class='box'>"+getMittags+"<button id='delete' onClick='removeDiv(this)'>Löschen</button></div>";
 }
 
-function storeAbends(){
-    var textAbends = document.getElementById("storeAbends").innerHTML;
+function storeAbends(elem){
+    var textAbends = $(elem).parents("#storeAbends").html();
 
     sessionStorage.setItem("textAbends",textAbends);
     
@@ -100,7 +100,7 @@ function displayAbends(textAbends){
 function drucken() {
     window.print();
 }
-
+//delete
 function removeDiv(elem){
     $(elem).parent('div').remove();
 }
