@@ -13,7 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link href="style/style.css" rel="stylesheet"/>
     <link href="style/dreamday.css" rel="stylesheet"/>
-
+    <link href="style/suche.css" rel="stylesheet"/>
     <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
     <script src="js/database.js"></script>
     <script src="js/dreamday.js"></script>
@@ -24,8 +24,9 @@
     <div class="container-fluid">
         <a href="index.html" class="navbar-brand-folgeseiten"><img src="img/logo3.png"/></a>
         <div class="form-index form-inline">
-            <input class="form-control-nav form-control mr-sm-2" type="search" id="suchBar"
-                   placeholder="Stadt suchen..." aria-label="Search">
+            <div class="autocomplete" style="width:300px;">
+                <input id="suchBar" type="text" placeholder="Stadt suchen...">
+            </div>
             <button class="btn btn-outline-success my-2 my-sm-0" id="suchButton" onclick="suche()">Los</button>
         </div>
     </div>
