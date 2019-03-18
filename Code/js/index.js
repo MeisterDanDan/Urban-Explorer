@@ -113,7 +113,7 @@ document.addEventListener("click", function (e) {
 }
 
 /*An array containing all the country names in the world:*/
-var cities = ["Amsterdam", "Dubai", "New York", "Paris", "Rom"];
+var citiyNames = ["Amsterdam", "Dubai", "New York", "Paris", "Rom"];
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-autocomplete(document.getElementById("suchBar"), cities);
+autocomplete(document.getElementById("suchBar"), citiyNames);
