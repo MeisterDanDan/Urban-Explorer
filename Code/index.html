@@ -22,15 +22,15 @@
     </head>
 
     <body onload="cursor()">
-        
+
         <nav class="navbar navbar-light bg-light justify-content-between">
                 <div class="container-fluid">
-                            <a href="index.html" class="navbar-brand-folgeseiten"><img src="img/logo3.png" /></a>
+                    <a href="index.html" class="navbar-brand-folgeseiten"><img src="img/logo3.png" /></a>
                     <div class="form-inline">
-                             Dein perfekter Tag in einer fremden Stadt
+                        <h3>Dein perfekter Tag in einer fremden Stadt</h3>
                     </div>
-                    </div>
-            </nav>
+                </div>
+        </nav>
 
         <div class="main-startseite" id="startseite">
 
@@ -40,10 +40,25 @@
                     <div id="commit"></div>
                 </div>
                 <div class="suche">
-                     <div class="form-inline">
-                         <input class="form-control form-control-lg form-control-borderless" type="search" id="suchBar" placeholder="Stadt suchen...">
-                         <button class="btn btn-lg btn-success" id="suchButton" type="submit" onclick="suche()">Suche</button>
-                     </div>
+
+
+                    <div class="form-inline">
+
+                        <div class="autocomplete" style="width:300px;">
+                            <input id="suchBar" type="text" placeholder="Stadt suchen...">
+                        </div>
+                        <button class="btn btn-lg btn-success" id="suchButton" type="submit" onclick="suche()">Suche</button>
+
+
+
+                        <!--
+                            <div class="autocomplete" style="width:300px;">
+                                <input  class="form-control form-control-lg form-control-borderless" type="search" id="suchBar" placeholder="Stadt suchen...">
+                                <button class="btn btn-lg btn-success" id="suchButton" type="submit" onclick="suche()">Suche</button>
+                            </div>
+                        -->
+
+                    </div>
                 </div>
             </div>
         </div>
