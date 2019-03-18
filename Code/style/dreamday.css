@@ -36,3 +36,8 @@
     top: 0;
     right: 1.5%;
 }
+
+@media print{
+    #druckBtn{ display: none}
+    #home-tab {display: none}
+}
