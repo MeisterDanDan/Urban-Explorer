@@ -34,13 +34,13 @@ function start() {
                 let inhalt = kategorie.val()[key];
                 if (inhalt.morgens == "true") {
                     morgensArray.push(inhalt)
-                }
-                else if (inhalt.mittags == "true") {
+                }else{}
+                if (inhalt.mittags == "true") {
                     mittagsArray.push(inhalt)
-                }
-                else if (inhalt.abends == "true"){
+                }else{}
+                if (inhalt.abends == "true"){
                   abendsArray.push(inhalt)
-                }
+                }else{}
               });
           });
         morgensArray.forEach(function (element) {
