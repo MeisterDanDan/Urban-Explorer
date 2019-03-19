@@ -52,6 +52,35 @@ function start() {
         abendsArray.forEach(function (element) {
             writeHtmlAbends(element);
         });
+        morgensArray.forEach(function (element) {
+            let name1 = element.name.replace(/ /g,'');
+            let sPath1 = name1;
+            sPath1 = sPath1.toLowerCase();
+            sPath1 = sPath1 +'.jpg';
+                firebase.storage().ref(stadtName + "/").child(sPath1).getDownloadURL().then(url => {
+                    document.getElementById(name1).src = url;
+                });
+        });
+        
+        mittagsArray.forEach(function (element) {
+            let name2 = element.name.replace(/ /g,'');
+            let sPath2 = name2;
+            sPath2 = sPath2.toLowerCase();
+            sPath2 = sPath2 +'.jpg';
+                firebase.storage().ref(stadtName + "/").child(sPath2).getDownloadURL().then(url => {
+                    document.getElementById(name2).src = url;
+                });
+        });
+        
+        abendsArray.forEach(function (element) {
+            let name3 = element.name.replace(/ /g,'');
+            let sPath3= name3;
+            sPath3 = sPath3.toLowerCase();
+            sPath3 = sPath3 +'.jpg';
+                firebase.storage().ref(stadtName + "/").child(sPath3).getDownloadURL().then(url => {
+                    document.getElementById(name3).src = url;
+                });
+        });
 
         
         document.getElementById("carousel1").innerHTML = htmlListe1;
@@ -64,9 +93,9 @@ function start() {
 let counter1=0;
 
 function writeHtmlMorgens(element) {
-  
+  let name1 = element.name.replace(/ /g,'');
     htmlListe1 += "<div class="+counter1+" id='storeMorgens' onclick='moveToSelected(this)'>"
-        + "<img src='img/amsterdam.jpg' >"
+        + "<img id="+name1+" src='' />"
         + '<div id="text">'
         + "<h5>"+element.name+"</h5>"
         + "<hr>"
@@ -89,9 +118,9 @@ function writeHtmlMorgens(element) {
 let counter2=0;
 
 function writeHtmlMittags(element) {
-  
+  let name2 = element.name.replace(/ /g,'');
     htmlListe2 += "<div class="+counter2+" id='storeMittags' onclick='moveToSelected(this)'>"
-        + "<img src='img/amsterdam.jpg' >"
+        + "<img id="+name2+" src='' />"
         + '<div id="text">'
         + "<h5>"+element.name+"</h5>"
         + "<hr>"
@@ -114,9 +143,9 @@ function writeHtmlMittags(element) {
 let counter3=0;
 
 function writeHtmlAbends(element) {
-  
+  let name3 = element.name.replace(/ /g,'');
     htmlListe3 += "<div class="+counter3+" id='storeAbends' onclick='moveToSelected(this)'>"
-        + "<img src='img/amsterdam.jpg' >"
+        + "<img id="+name3+" src='' />"
         + '<div id="text">'
         + "<h5>"+element.name+"</h5>"
         + "<hr>"
