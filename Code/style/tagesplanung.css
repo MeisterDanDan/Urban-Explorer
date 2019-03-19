@@ -1,21 +1,21 @@
 /* carousel hacks*/
-.next #text{
+[class="1"] #text{
    display: none;
 }
-.nextRightSecond #text{
+[class="2"] #text{
    display: none;
 }
-.hideRight #text{
+[class="3"] #text{
    display: none;
 }
 
-.prev #text{
+[class="-1"] #text{
    display: none;
 }
-.prevLeftSecond #text{
+[class="-2"] #text{
    display: none;
 }
-.hideLeft #text{
+[class="-3"] #text{
    display: none;
 }
 
@@ -28,7 +28,7 @@
     text-align: center;
 }
 
-.selected #text{
+[class="0"] #text{
     width:100% ;
     border-bottom: 1px solid ;
     border-right: 1px solid ;
@@ -37,13 +37,13 @@
 }
 
 
-.selected #text:hover{
+[class="0"] #text:hover{
     box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
-.selected img:hover{
+[class="0"] img:hover{
     box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
-.selected img{
+[class="0"] img{
     width:100% ;
     border-bottom: 1px solid ;
     border-right: 1px solid ;
@@ -52,13 +52,13 @@
 }
 
 
-.selected button {
+[class="0"] button {
     float:right;
     border: solid 1px;
     margin: 5px;
     padding: 5px;
 }
-.selected button:hover {
+[class="0"] button:hover {
     box-shadow: 0 0 11px rgba(33,33,33,.2);
     transition: 1s;
 }
@@ -134,76 +134,225 @@
 
 
 
+/*carousel Morgens*/
 
-
-#carousel {
+#carousel1 {
   position: relative;
   height: 600px;
   top: 50%;
   overflow: hidden;
   padding-top: 20px;
 }
-#carousel div {
+#carousel1 div {
   position: absolute;
   transition: transform 1s, left 1s, opacity 1s, z-index 0s;
   opacity: 1;
 }
-#carousel div img {
+#carousel1 div img {
   width: 400px;
   transition: width 1s;
 }
-#carousel div.hideLeft {
+#carousel1 div[class="-3"] {
   left: 0%;
   opacity: 0;
   transform: translateY(50%) translateX(-50%);
 }
-#carousel div.hideLeft img {
+#carousel1 div[class="-3"] img {
   width: 200px;
 }
-#carousel div.hideRight {
+#carousel1 div[class="3"] {
   left: 100%;
   opacity: 0;
   transform: translateY(50%) translateX(-50%);
 }
-#carousel div.hideRight img {
+#carousel1 div[class="3"] img {
   width: 200px;
 }
-#carousel div.prev {
+#carousel1 div[class="-1"] {
   z-index: 5;
   left: 30%;
   transform: translateY(50px) translateX(-50%);
 }
-#carousel div.prev img {
+#carousel1 div[class="-1"] img {
   width: 300px;
 }
-#carousel div.prevLeftSecond {
+#carousel1 div[class="-2"] {
   z-index: 4;
   left: 15%;
   transform: translateY(50%) translateX(-50%);
   opacity: 0.7;
 }
-#carousel div.prevLeftSecond img {
+#carousel1 div[class="-2"] img {
   width: 200px;
 }
-#carousel div.selected {
+#carousel1 div[class="0"] {
   z-index: 10;
   left: 50%;
   transform: translateY(0px) translateX(-50%);
 }
-#carousel div.next {
+#carousel1 div[class="1"] {
   z-index: 5;
   left: 70%;
   transform: translateY(50px) translateX(-50%);
 }
-#carousel div.next img {
+#carousel1 div[class="1"] img {
   width: 300px;
 }
-#carousel div.nextRightSecond {
+#carousel1 div[class="2"] {
   z-index: 4;
   left: 85%;
   transform: translateY(50%) translateX(-50%);
   opacity: 0.7;
 }
-#carousel div.nextRightSecond img {
+#carousel1 div[class="2"] img {
   width: 200px;
 }
+
+/*carousel Mittags*/
+
+#carousel2 {
+  position: relative;
+  height: 600px;
+  top: 50%;
+  overflow: hidden;
+  padding-top: 20px;
+}
+#carousel2 div {
+  position: absolute;
+  transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+  opacity: 1;
+}
+#carousel2 div img {
+  width: 400px;
+  transition: width 1s;
+}
+#carousel2 div[class="-3"] {
+  left: 0%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-50%);
+}
+#carousel2 div[class="-3"] img {
+  width: 200px;
+}
+#carousel2 div[class="3"] {
+  left: 100%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-50%);
+}
+#carousel2 div[class="3"] img {
+  width: 200px;
+}
+#carousel2 div[class="-1"] {
+  z-index: 5;
+  left: 30%;
+  transform: translateY(50px) translateX(-50%);
+}
+#carousel2 div[class="-1"] img {
+  width: 300px;
+}
+#carousel2 div[class="-2"] {
+  z-index: 4;
+  left: 15%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0.7;
+}
+#carousel2 div[class="-2"] img {
+  width: 200px;
+}
+#carousel2 div[class="0"] {
+  z-index: 10;
+  left: 50%;
+  transform: translateY(0px) translateX(-50%);
+}
+#carousel2 div[class="1"] {
+  z-index: 5;
+  left: 70%;
+  transform: translateY(50px) translateX(-50%);
+}
+#carousel2 div[class="1"] img {
+  width: 300px;
+}
+#carousel2 div[class="2"] {
+  z-index: 4;
+  left: 85%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0.7;
+}
+#carousel2 div[class="2"] img {
+  width: 200px;
+}
+
+/*carousel Abends*/
+
+#carousel3 {
+  position: relative;
+  height: 600px;
+  top: 50%;
+  overflow: hidden;
+  padding-top: 20px;
+}
+#carousel3 div {
+  position: absolute;
+  transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+  opacity: 1;
+}
+#carousel3 div img {
+  width: 400px;
+  transition: width 1s;
+}
+#carousel3 div[class="-3"] {
+  left: 0%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-50%);
+}
+#carousel3 div[class="-3"] img {
+  width: 200px;
+}
+#carousel3 div[class="3"] {
+  left: 100%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-50%);
+}
+#carousel3 div[class="3"] img {
+  width: 200px;
+}
+#carousel3 div[class="-1"] {
+  z-index: 5;
+  left: 30%;
+  transform: translateY(50px) translateX(-50%);
+}
+#carousel3 div[class="-1"] img {
+  width: 300px;
+}
+#carousel3 div[class="-2"] {
+  z-index: 4;
+  left: 15%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0.7;
+}
+#carousel3 div[class="-2"] img {
+  width: 200px;
+}
+#carousel3 div[class="0"] {
+  z-index: 10;
+  left: 50%;
+  transform: translateY(0px) translateX(-50%);
+}
+#carousel3 div[class="1"] {
+  z-index: 5;
+  left: 70%;
+  transform: translateY(50px) translateX(-50%);
+}
+#carousel3 div[class="1"] img {
+  width: 300px;
+}
+#carousel3 div[class="2"] {
+  z-index: 4;
+  left: 85%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0.7;
+}
+#carousel3 div[class="2"] img {
+  width: 200px;
+}
+
