@@ -61,7 +61,7 @@ function start() {
                     document.getElementById(name1).src = url;
                 });
         });
-        
+
         mittagsArray.forEach(function (element) {
             let name2 = element.name.replace(/ /g,'');
             let sPath2 = name2;
@@ -71,7 +71,7 @@ function start() {
                     document.getElementById(name2).src = url;
                 });
         });
-        
+
         abendsArray.forEach(function (element) {
             let name3 = element.name.replace(/ /g,'');
             let sPath3= name3;
@@ -82,12 +82,12 @@ function start() {
                 });
         });
 
-        
+
         document.getElementById("carousel1").innerHTML = htmlListe1;
         document.getElementById("carousel2").innerHTML = htmlListe2;
         document.getElementById("carousel3").innerHTML = htmlListe3;
         })
-    
+
 }
 
 let counter1=0;
@@ -105,7 +105,7 @@ function writeHtmlMorgens(element) {
         + '<li>' + "Preise: " + element.preise + '</li>'
         + '<li>' + "Öffnungszeiten: " + element.oeffnungszeiten + '</li>'
         + '</ul>'
-        + '<button class="speichern" onclick="storeMorgens(this);infoMorgens()">Hinzufügen</button>'
+        + '<button id="speichern" onclick="storeMorgens(this);this.disabled=true">Hinzufügen</button>'
         + '</div>'
         + '</div>';
     counter1++
@@ -130,7 +130,7 @@ function writeHtmlMittags(element) {
         + '<li>' + "Preise: " + element.preise + '</li>'
         + '<li>' + "Öffnungszeiten: " + element.oeffnungszeiten + '</li>'
         + '</ul>'
-        + '<button class="speichern" onclick="storeMittags(this);infoMittags()">Hinzufügen</button>'
+        + '<button id="speichern" onclick="storeMittags(this);this.disabled=true">Hinzufügen</button>'
         + '</div>'
         + '</div>';
     counter2++
@@ -155,7 +155,7 @@ function writeHtmlAbends(element) {
         + '<li>' + "Preise: " + element.preise + '</li>'
         + '<li>' + "Öffnungszeiten: " + element.oeffnungszeiten + '</li>'
         + '</ul>'
-        + '<button class="speichern" onclick="storeAbends(this);infoAbends()">Hinzufügen</button>'
+        + '<button id="speichern" onclick="storeAbends(this);this.disabled=true">Hinzufügen</button>'
         + '</div>'
         + '</div>';
     counter3++
@@ -209,7 +209,7 @@ $('1').click(function() {
 
 });
 
- 
+
 
 function storeMorgens(elem){
 
@@ -223,7 +223,7 @@ function storeMorgens(elem){
 function displayMorgens(textMorgens){
     var listMorgens = document.getElementById("content-morgens");
     var getMorgens = sessionStorage.getItem("textMorgens");
-    listMorgens.innerHTML+="<div class='box'>"+getMorgens+"<i class='fas fa-times'onClick='removeDiv(this)'></div>";
+    listMorgens.innerHTML+="<div class='box'>"+getMorgens+"<button id='delete' onClick='removeDiv(this)' >Löschen</button></div>";
 }
 
 function storeMittags(elem){
@@ -237,7 +237,7 @@ function storeMittags(elem){
 function displayMittags(textMittags){
     var listMittags = document.getElementById("content-mittags");
     var getMittags = sessionStorage.getItem("textMittags");
-    listMittags.innerHTML+="<div class='box'>"+getMittags+"<i class='fas fa-times'onClick='removeDiv(this)'></div>";
+    listMittags.innerHTML+="<div class='box'>"+getMittags+"<button id='delete' onClick='removeDiv(this)'>Löschen</button></div>";
 }
 
 function storeAbends(elem){
@@ -251,7 +251,7 @@ function storeAbends(elem){
 function displayAbends(textAbends){
     var listAbends = document.getElementById("content-abends");
     var getAbends = sessionStorage.getItem("textAbends");
-    listAbends.innerHTML+="<div class='box'>"+getAbends+"<i class='fas fa-times'onClick='removeDiv(this)'></div>";
+    listAbends.innerHTML+="<div class='box'>"+getAbends+"<button id='delete' onClick='removeDiv(this)'>Löschen</button></div>";
 }
 
 //drucken
@@ -262,31 +262,3 @@ function drucken() {
 function removeDiv(elem){
     $(elem).parent('div').remove();
 }
-
-
-function infoMorgens (){
-
-   document.getElementById("add1").style.display = "block"; 
-    setTimeout(function(){
-  document.getElementById("add1").style.display = "none";               
-},1500);
-    }
-
-function infoMittags (){
-
-   document.getElementById("add2").style.display = "block"; 
-    setTimeout(function(){
-  document.getElementById("add2").style.display = "none";               
-},1500);
-    }
-
-function infoAbends (){
-
-   document.getElementById("add3").style.display = "block"; 
-    setTimeout(function(){
-  document.getElementById("add3").style.display = "none";               
-},1500);
-    }
-
-
-
