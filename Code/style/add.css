@@ -80,3 +80,11 @@ img{
     width: 80%;
     text-align: center;
 }
+@media (max-width:575px){
+    #home{
+        padding:5px;
+    }
+    .col-sm-6{
+        padding-left: 0px;
+    }
+}
