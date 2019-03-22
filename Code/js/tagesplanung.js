@@ -5,28 +5,22 @@ let htmlListe3 = '';
 function start() {
 
     search = decodeURIComponent(window.location.href.slice(window.location.href.indexOf('?') + 8));
-
     let stadtName = search.replace(/ /g,'');
-
     stadtName = stadtName.toLowerCase();
 
     document.body.style.backgroundImage = "url(\'" + "img/bg/" + search.replace(' ', '') + ".jpg" + "\')";
-
     document.body.style.backgroundSize = "cover";
 
     if (search === "new york") {
-
         document.getElementById("home-tab").innerHTML = "Tagesplanung für New York";
-
     } else {
-
         document.getElementById("home-tab").innerHTML = "Tagesplanung für " + search.charAt(0).toUpperCase() + search.slice(1);
-
     }
 
     let morgensArray = [];
     let mittagsArray = [];
     let abendsArray = [];
+
     let databaseEntries = firebase.database().ref("staedte/" + stadtName );
     databaseEntries.on("value", function (snapshot) {
         snapshot.forEach(function (kategorie) {
@@ -42,22 +36,26 @@ function start() {
                   abendsArray.push(inhalt)
                 }else{}
               });
-          });
+        });
+
         morgensArray.forEach(function (element) {
-            writeHtmlMorgens(element);
+            writeHtmlMorgens(element, stadtName);
         });
         mittagsArray.forEach(function (element) {
-            writeHtmlMittags(element);
+            writeHtmlMittags(element, stadtName);
         });
         abendsArray.forEach(function (element) {
-            writeHtmlAbends(element);
+            writeHtmlAbends(element, stadtName);
         });
+
+        /*
         morgensArray.forEach(function (element) {
             let name1 = element.name.replace(/ /g,'');
             let sPath1 = name1;
             sPath1 = sPath1.toLowerCase();
             sPath1 = sPath1 +'.jpg';
                 firebase.storage().ref(stadtName + "/").child(sPath1).getDownloadURL().then(url => {
+                    console.log("Die Morgens-URL: " +url);
                     document.getElementById(name1).src = url;
                 });
         });
@@ -68,6 +66,7 @@ function start() {
             sPath2 = sPath2.toLowerCase();
             sPath2 = sPath2 +'.jpg';
                 firebase.storage().ref(stadtName + "/").child(sPath2).getDownloadURL().then(url => {
+                    console.log("Die Mittags-URL: " +url);
                     document.getElementById(name2).src = url;
                 });
         });
@@ -78,24 +77,25 @@ function start() {
             sPath3 = sPath3.toLowerCase();
             sPath3 = sPath3 +'.jpg';
                 firebase.storage().ref(stadtName + "/").child(sPath3).getDownloadURL().then(url => {
+                    console.log("Die Abends-URL: " +url);
                     document.getElementById(name3).src = url;
                 });
         });
-
+*/
 
         document.getElementById("carousel1").innerHTML = htmlListe1;
         document.getElementById("carousel2").innerHTML = htmlListe2;
         document.getElementById("carousel3").innerHTML = htmlListe3;
-        })
-
+    });
 }
 
 let counter1=0;
 
-function writeHtmlMorgens(element) {
-  let name1 = element.name.replace(/ /g,'');
+function writeHtmlMorgens(element, stadtName) {
+    let name1 = element.name.replace(/ /g,'');
+
     htmlListe1 += "<div class="+counter1+" id='storeMorgens' onclick='moveToSelected(this)'>"
-        + "<img id="+name1+" src='' />"
+        + "<img id="+name1.toLowerCase()+"morgen"+" src='' />"
         + '<div id="text">'
         + "<h5>"+element.name+"</h5>"
         + "<hr>"
@@ -108,6 +108,10 @@ function writeHtmlMorgens(element) {
         + '<button id="speichern" onclick="storeMorgens(this);this.disabled=true">Hinzufügen</button>'
         + '</div>'
         + '</div>';
+
+        firebase.storage().ref(stadtName + "/").child(name1.toLowerCase()+'.jpg').getDownloadURL().then(function(url){ console.log("Die Morgens-URL: " +url);
+        document.getElementById(name1.toLowerCase()+"morgen").src = url; });
+
     counter1++
     if(counter1==4){
         counter1=3;
@@ -117,10 +121,11 @@ function writeHtmlMorgens(element) {
 
 let counter2=0;
 
-function writeHtmlMittags(element) {
-  let name2 = element.name.replace(/ /g,'');
+function writeHtmlMittags(element, stadtName) {
+    let name2 = element.name.replace(/ /g,'');
+
     htmlListe2 += "<div class="+counter2+" id='storeMittags' onclick='moveToSelected(this)'>"
-        + "<img id="+name2+" src='' />"
+        + "<img id="+name2.toLowerCase()+"mittag"+" src='' />"
         + '<div id="text">'
         + "<h5>"+element.name+"</h5>"
         + "<hr>"
@@ -133,6 +138,10 @@ function writeHtmlMittags(element) {
         + '<button id="speichern" onclick="storeMittags(this);this.disabled=true">Hinzufügen</button>'
         + '</div>'
         + '</div>';
+
+        firebase.storage().ref(stadtName + "/").child(name2.toLowerCase()+'.jpg').getDownloadURL().then(function(url){ console.log("Die Mittags-URL: " +url);
+        document.getElementById(name2.toLowerCase()+"mittag").src = url; });
+
     counter2++
     if(counter2==4){
         counter2=3;
@@ -142,10 +151,11 @@ function writeHtmlMittags(element) {
 
 let counter3=0;
 
-function writeHtmlAbends(element) {
-  let name3 = element.name.replace(/ /g,'');
+function writeHtmlAbends(element, stadtName) {
+    let name3 = element.name.replace(/ /g,'');
+
     htmlListe3 += "<div class="+counter3+" id='storeAbends' onclick='moveToSelected(this)'>"
-        + "<img id="+name3+" src='' />"
+        + "<img id="+name3.toLowerCase()+"abend"+" src='' />"
         + '<div id="text">'
         + "<h5>"+element.name+"</h5>"
         + "<hr>"
@@ -158,6 +168,10 @@ function writeHtmlAbends(element) {
         + '<button id="speichern" onclick="storeAbends(this);this.disabled=true">Hinzufügen</button>'
         + '</div>'
         + '</div>';
+
+        firebase.storage().ref(stadtName + "/").child(name3.toLowerCase()+'.jpg').getDownloadURL().then(function(url){ console.log("Die Abends-URL: " +url);
+        document.getElementById(name3.toLowerCase()+"abend").src = url; });
+
     counter3++
     if(counter3==4){
         counter3=3;
@@ -167,56 +181,49 @@ function writeHtmlAbends(element) {
 
 
 //carousel
+function moveToSelected(element) {
 
-   function moveToSelected(element) {
+    if (element == "1") {
+        var selected = $("0").next();
+    } else if (element == "-1") {
+        var selected = $("0").prev();
+    } else {
+        var selected = element;
+    }
 
-  if (element == "1") {
-    var selected = $("0").next();
-  } else if (element == "-1") {
-    var selected = $("0").prev();
-  } else {
-    var selected = element;
-  }
+    var next = $(selected).next();
+    var prev = $(selected).prev();
+    var prevSecond = $(prev).prev();
+    var nextSecond = $(next).next();
 
-  var next = $(selected).next();
-  var prev = $(selected).prev();
-  var prevSecond = $(prev).prev();
-  var nextSecond = $(next).next();
+    $(selected).removeClass().addClass("0");
 
-  $(selected).removeClass().addClass("0");
+    $(prev).removeClass().addClass("-1");
+    $(next).removeClass().addClass("1");
 
-  $(prev).removeClass().addClass("-1");
-  $(next).removeClass().addClass("1");
+    $(nextSecond).removeClass().addClass("2");
+    $(prevSecond).removeClass().addClass("-2");
 
-  $(nextSecond).removeClass().addClass("2");
-  $(prevSecond).removeClass().addClass("-2");
-
-  $(nextSecond).nextAll().removeClass().addClass('3');
-  $(prevSecond).prevAll().removeClass().addClass('-3');
-
+    $(nextSecond).nextAll().removeClass().addClass('3');
+    $(prevSecond).prevAll().removeClass().addClass('-3');
 }
 
 $('#carousel div').click(function() {
-  moveToSelected($(this));
+    moveToSelected($(this));
 });
 
 $('-1').click(function() {
-  moveToSelected('-1');
+    moveToSelected('-1');
 });
 
 $('1').click(function() {
-  moveToSelected('1');
-
+    moveToSelected('1');
 });
 
 
-
 function storeMorgens(elem){
-
     var textMorgens = $(elem).parents("#storeMorgens").html();
-
     sessionStorage.setItem("textMorgens",textMorgens);
-
     displayMorgens(textMorgens);
 }
 
@@ -228,9 +235,7 @@ function displayMorgens(textMorgens){
 
 function storeMittags(elem){
     var textMittags = $(elem).parents("#storeMittags").html();
-
     sessionStorage.setItem("textMittags",textMittags);
-
     displayMittags(textMittags);
 }
 
@@ -242,9 +247,7 @@ function displayMittags(textMittags){
 
 function storeAbends(elem){
     var textAbends = $(elem).parents("#storeAbends").html();
-
     sessionStorage.setItem("textAbends",textAbends);
-
     displayAbends(textAbends);
 }
 

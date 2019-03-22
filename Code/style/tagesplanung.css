@@ -36,7 +36,6 @@
     background: white;
 }
 
-
 [class="0"] #text:hover{
     box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
@@ -68,7 +67,6 @@
     height:125px;
 }
 
-
 [class="0"] button {
     float:right;
     border: solid 1px;
@@ -83,12 +81,9 @@
     cursor: pointer;
 }
 
-
-
 /*druckansicht*/
 .druckansicht #text h5 {
    width:640px;
-    
 }
 .druckansicht{
     margin: 10px;
@@ -123,7 +118,7 @@
    -o-hyphens: auto;
    -webkit-hyphens: auto;
    -ms-hyphens: auto;
-   hyphens: auto; 
+   hyphens: auto;
     display:flex;
 }
 .druckansicht #home{
@@ -142,7 +137,6 @@
     cursor: pointer;
 }
 
-
 /* tabs */
 #home-tab{
     margin-left: 537px;
@@ -157,23 +151,20 @@
 @media (max-width:1199px){
     #home-tab{
     margin-left: 357px;
-}
+    }
 }
 @media (max-width:991px){
     #home-tab{
     margin-left: 117px;
-}
+    }
 }
 @media (max-width:767px){
     #home-tab{
     margin-left: -63px;
+    }
 }
-}
-
-
 
 /*carousel Morgens*/
-
 #carousel1 {
   position: relative;
   height: 650px;
@@ -189,7 +180,6 @@
 }
 #carousel1 div img {
   width: 400px;
-
 }
 #carousel1 div[class="-3"] {
   left: 0%;
@@ -206,7 +196,6 @@
 }
 #carousel1 div[class="3"] img {
   width: 200px;
-
 }
 #carousel1 div[class="-1"] {
   z-index: 5;
@@ -215,7 +204,6 @@
 }
 #carousel1 div[class="-1"] img {
   width: 300px;
-
 }
 #carousel1 div[class="-2"] {
   z-index: 4;
@@ -225,13 +213,11 @@
 }
 #carousel1 div[class="-2"] img {
   width: 200px;
-
 }
 #carousel1 div[class="0"] {
   z-index: 10;
   left: 50%;
   transform: translateY(0px) translateX(-50%);
- 
 }
 #carousel1 div[class="1"] {
   z-index: 5;
@@ -240,7 +226,6 @@
 }
 #carousel1 div[class="1"] img {
   width: 300px;
-  
 }
 #carousel1 div[class="2"] {
   z-index: 4;
@@ -250,11 +235,9 @@
 }
 #carousel1 div[class="2"] img {
   width: 200px;
-
 }
 
 /*carousel Mittags*/
-
 #carousel2 {
   position: relative;
   height: 600px;
@@ -269,7 +252,6 @@
 }
 #carousel2 div img {
   width: 400px;
-
 }
 #carousel2 div[class="-3"] {
   left: 0%;
@@ -328,7 +310,6 @@
 }
 
 /*carousel Abends*/
-
 #carousel3 {
   position: relative;
   height: 600px;
@@ -343,7 +324,7 @@
 }
 #carousel3 div img {
   width: 400px;
-  
+
 }
 #carousel3 div[class="-3"] {
   left: 0%;
@@ -418,6 +399,3 @@
     z-index: 100;
 
 }
-
-
-

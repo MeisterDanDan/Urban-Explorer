@@ -247,7 +247,7 @@ function neuesHtmlSchreiben(element,auslöser){
         + '<div class="liste">'
         + "<img id="+name+" src='' width=300 height=180/>"
         + "<ul>"
-        + '<b>' + element.name + '</b>' 
+        + '<b>' + element.name + '</b>'
         + '<li>' + "Informationen: " + element.informationen + '</li>'
         + '<li>' + "Adresse: " + element.adresse + '</li>'
         + '<li>' + "Preise: " + element.preise + '</li>'

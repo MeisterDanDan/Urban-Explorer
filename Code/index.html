@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html lang="de">
-
     <head>
         <title>Urban Explorer</title>
 
@@ -14,7 +12,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
         <link href="style/style.css" rel="stylesheet" />
         <link href="style/index.css" rel="stylesheet" />
-        <link href="style/suche.css" rel="stylesheet" />
         <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
         <script src="js/database.js"></script>
         <script src="js/start.js"></script>
@@ -24,10 +21,9 @@
     <body onload="cursor()">
 
         <nav class="navbar navbar-light bg-light justify-content-between">
-                <div class="container-fluid">
-                    <a href="index.html" class="navbar-brand-folgeseiten"><img src="img/logo3.png" /></a>
-                    <!-- <div class="form-inline"> </div> -->
-                </div>
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand-folgeseiten"><img src="img/logo3.png" /></a>
+            </div>
         </nav>
 
         <div class="main-startseite" id="startseite">
@@ -45,13 +41,8 @@
                         <div class="autocomplete" style="width:300px;">
                             <input id="suchBar" style="padding: 12px;" type="text" placeholder="Stadt suchen..." autocomplete="off">
                         </div>
+
                         <button class="btn btn-lg btn-success" id="suchButton" type="submit" onclick="suche()">Suche</button>
-                        <!--
-                            <div class="autocomplete" style="width:300px;">
-                                <input  class="form-control form-control-lg form-control-borderless" type="search" id="suchBar" placeholder="Stadt suchen...">
-                                <button class="btn btn-lg btn-success" id="suchButton" type="submit" onclick="suche()">Suche</button>
-                            </div>
-                        -->
                     </div>
                 </div>
             </div>

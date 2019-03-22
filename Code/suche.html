@@ -1,93 +1,86 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <title>Urban Explorer</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <title>Urban Explorer</title>
 
-    <link rel="icon" type="image/ico" href="img/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" >
-    <link href="style/style.css" rel="stylesheet" />
-    <link href="style/suche.css" rel="stylesheet" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" type="image/ico" href="img/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" >
+        <link href="style/style.css" rel="stylesheet" />
+        <link href="style/suche.css" rel="stylesheet" />
+        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
+        <script src="js/suche.js"></script>
+    </head>
 
-    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
+    <body onload="start()">
 
-    <script src="js/suche.js"></script>
-
-
-  </head>
-        <body onload="start()">
-
-            <nav class="navbar navbar-light bg-light justify-content-between">
-                <div class="container-fluid">
-                            <a href="index.html" class="navbar-brand-folgeseiten"><img src="img/logo3.png" /></a>
-                            <div class="form-inline">
-                                <div class="autocomplete" style="width:300px;">
-                                    <input id="suchBar" type="text" placeholder="Stadt suchen...">
-                                </div>
-                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="suchButton" onclick="suche()">Los</button>
-                            </div>
+        <nav class="navbar navbar-light bg-light justify-content-between">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand-folgeseiten"><img src="img/logo3.png" /></a>
+                <div class="form-inline">
+                    <div class="autocomplete" style="width:300px;">
+                        <input id="suchBar" type="text" placeholder="Stadt suchen..." autocomplete="off">
                     </div>
-            </nav>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="suchButton" onclick="suche()">Los</button>
+                </div>
+            </div>
+        </nav>
 
-            <div class="main-startseite">
-                <div class="container">
-                    <div class="suche-box">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="home-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true">Stadt</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="myTabContent">
-                            <div class="search-tab tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <div class="row text-center">
-                                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="card">
-                                            <i class="fas fa-tools"></i>
-                                             <div class="card-body">
-                                               <h5 class="card-title">Eigene Tagesplanung</h5>
-                                               <p class="card-text">Du willst deine Tagesplanung selbst in die Hand nehmen? Dann plane hier ganz einfach deinen Tag selbst!</p>
-                                               <button class="btn btn-primary" onclick="tagesplanungSeite()">Zur Tagesplanung</button>
-                                             </div>
-                                           </div>
+        <div class="main-startseite">
+            <div class="container">
+                <div class="suche-box">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true">Stadt</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="search-tab tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row text-center">
+                                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="card">
+                                        <i class="fas fa-tools"></i>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Eigene Tagesplanung</h5>
+                                            <p class="card-text">Du willst deine Tagesplanung selbst in die Hand nehmen? Dann plane hier ganz einfach deinen Tag selbst!</p>
+                                            <button class="btn btn-primary" onclick="tagesplanungSeite()">Zur Tagesplanung</button>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="card">
-                                            <i class="fas fa-heart"></i>
-                                            <div class="card-body">
-                                              <h5 class="card-title">Dream Day</h5>
-                                              <p class="card-text">Keine Lust selbst zu planen? Kein Problem, wir erstellen dir deinen perfekten Tag! <br /><br /> </p>
-                                              <button class="btn btn-primary" onclick="dreamdaySeite()">Zum Dream Day</button>
-                                            </div>
-                                          </div>
+                                </div>
+                                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="card">
+                                        <i class="fas fa-heart"></i>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Dream Day</h5>
+                                            <p class="card-text">Keine Lust selbst zu planen? Kein Problem, wir erstellen dir deinen perfekten Tag! <br /><br /> </p>
+                                            <button class="btn btn-primary" onclick="dreamdaySeite()">Zum Dream Day</button>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 text-center">
-                                        <div class="card">
+                                </div>
+                                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 text-center">
+                                    <div class="card">
                                         <i class="fas fa-calendar-plus"></i>
                                         <div class="card-body">
-                                          <h5 class="card-title">Eintrag hinzufügen</h5>
-                                          <p class="card-text">Füge hier einfach eine Sehenswürdigkeit hinzu, die du empfehlen kannst. <br /><br /></p>
-                                          <button class="btn btn-primary" onclick="eintragSeite()">Zum Eintrag</button>
+                                            <h5 class="card-title">Eintrag hinzufügen</h5>
+                                            <p class="card-text">Füge hier einfach eine Sehenswürdigkeit hinzu, die du empfehlen kannst. <br /><br /></p>
+                                            <button class="btn btn-primary" onclick="eintragSeite()">Zum Eintrag</button>
                                         </div>
-                                      </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
             </div>
+        </div>
 
-
-
-        </body>
-        <script src="js/index.js"></script>
-    </html>
+    </body>
+    <script src="js/index.js"></script>
+</html>
