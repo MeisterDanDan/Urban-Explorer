@@ -82,9 +82,7 @@
 }
 
 /*druckansicht*/
-.druckansicht #text h5 {
-   width:640px;
-}
+
 .druckansicht{
     margin: 10px;
 }
@@ -92,20 +90,21 @@
     margin: 5px;
 }
 .druckansicht img {
-    width: 400px;
-    height: 250px;
+    width: 500px;
     padding: 5px;
 }
 .druckansicht #text{
     vertical-align: top;
-    padding: 5px;
+    width: 100%;
+    margin-right: 5px;
+    margin-top: 5px;
 }
 .druckansicht .speichern{
     display: none;
 }
 .druckansicht #drucken{
     display: block;
-    margin: 15px 0px 5px 0px;
+    margin: 15px 0px 5px 5px;
 }
 .druckansicht #drucken:hover{
  box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -129,13 +128,24 @@
     float: right;
 }
 .druckansicht .fa-times{
-    float: right;
     font-size: 20px;
-    background: #eaeaec;
     padding-left: 5px;
     padding-right: 5px;
     cursor: pointer;
+    float: right;
+    position: relative;
+    margin: 0px;
 }
+#carousel1 .fa-times{
+    display: none;
+}
+#carousel2 .fa-times{
+    display: none;
+}
+#carousel3 .fa-times{
+    display: none;
+}
+
 
 /* tabs */
 #home-tab{
@@ -384,6 +394,7 @@
 
 #add1,#add2,#add3 {
     display: none;
+    transition: 2s;
     background: #79c879;
     border-radius: 20%;
     padding: 10px;
@@ -398,4 +409,39 @@
     margin-top: 20px;
     z-index: 100;
 
+}
+
+@media(max-width:767px){
+    .druckansicht .box{
+    display: block;
+    }
+    .druckansicht img{
+        width: 100%;
+    }
+    .druckansicht .fa-times{
+        background: #fff;
+    }
+}
+
+@media(max-width:500px){
+    #carousel1 div img {
+  width: 350px;
+}
+     #carousel2 div img {
+  width: 350px;
+}
+     #carousel3 div img {
+  width: 350px;
+}
+}
+@media(max-width:450px){
+    #carousel1 div img {
+  width: 300px;
+}
+     #carousel2 div img {
+  width: 300px;
+}
+     #carousel3 div img {
+  width: 300px;
+}
 }

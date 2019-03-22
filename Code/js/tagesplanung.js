@@ -97,6 +97,7 @@ function writeHtmlMorgens(element, stadtName) {
     htmlListe1 += "<div class="+counter1+" id='storeMorgens' onclick='moveToSelected(this)'>"
         + "<img id="+name1.toLowerCase()+"morgen"+" src='' />"
         + '<div id="text">'
+        +"<i class='fas fa-times'onClick='removeDiv(this)'></i>"
         + "<h5>"+element.name+"</h5>"
         + "<hr>"
         + "<ul>"
@@ -105,7 +106,7 @@ function writeHtmlMorgens(element, stadtName) {
         + '<li>' + "Preise: " + element.preise + '</li>'
         + '<li>' + "Öffnungszeiten: " + element.oeffnungszeiten + '</li>'
         + '</ul>'
-        + '<button id="speichern" onclick="storeMorgens(this);this.disabled=true">Hinzufügen</button>'
+        + '<button class="speichern" onclick="storeMorgens(this);infoMorgens()">Hinzufügen</button>'
         + '</div>'
         + '</div>';
 
@@ -127,6 +128,7 @@ function writeHtmlMittags(element, stadtName) {
     htmlListe2 += "<div class="+counter2+" id='storeMittags' onclick='moveToSelected(this)'>"
         + "<img id="+name2.toLowerCase()+"mittag"+" src='' />"
         + '<div id="text">'
+        +"<i class='fas fa-times'onClick='removeDiv(this)'></i>"
         + "<h5>"+element.name+"</h5>"
         + "<hr>"
         + "<ul>"
@@ -135,7 +137,7 @@ function writeHtmlMittags(element, stadtName) {
         + '<li>' + "Preise: " + element.preise + '</li>'
         + '<li>' + "Öffnungszeiten: " + element.oeffnungszeiten + '</li>'
         + '</ul>'
-        + '<button id="speichern" onclick="storeMittags(this);this.disabled=true">Hinzufügen</button>'
+        + '<button class="speichern" onclick="storeMittags(this);infoMittags()">Hinzufügen</button>'
         + '</div>'
         + '</div>';
 
@@ -157,6 +159,7 @@ function writeHtmlAbends(element, stadtName) {
     htmlListe3 += "<div class="+counter3+" id='storeAbends' onclick='moveToSelected(this)'>"
         + "<img id="+name3.toLowerCase()+"abend"+" src='' />"
         + '<div id="text">'
+        + "<i class='fas fa-times'onClick='removeDiv(this)'></i>"
         + "<h5>"+element.name+"</h5>"
         + "<hr>"
         + "<ul>"
@@ -165,7 +168,8 @@ function writeHtmlAbends(element, stadtName) {
         + '<li>' + "Preise: " + element.preise + '</li>'
         + '<li>' + "Öffnungszeiten: " + element.oeffnungszeiten + '</li>'
         + '</ul>'
-        + '<button id="speichern" onclick="storeAbends(this);this.disabled=true">Hinzufügen</button>'
+        
+        + '<button class="speichern" onclick="storeAbends(this);infoAbends()">Hinzufügen</button>'
         + '</div>'
         + '</div>';
 
@@ -230,7 +234,7 @@ function storeMorgens(elem){
 function displayMorgens(textMorgens){
     var listMorgens = document.getElementById("content-morgens");
     var getMorgens = sessionStorage.getItem("textMorgens");
-    listMorgens.innerHTML+="<div class='box'>"+getMorgens+"<button id='delete' onClick='removeDiv(this)' >Löschen</button></div>";
+    listMorgens.innerHTML+="<div class='box'>"+getMorgens+"</div>";
 }
 
 function storeMittags(elem){
@@ -242,7 +246,7 @@ function storeMittags(elem){
 function displayMittags(textMittags){
     var listMittags = document.getElementById("content-mittags");
     var getMittags = sessionStorage.getItem("textMittags");
-    listMittags.innerHTML+="<div class='box'>"+getMittags+"<button id='delete' onClick='removeDiv(this)'>Löschen</button></div>";
+    listMittags.innerHTML+="<div class='box'>"+getMittags+"</div>";
 }
 
 function storeAbends(elem){
@@ -254,7 +258,7 @@ function storeAbends(elem){
 function displayAbends(textAbends){
     var listAbends = document.getElementById("content-abends");
     var getAbends = sessionStorage.getItem("textAbends");
-    listAbends.innerHTML+="<div class='box'>"+getAbends+"<button id='delete' onClick='removeDiv(this)'>Löschen</button></div>";
+    listAbends.innerHTML+="<div class='box'>"+getAbends+"</div>";
 }
 
 //drucken
@@ -265,3 +269,28 @@ function drucken() {
 function removeDiv(elem){
     $(elem).parent('div').remove();
 }
+
+//Erfolgreich hinzugefügt
+function infoMorgens (){
+
+   document.getElementById("add1").style.display = "block"; 
+    setTimeout(function(){
+  document.getElementById("add1").style.display = "none";               
+},1500);
+    }
+
+function infoMittags (){
+
+   document.getElementById("add2").style.display = "block"; 
+    setTimeout(function(){
+  document.getElementById("add2").style.display = "none";               
+},1500);
+    }
+
+function infoAbends (){
+
+   document.getElementById("add3").style.display = "block"; 
+    setTimeout(function(){
+  document.getElementById("add3").style.display = "none";               
+},1500);
+    }
