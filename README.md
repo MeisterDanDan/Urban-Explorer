@@ -13,8 +13,8 @@ Es muss ausschließlich der folgende Ablauf chronologisch durchgegangen werden:
 * Ordner "/Code" öffnen
 * Doppelclick auf die Datei index.html
 
--> Die Website sollte sich jetzt im Standardbrowser öffnen.
-Hierbei gilt zu beachten, dass die Webanwendung für Firefox und mobile Ansichht optimiert st.
+Die Website sollte sich jetzt im Standardbrowser öffnen.
+Hierbei gilt zu beachten, dass die Webanwendung für Firefox und mobile Ansicht optimiert st.
 
 ## Autoren
 * **Daniel Wenzl** - [MeisterDanDan](https://github.com/MeisterDanDan)
