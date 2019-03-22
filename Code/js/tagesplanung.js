@@ -259,3 +259,10 @@ function infoAbends (){
   document.getElementById("add3").style.display = "none";               
 },1500);
     }
+
+$(document).ready(function () {
+    $('.suche-box ul li a').click(function (ev) {
+        $('.suche-box ul li').removeClass('selected');
+        $(ev.currentTarget).parent('li').addClass('selected');
+    });
+});
