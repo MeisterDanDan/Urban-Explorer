@@ -107,29 +107,8 @@ function austausch(stelleAuslöser, name){
              var x = Math.floor(Math.random() * (max - min)) + min;
              prüfungDoppelt.push(neueAnzeige[x]);
              neuesHtmlSchreiben(neueAnzeige[x],auslöser);
-
-             /*
-             prüfungDoppelt.forEach(function (element) {
-                    if (neueEinträge[x].name !== element){
-                        neuesHtmlSchreiben(neueEinträge[x],auslöser);
-                        var index = prüfungDoppelt.indexOf(element.name);
-                        console.log(index);
-                        //prüfungDoppelt.splice(index,1);
-                        //prüfungDoppelt.push(neueEinträge[x].name);
-                        console.log(prüfungDoppelt);
-                        return;
-                    }
-                    else {
-
-                        x = Math.floor(Math.random() * (max - min)) + min;
-                        neuesHtmlSchreiben(neueEinträge[x],auslöser);
-                        prüfungDoppelt.push(neueEinträge[x].name);
-
-                    }
-             });
-             */
              //Bild ersetzen
-             let name = neueEinträge[x].name.replace(/ /g,'');
+             let name = neueAnzeige[x].name.replace(/ /g,'');
              sPath = name;
              sPath = sPath.toLowerCase();
              sPath = sPath +'.jpg';
@@ -148,11 +127,25 @@ function austausch(stelleAuslöser, name){
                     }
                 })
             });
-            var max = neueEinträge.length;
-            var x = Math.floor(Math.random() * (max - min)) + min;
-            neuesHtmlSchreiben(neueEinträge[x],auslöser);
+            for(let b=0; b<neueEinträge.length;b++){
+                 if(neueEinträge[b].name == nameAltesElement){
+                     neueEinträge.splice(b,1);
+                     break;
+                 }
+             }
+             for(let b=0; b<prüfungDoppelt.length;b++){
+                  if(prüfungDoppelt[b].name == nameAltesElement){
+                      prüfungDoppelt.splice(b,1);
+                      break;
+                  }
+              }
+             let neueAnzeige2 = arrayZusammenführer(neueEinträge, prüfungDoppelt, nameAltesElement);
+             var max = neueAnzeige2.length;
+             var x = Math.floor(Math.random() * (max - min)) + min;
+             prüfungDoppelt.push(neueAnzeige2[x]);
+             neuesHtmlSchreiben(neueAnzeige2[x],auslöser);
             //Bild ersetzen
-            let name2 = neueEinträge[x].name.replace(/ /g,'');;
+            let name2 = neueAnzeige2[x].name.replace(/ /g,'');;
             let sPath2 = name2;
             sPath2 = sPath2.toLowerCase();
             sPath2 = sPath2 +'.jpg';
@@ -171,11 +164,25 @@ function austausch(stelleAuslöser, name){
                     }
                 })
             });
-            var max = neueEinträge.length;
-            var x = Math.floor(Math.random() * (max - min)) + min;
-            neuesHtmlSchreiben(neueEinträge[x],auslöser);
+            for(let b=0; b<neueEinträge.length;b++){
+                 if(neueEinträge[b].name == nameAltesElement){
+                     neueEinträge.splice(b,1);
+                     break;
+                 }
+             }
+             for(let b=0; b<prüfungDoppelt.length;b++){
+                  if(prüfungDoppelt[b].name == nameAltesElement){
+                      prüfungDoppelt.splice(b,1);
+                      break;
+                  }
+              }
+             let neueAnzeige3 = arrayZusammenführer(neueEinträge, prüfungDoppelt, nameAltesElement);
+             var max = neueAnzeige3.length;
+             var x = Math.floor(Math.random() * (max - min)) + min;
+             prüfungDoppelt.push(neueAnzeige3[x]);
+             neuesHtmlSchreiben(neueAnzeige3[x],auslöser);
             //Bild ersetzen
-            let name3 = neueEinträge[x].name.replace(/ /g,'');;
+            let name3 = neueAnzeige3[x].name.replace(/ /g,'');;
             let sPath3 = name3;
             sPath3 = sPath3.toLowerCase();
             sPath3 = sPath3 +'.jpg';
@@ -194,11 +201,25 @@ function austausch(stelleAuslöser, name){
                     }
                 })
             });
-            var max = neueEinträge.length;
-            var x = Math.floor(Math.random() * (max - min)) + min;
-            neuesHtmlSchreiben(neueEinträge[x],auslöser);
+            for(let b=0; b<neueEinträge.length;b++){
+                 if(neueEinträge[b].name == nameAltesElement){
+                     neueEinträge.splice(b,1);
+                     break;
+                 }
+             }
+             for(let b=0; b<prüfungDoppelt.length;b++){
+                  if(prüfungDoppelt[b].name == nameAltesElement){
+                      prüfungDoppelt.splice(b,1);
+                      break;
+                  }
+              }
+             let neueAnzeige4 = arrayZusammenführer(neueEinträge, prüfungDoppelt, nameAltesElement);
+             var max = neueAnzeige4.length;
+             var x = Math.floor(Math.random() * (max - min)) + min;
+             prüfungDoppelt.push(neueAnzeige4[x]);
+             neuesHtmlSchreiben(neueAnzeige4[x],auslöser);
             //Bild ersetzen
-            let name4 = neueEinträge[x].name.replace(/ /g,'');;
+            let name4 = neueAnzeige4[x].name.replace(/ /g,'');;
             let sPath4 = name4;
             sPath4 = sPath4.toLowerCase();
             sPath4 = sPath4 +'.jpg';
@@ -217,11 +238,25 @@ function austausch(stelleAuslöser, name){
                     }
                 })
             });
-            var max = neueEinträge.length;
-            var x = Math.floor(Math.random() * (max - min)) + min;
-            neuesHtmlSchreiben(neueEinträge[x],auslöser);
+            for(let b=0; b<neueEinträge.length;b++){
+                 if(neueEinträge[b].name == nameAltesElement){
+                     neueEinträge.splice(b,1);
+                     break;
+                 }
+             }
+             for(let b=0; b<prüfungDoppelt.length;b++){
+                  if(prüfungDoppelt[b].name == nameAltesElement){
+                      prüfungDoppelt.splice(b,1);
+                      break;
+                  }
+              }
+             let neueAnzeige5 = arrayZusammenführer(neueEinträge, prüfungDoppelt, nameAltesElement);
+             var max = neueAnzeige5.length;
+             var x = Math.floor(Math.random() * (max - min)) + min;
+             prüfungDoppelt.push(neueAnzeige5[x]);
+             neuesHtmlSchreiben(neueAnzeige5[x],auslöser);
             //Bild ersetzen
-            let name5 = neueEinträge[x].name.replace(/ /g,'');;
+            let name5 = neueAnzeige5[x].name.replace(/ /g,'');;
             let sPath5 = name5;
             sPath5 = sPath5.toLowerCase();
             sPath5 = sPath5 +'.jpg';
@@ -240,11 +275,25 @@ function austausch(stelleAuslöser, name){
                     }
                 })
             });
-            var max = neueEinträge.length;
-            var x = Math.floor(Math.random() * (max - min)) + min;
-            neuesHtmlSchreiben(neueEinträge[x],auslöser);
+            for(let b=0; b<neueEinträge.length;b++){
+                 if(neueEinträge[b].name == nameAltesElement){
+                     neueEinträge.splice(b,1);
+                     break;
+                 }
+             }
+             for(let b=0; b<prüfungDoppelt.length;b++){
+                  if(prüfungDoppelt[b].name == nameAltesElement){
+                      prüfungDoppelt.splice(b,1);
+                      break;
+                  }
+              }
+             let neueAnzeige6 = arrayZusammenführer(neueEinträge, prüfungDoppelt, nameAltesElement);
+             var max = neueAnzeige6.length;
+             var x = Math.floor(Math.random() * (max - min)) + min;
+             prüfungDoppelt.push(neueAnzeige6[x]);
+             neuesHtmlSchreiben(neueAnzeige6[x],auslöser);
             //Bild ersetzen
-            let name6 = neueEinträge[x].name.replace(/ /g,'');;
+            let name6 = neueAnzeige6[x].name.replace(/ /g,'');;
             let sPath6 = name6;
             sPath6 = sPath6.toLowerCase();
             sPath6 = sPath6 +'.jpg';
@@ -261,11 +310,25 @@ function austausch(stelleAuslöser, name){
                     neueEinträge.push(bar.val());
                 })
             });
-            var max = neueEinträge.length;
-            var x = Math.floor(Math.random() * (max - min)) + min;
-            neuesHtmlSchreiben(neueEinträge[x],auslöser);
+            for(let b=0; b<neueEinträge.length;b++){
+                 if(neueEinträge[b].name == nameAltesElement){
+                     neueEinträge.splice(b,1);
+                     break;
+                 }
+             }
+             for(let b=0; b<prüfungDoppelt.length;b++){
+                  if(prüfungDoppelt[b].name == nameAltesElement){
+                      prüfungDoppelt.splice(b,1);
+                      break;
+                  }
+              }
+             let neueAnzeige7 = arrayZusammenführer(neueEinträge, prüfungDoppelt, nameAltesElement);
+             var max = neueAnzeige7.length;
+             var x = Math.floor(Math.random() * (max - min)) + min;
+             prüfungDoppelt.push(neueAnzeige7[x]);
+             neuesHtmlSchreiben(neueAnzeige7[x],auslöser);
             //Bild ersetzen
-            let name7 = neueEinträge[x].name.replace(/ /g,'');;
+            let name7 = neueAnzeige7[x].name.replace(/ /g,'');;
             let sPath7 = name7;
             sPath7 = sPath7.toLowerCase();
             sPath7 = sPath7 +'.jpg';
@@ -325,40 +388,4 @@ function arrayZusammenführer(neueEinträge, prüfungDoppelt, nameAltesElement){
 
     return aEntries;
 
-
-/*    for(let b=0; b<prüfungDoppelt.length;b++){
-         if(prüfungDoppelt[b].name == nameAltesElement){
-             prüfungDoppelt.splice(b,1);
-             break;
-         }
-     }
-
-    //Element aus dem einem Array in ein neues schreiben, falls es im anderen nicht vorhanden ist
-    let neueAuswahl = new Set();
-    for (var c = 0; c < neueEinträge.length; c++) {
-        for (var d = 0; d < prüfungDoppelt.length; d++) {
-            if(neueEinträge[c].name !== prüfungDoppelt[d].name)
-                neueAuswahl.add(neueEinträge[c]);
-        }
-    }
-    let test = Array.from(neueAuswahl);
-    return Array.from(neueAuswahl);*/
-
 }
-    /*
-    let arrayDub =[];
-    for(let k =0; k<arrayPossible.length;k++){
-        arrayDub.push(arrayPossible[k]);
-    }
-    for (var i = 0; i < arrayPossible.length; i++) {
-        for (var j = 0; j < arrayShown.length; j++) {
-            if (arrayPossible[i].name===arrayShown[j].name) {
-                var index = arrayDub.indexOf(arrayPossible[i]);
-                if(index>0){
-                    arrayDub.splice(index,1);
-                }
-            }
-        }
-    }
-    return arrayDub;
-    */
