@@ -163,21 +163,6 @@
     #home-tab{ display: none}
     #tab {display: none}
 }
-@media (max-width:1199px){
-    #home-tab{
-    margin-left: 357px;
-    }
-}
-@media (max-width:991px){
-    #home-tab{
-    margin-left: 117px;
-    }
-}
-@media (max-width:767px){
-    #home-tab{
-    margin-left: 5px;
-    }
-}
 
 /*carousel Morgens*/
 #carousel1 {
