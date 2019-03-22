@@ -1,0 +1,1021 @@
+{
+  "staedte" : {
+    "amsterdam" : {
+      "bars" : {
+        "Biercafe Gollem" : {
+          "abends" : "true",
+          "adresse" : "Raamsteeg 4, 1012 VZ Amsterdam, Niederlande",
+          "informationen" : "pub, serviert Alkohol, voll ausgestattete Bar, kostenloses WLAN",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "Biercafe Gollem",
+          "oeffnungszeiten" : "12:00-01:00",
+          "preise" : "€"
+        },
+        "SkyLounge" : {
+          "abends" : "true",
+          "adresse" : "Oosterdoksstraat 4 | 11th Floor DoubleTree by Hilton Hotel Amsterdam Centraal Station, 1011 DK Amsterdam, Niederlande",
+          "dreamday" : 7,
+          "informationen" : "niederländisch, Bar, europäisch, Weinbars & Weinstuben",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "SkyLounge",
+          "oeffnungszeiten" : "11:00 - 01:00",
+          "preise" : "€€€"
+        },
+        "The Grasshopper" : {
+          "abends" : "true",
+          "adresse" : "Oudebrugsteeg 16 | Ground floor, 1012 JP Amsterdam, Niederlande",
+          "informationen" : "International, Pub, Grillspezialitäten",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "The Grasshopper",
+          "oeffnungszeiten" : "09:00 - 01:00",
+          "preise" : "€€"
+        },
+        "The Tailor" : {
+          "abends" : "true",
+          "adresse" : "Dam 9, 1012 JS Amsterdam, Niederlande",
+          "informationen" : "Bar, international, europäisch, Deli, zeitgenössisch",
+          "mittags" : "false",
+          "morgens" : "false",
+          "name" : "The Tailor",
+          "oeffnungszeiten" : "17:00-03:00",
+          "preise" : "€€€"
+        }
+      },
+      "restaurants" : {
+        "Belushi's" : {
+          "abends" : "true",
+          "adresse" : "Warmoesstraat 129, 1012 JA Amsterdam, Niederlande",
+          "informationen" : "Bar, europäisch, Pub, international",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Belushi's",
+          "oeffnungszeiten" : "10:00 - 03:00",
+          "preise" : "€"
+        },
+        "Bluespoon" : {
+          "abends" : "true",
+          "adresse" : "Prinsengracht 587 | Andaz, 1016 HT Amsterdam, Niederlande",
+          "informationen" : "für Vegetarier geeignet, vegane Speisen, glutenfreie Speisen",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Bluespoon",
+          "oeffnungszeiten" : "6:30- 22:00",
+          "preise" : "€€€"
+        },
+        "Omelegg - De Pijp" : {
+          "abends" : "false",
+          "adresse" : "Ferdinand Bolstraat 143, 1072 LH Amsterdam, Niederlande",
+          "informationen" : "niederländisch, Café, europäisch, gesund, mitteleuropäisch, international für Vegetarier geeignet, vegane Speisen, glutenfreie Speisen",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Omelegg - De Pijp",
+          "oeffnungszeiten" : "07:00 - 16:00",
+          "preise" : "€"
+        },
+        "PIQNIQ" : {
+          "abends" : "false",
+          "adresse" : "Lindengracht 59 hs, 1015 KC Amsterdam, Niederlande",
+          "dreamday" : 1,
+          "informationen" : "für Vegetarier geeignet, vegane Speisen, glutenfreie Speisen, niederländisch, Café, europäisch, gesund, mitteleuropäisch, international",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "PIQNIQ",
+          "oeffnungszeiten" : "09:00-17:00",
+          "preise" : "€€"
+        },
+        "Restaurant Pizzeria Lucca Due" : {
+          "abends" : "true",
+          "adresse" : "Haarlemmerstraat 130, 1013 EX Amsterdam, Niederlande",
+          "dreamday" : 6,
+          "informationen" : "italienisch, Pizza, mediterran, europäisch, für Vegetarier geeignet, vegane Speisen, glutenfreie Speisen",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "Restaurant Pizzeria Lucca Due",
+          "oeffnungszeiten" : "12:00 - 00:00",
+          "preise" : "€€"
+        },
+        "Restaurant Vinkeles" : {
+          "abends" : "false",
+          "adresse" : "Vijzelstraat 45, 1017 HE Amsterdam, Niederlande",
+          "informationen" : "international, europäisch, vegetrarisch, vegan",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "Restaurant Vinkeles",
+          "oeffnungszeiten" : "12:00 - 14:00",
+          "preise" : "€€€€"
+        },
+        "Senses Restaurant" : {
+          "abends" : "true",
+          "adresse" : "Prinsengracht 587 | Andaz, 1016 HT Amsterdam, Niederlande",
+          "informationen" : "für Vegetarier geeignet, vegane Speisen, glutenfreie Speisen",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Senses Restaurant",
+          "oeffnungszeiten" : "06:30- 22:00",
+          "preise" : "€€€"
+        },
+        "The Chicken Bar" : {
+          "abends" : "true",
+          "adresse" : "Voetboogstraat 6, 1012 XL Amsterdam, Niederlande",
+          "dreamday" : 3,
+          "informationen" : "Bar, Barbecue, europäisch, Grillspezialitäten, Pub",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "The Chicken Bar",
+          "oeffnungszeiten" : "13:00-23:00",
+          "preise" : "€€"
+        },
+        "Toastable Nieuwendijk" : {
+          "abends" : "true",
+          "adresse" : "Keizersgracht 384 | The Dylan Amsterdam, 1016 GB Amsterdam, Niederlande",
+          "informationen" : "französisch, europäisch, international, zeitgenössisch",
+          "mittags" : "false",
+          "morgens" : "false",
+          "name" : "Toastable Nieuwendijk",
+          "oeffnungszeiten" : "19:00 - 22:00",
+          "preise" : "€€€€"
+        }
+      },
+      "sehenswuerdigkeiten" : {
+        "Rotlichtviertel" : {
+          "abends" : "true",
+          "adresse" : "Nationaldenkmal am Dam-Platz, Amsterdam. Am besten Spät am Abend gehen",
+          "dreamday" : 5,
+          "informationen" : "Partymeile im Zentrum von Amsterdam",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Rotlichtviertel",
+          "oeffnungszeiten" : "24h geöffnet",
+          "preise" : "Kostenlos"
+        },
+        "The Bulldog Amsterdam" : {
+          "abends" : "true",
+          "adresse" : "Oudezijds Voorburgwal 90, 1012 GG Amsterdam, Niederlande. Am besten früh morgens gehen",
+          "informationen" : "Erster coffeshop in Amsterdam",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "The Bulldog Amsterdam",
+          "oeffnungszeiten" : "08:00 - 01:00",
+          "preise" : "10-20€"
+        },
+        "Van gough museum" : {
+          "abends" : "true",
+          "adresse" : "Museumplein 6, 1071 DJ Amsterdam, Niederlande. Ticket am besten online kaufen um sich die warterei in der Schlange zu ersparen",
+          "dreamday" : 4,
+          "informationen" : " Museum über den berühmten Künstler Van Vough",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Van gough museum",
+          "oeffnungszeiten" : "09:00 - 19:00",
+          "preise" : "20€"
+        },
+        "Vondelpark" : {
+          "abends" : "true",
+          "adresse" : "Van Baerlestraat & Vondelpark | Museum Quarter, Amsterdam, Niederlande. Picknick im Grünen",
+          "dreamday" : 2,
+          "informationen" : " Großer Stadtpark in Amsterdam",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Vondelpark",
+          "oeffnungszeiten" : "24h geöffnet",
+          "preise" : "Kostenlos"
+        }
+      }
+    },
+    "dubai" : {
+      "bars" : {
+        "Barasti Beach" : {
+          "abends" : "true",
+          "adresse" : "Le Meridien Mina Seyahi Beach Resort & Marina | Al Sufouh Road, Jumeirah Beach, Dubai, United Arab Emirates",
+          "informationen" : "Bar, European, British",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "Barasti Beach",
+          "oeffnungszeiten" : "11:00 - 2:30",
+          "preise" : "$$ - $$$"
+        },
+        "Barefoot Lounge" : {
+          "abends" : "true",
+          "adresse" : "Jumeirah 1 | Opp Grand Jumeirah Mosque, Dubai 5182, United Arab Emirates",
+          "informationen" : "Bar, Seafood, Mediterranean",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Barefoot Lounge",
+          "oeffnungszeiten" : "08:00- 2:00",
+          "preise" : "$$ - $$$"
+        },
+        "bar44" : {
+          "abends" : "true",
+          "adresse" : "Grosvenor House Dubai, Al Emreef Street - Dubai - United Arab Emirates",
+          "dreamday" : 7,
+          "informationen" : "Viele verschiedene Getränke ",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "bar44",
+          "oeffnungszeiten" : "07:00 - 2:30",
+          "preise" : "$$"
+        }
+      },
+      "restaurants" : {
+        "Aprons & Hammers" : {
+          "abends" : "true",
+          "adresse" : "Dubai International Marina Club | Mina Seyahi Beach Resort, Dubai, United Arab Emirates",
+          "informationen" : "Seafood, Halal, Gluten Free Options",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "Aprons & Hammers",
+          "oeffnungszeiten" : "12:00 – 00:00",
+          "preise" : "$$$ - $$$$"
+        },
+        "Arabian Tea House Café" : {
+          "abends" : "true",
+          "adresse" : "Al Fahidi Street | Bur Dubai, Bastakiya، Opposite Musalla Post Office, Dubai, Vereinigte Arabische Emirate",
+          "dreamday" : 1,
+          "informationen" : "libanesisch, Café, orientalisch für Vegetarier geeignet, vegane Speisen, glutenfreie Speisen",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Arabian Tea House Café",
+          "oeffnungszeiten" : "06:00 – 23:00",
+          "preise" : "$$ - $$$"
+        },
+        "BiCE Mare" : {
+          "abends" : "true",
+          "adresse" : "Souk Al Bahar - Dubai - United Arab Emirates",
+          "informationen" : "italienisch, Seafood cuisine, für Vegetarier geeignet",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "BiCE Mare",
+          "oeffnungszeiten" : "12:00 – 23:30",
+          "preise" : "$$$ - $$$$"
+        },
+        "Burj Al Hamam" : {
+          "abends" : "true",
+          "adresse" : "Jumeirah Beach Road | in the Dubai Mall, Dubai, United Arab Emirates",
+          "informationen" : "Middle Eastern, Lebanese, Mediterranean",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "Burj Al Hamam",
+          "oeffnungszeiten" : "12:30 – 23:30",
+          "preise" : "$$ - $$$"
+        },
+        "Sallora Restaurant & Sweets" : {
+          "abends" : "true",
+          "adresse" : "Sheikh Rashid Road, Al Garhoud near Jumeirah Creekside, Dubai United Arab Emirates",
+          "informationen" : "Middle Eastern, Breakfast, Lunch, für Vegetarier geeignet",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Sallora Restaurant & Sweets",
+          "oeffnungszeiten" : "06:00 – 23:00",
+          "preise" : "$$ - $$$"
+        },
+        "Sarouja" : {
+          "abends" : "true",
+          "adresse" : "Al Sufouh Road | Skyview Tower, Near Skydive, Dubai 00971, United Arab Emirates",
+          "dreamday" : 3,
+          "informationen" : "Cafe, Arabic, Mediterranean",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Sarouja",
+          "oeffnungszeiten" : "08:00 – 03:00",
+          "preise" : "$$ - $$$"
+        },
+        "The Cavendish Restaurant" : {
+          "abends" : "true",
+          "adresse" : "Cluster J | Jumeirah Lakes Towers, Dubai, Vereinigte Arabische Emirate",
+          "informationen" : "italienisch, irisch, europäisch, Cafe, für Vegetarier geeignet",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "The Cavendish Restaurant",
+          "oeffnungszeiten" : "06:30 – 23:00",
+          "preise" : "$$ - $$$"
+        },
+        "Umi Sushi" : {
+          "abends" : "true",
+          "adresse" : "Jumeirah Beach Residence | Dubai Marina, Dubai, United Arab Emirates",
+          "dreamday" : 6,
+          "informationen" : "Sushi, Asian, Japanese",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "Umi Sushi",
+          "oeffnungszeiten" : "12:30 – 23:30",
+          "preise" : "$$ - $$$"
+        },
+        "Zaatar W Zeit" : {
+          "abends" : "true",
+          "adresse" : "Ground Level, Al Meraikhi Tower, Next to Shangri-La Hotel - Sheikh Zayed Rd - Dubai ",
+          "informationen" : "Lebanesich, Fast Food, für Vegetarier geeignet",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Zaatar W Zeit",
+          "oeffnungszeiten" : "24 Stunden geöffnet",
+          "preise" : "$ - $$"
+        }
+      },
+      "sehenswuerdigkeiten" : {
+        "Aquaventure-Wasserpark im Atlantis" : {
+          "abends" : "true",
+          "adresse" : "Atlantis The Palm - Crescent Rd - Dubai ",
+          "dreamday" : 4,
+          "informationen" : "Restaurants, Strände und Wasserspiele",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Aquaventure-Wasserpark im Atlantis",
+          "oeffnungszeiten" : "10:00 - 18:00 ",
+          "preise" : "Kind (Alter ab 4 - 11) ab 57,90 Euro, Erwachsener (Alter 12 - 99) ab 71,21 Euro Kinder unter 4 Jahren genießen freien Eintritt"
+        },
+        "Burj Khalifa Aussichtsplattform" : {
+          "abends" : "true",
+          "adresse" : "1 Sheikh Mohammed bin Rashid Blvd - Dubai - United Arab Emirates",
+          "dreamday" : 2,
+          "informationen" : "Mit 828m eines der weltgrößten Gebäude, Panoramablick auf Dubai",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Burj Khalifa Aussichtsplattform",
+          "oeffnungszeiten" : "8:30 -23:00",
+          "preise" : "ab € 61.47, Kinder unter 4 Jahren genießen freien Eintritt."
+        },
+        "Dubai City Pass" : {
+          "abends" : "true",
+          "adresse" : "",
+          "dreamday" : 5,
+          "informationen" : "Nutzen Sie Ihre Zeit in Dubai optimal aus und genießen Sie riesige Rabatte mit diesem günstigen Dubai City Pass. Fuer Gruppe enpfohlen",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Dubai City Pass",
+          "oeffnungszeiten" : "24 Stunden",
+          "preise" : "Kind (Alter 3 - 11) ab 99,90 Euro, Erwachsener (Alter 12 - 99) ab 125,00 Euro Kinder unter 4 Jahren genießen freien Eintritt"
+        }
+      }
+    },
+    "newyork" : {
+      "bars" : {
+        "230fifthrooftoplounge" : {
+          "abends" : "true",
+          "adresse" : "230 5th Ave, Corner 27th street on 5th ave, New York City, NY 10001-7704",
+          "dreamday" : 7,
+          "informationen" : "Rooftop Bar",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "230 Fifth Rooftop Lounge",
+          "oeffnungszeiten" : "Montag – Freitag: 10:00 - 2:00",
+          "preise" : "$$$"
+        },
+        "McSorley's Old Ale House" : {
+          "abends" : "true",
+          "adresse" : "15 E 7th St, New York City, NY 10003-8291",
+          "informationen" : "Viele verschiedene Biersorten ",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "McSorley's Old Ale House",
+          "oeffnungszeiten" : "Sonntag: 13:00 - 1:00 Montag – Samstag: 11:00 - 1:00",
+          "preise" : "$"
+        },
+        "Terra Blues" : {
+          "abends" : "true",
+          "adresse" : "149 Bleecker St, 2nd Floor, New York City, NY 10012-1437",
+          "informationen" : "Urige Bar mit Live Musik ",
+          "mittags" : "false",
+          "morgens" : "false",
+          "name" : "Terra Blues",
+          "oeffnungszeiten" : "Sonntag-Donnerstag: 18:30- 2:00 Freitag: 18:30  - 3:00 Samstag: 18:00 - 3:00",
+          "preise" : "$$"
+        }
+      },
+      "restaurants" : {
+        "Boucherie Union Square" : {
+          "abends" : "false",
+          "adresse" : "75 9th Ave, New York, NY 10011, USA",
+          "informationen" : "Mexican, Latin, Fast Food, Vegetarian Friendly",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Boucherie Union Square",
+          "oeffnungszeiten" : "Montag – Donnerstag: 11:00 - 12:00 Donnerstag-Freitag: 11:00 - 1:00 Samstag-Sonntag: 10:00 - 12:00",
+          "preise" : "$$$$"
+        },
+        "Boucherie West Village" : {
+          "abends" : "false",
+          "adresse" : "99 7th Ave S, New York, NY 10014, USA",
+          "informationen" : "French, Steakhouse, Vegetarian Friendly, Vegan Options, Gluten Free Options",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Boucherie West Village",
+          "oeffnungszeiten" : "Sonntag: 10:00 - 12:00 Montag -Mittwoch: 11:00 - 12:00 Donnerstag-Freitag: 11:00 - 1:00 Samstag: 10:00 - 1:00",
+          "preise" : "$$-$$$"
+        },
+        "Breads Bakery" : {
+          "abends" : "true",
+          "adresse" : "19 E 16th St, New York, NY 10003, USA",
+          "dreamday" : 1,
+          "informationen" : "Vegetarian Friendly, Breakfast, Lunch, Brunch",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Breads Bakery",
+          "oeffnungszeiten" : "Sonntag: 7:30 - 20:00 Montag- Freitag: 6:30 - 21:00 Samstag: 6:30 - 20:00",
+          "preise" : "$$-$$$"
+        },
+        "Club A Steakhouse" : {
+          "abends" : "true",
+          "adresse" : "240 E 58th St, New York, NY 10022, USA",
+          "dreamday" : 6,
+          "informationen" : "Local cuisine, American, Steakhouse, Gluten Free Options",
+          "mittags" : "false",
+          "morgens" : "false",
+          "name" : "Club A Steakhouse",
+          "oeffnungszeiten" : "Samstag-Sonntag: 17:00 PM - 22:00  Montag-Freitag: 17:00 – 21:00",
+          "preise" : "$$$$"
+        },
+        "Diana of Little Chef, Little Kitchen" : {
+          "abends" : "true",
+          "adresse" : "1-59 47th Ave, Long Island City, NY 11101, USA",
+          "informationen" : "Italian, American, Filipino, Mediterranean, Asian",
+          "mittags" : "false",
+          "morgens" : "false",
+          "name" : "Diana of Little Chef, Little Kitchen",
+          "oeffnungszeiten" : "Montag-Sonntag: 17:00 – 22:00",
+          "preise" : "$$-$$$"
+        },
+        "Nish Nush" : {
+          "abends" : "true",
+          "adresse" : "93 Reade St, New York, NY 10013, USA",
+          "informationen" : "Fast Food, Mediterranean, Middle Eastern, Israeli, Vegetarian Friendly, Vegan Options, Gluten Free Options",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "Nish Nush",
+          "oeffnungszeiten" : "11:00 - 21:00 Montag-Samstag: 11:00 - 22:00",
+          "preise" : "$"
+        },
+        "Print" : {
+          "abends" : "true",
+          "adresse" : "653 11th Ave, New York, NY 10036, USA",
+          "informationen" : "Local cuisine, American, Vegetarian Friendly, Vegan Options",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Print",
+          "oeffnungszeiten" : "7:00 - 3:00",
+          "preise" : "$$$$"
+        },
+        "bestbagelandcoffee" : {
+          "abends" : "false",
+          "adresse" : "224b W 35th St, New York, NY 10001, USA",
+          "dreamday" : 3,
+          "informationen" : "Local cuisine, American, Cafe, Fast Food, Vegetarian Friendly",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Best Bagel and Coffee",
+          "oeffnungszeiten" : "Montag – Freitag: 6:00 - 16:00",
+          "preise" : "$"
+        }
+      },
+      "sehenswuerdigkeiten" : {
+        "Central Park" : {
+          "abends" : "true",
+          "adresse" : "von der 79th bis zur 86th Street. am besten Joggen gehen oder Fahrrad mieten",
+          "informationen" : "Riesiger Stadtpark im Herzen Manhattens ",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Central Park",
+          "oeffnungszeiten" : "Im Winter von 13:00 bis 16:30 Uhr, im Sommer von 10:00 bis 17:00 Uhr",
+          "preise" : "Kostenlos"
+        },
+        "Freiheitsstatue" : {
+          "abends" : "true",
+          "adresse" : "Liberty Island",
+          "dreamday" : 4,
+          "informationen" : "Kolossalstatue und Geschenk des französischen Volkes an die Vereinigten Staaten. Man kann nach oben in die Krone",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Freiheitsstatue",
+          "oeffnungszeiten" : "8:30 - 16:00",
+          "preise" : "18,50 Euro für Erwachsene, Kinder 8 Euro (4-12 Jahre)"
+        },
+        "One World Trade Center mit dem National 9 11 Memorial" : {
+          "abends" : "true",
+          "adresse" : "180 Greenwich St, New York, NY 10007, USA",
+          "informationen" : "Mit 541 Metern Höhe das höchste Gebäude New Yorks.Tipp: Am späten Nachmittag oder abends hingehen",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "One World Trade Center mit dem National 9.11 Memorial",
+          "oeffnungszeiten" : "09:00 - 20 Uhr",
+          "preise" : "Erwachsene ab 23 Euro"
+        },
+        "Times Square" : {
+          "abends" : "true",
+          "adresse" : "von West 42nd Street bis West 47th Street",
+          "dreamday" : 5,
+          "informationen" : "Als Broadway bezeichnetes Theaterviertel von Manhattan. Im Dunkeln wirkt der Times Square am coolsten!",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Times Square",
+          "oeffnungszeiten" : "Dauerhaft zugänglich",
+          "preise" : "Kostenlos"
+        },
+        "empirestatebuilding" : {
+          "abends" : "true",
+          "adresse" : "20 West 34th Street, New York City, NY 10118-0114. Am besten früh morgens oder spät abends gehen",
+          "dreamday" : 2,
+          "informationen" : "Wolkenkratzer im Stadteil Manhatten, 381 Meter hoch",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Empire State Building",
+          "oeffnungszeiten" : "08:00 – 02:00",
+          "preise" : "Ab 34 Euro für Erwachsene, Ab 30 Euro für Kinder (6-12 Jahre)"
+        }
+      }
+    },
+    "paris" : {
+      "bars" : {
+        "-LaB6mNHsQpGk5IC2lUB" : {
+          "abends" : true,
+          "adresse" : "Rue Charlot 60, 75003 Paris",
+          "informationen" : "Pariser Cocktailbar mit gewissem Streetart-Flair",
+          "mittags" : false,
+          "morgens" : false,
+          "name" : "Little Red Door",
+          "oeffnungszeiten" : "So-Do 18:00 - 2:00 Uhr; Fr&Sa 18:00 - 3:00 Uhr",
+          "preise" : "€€€"
+        },
+        "Bauby Bar" : {
+          "abends" : "true",
+          "adresse" : "13 rue Castex, 75004 Paris",
+          "informationen" : "Szene Bar mit vielen Filmutensilien und Replika ",
+          "mittags" : "false",
+          "morgens" : "false",
+          "name" : "Bauby Bar",
+          "oeffnungszeiten" : "Dienstag – Mittwoch: 16:00- 00:00 Donnerstag – Samstag: 17:00 Uhr - 02:00",
+          "preise" : "€€"
+        },
+        "Dirty Dick" : {
+          "abends" : "true",
+          "adresse" : "10 rue Frochot, 75009 Paris",
+          "informationen" : "Besondere Cocktails im tropischen Barambiente, Spätabends  ",
+          "mittags" : "false",
+          "morgens" : "false",
+          "name" : "Dirty Dick",
+          "oeffnungszeiten" : "Sonntag – Samstag: 18:00 Uhr - 02:00",
+          "preise" : "€€"
+        },
+        "Le Bar du Bristol" : {
+          "abends" : "true",
+          "adresse" : "112 Rue du Faubourg Saint-Honoré, 75008 Paris",
+          "dreamday" : 7,
+          "informationen" : "Exquisite Hotelbar ",
+          "mittags" : "false",
+          "morgens" : "false",
+          "name" : "Le Bar du Bristol",
+          "oeffnungszeiten" : "Montag – Sonntag: 17:30 Uhr – 02:00",
+          "preise" : "€€€€"
+        }
+      },
+      "restaurants" : {
+        "-LaB8xEuu9y7jQnsa13h" : {
+          "abends" : "true",
+          "adresse" : "Rue Lamarck 74, 75018 Paris",
+          "informationen" : "Leckere Bio-Produkte, Müsli Schüsseln mit frischem Obst und französische Frühstücksklassiker",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Café Bleu Matin",
+          "oeffnungszeiten" : "Di-Fr 7:30-19:00; Sa-So 8:30-20:00",
+          "preise" : "€€€"
+        },
+        "-LaFjADzrOYxSYs5WrRe" : {
+          "abends" : "true",
+          "adresse" : "Rue du Faubourg Poissonniere 89, 75009 Paris",
+          "informationen" : "Asiatisch, Fusion, für Vegetarier geeignet",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "BAOLI BAO",
+          "oeffnungszeiten" : "Mo-Fr 12:00 - 14:30; Mo-Sa 19:00 - 22:30",
+          "preise" : "€€"
+        },
+        "ASPIC" : {
+          "abends" : "true",
+          "adresse" : "24 Rue de la Tour d'Auvergne, 75009 Paris",
+          "informationen" : "Französisch, europäisch, zeitgenössisch",
+          "mittags" : "false",
+          "morgens" : "false",
+          "name" : "ASPIC",
+          "oeffnungszeiten" : "Dienstag – Samstag: 19:30 - 22:00 ",
+          "preise" : "€€€€"
+        },
+        "Baguett‘s" : {
+          "abends" : "true",
+          "adresse" : "33 rue de Richelieu, 75001 Paris",
+          "dreamday" : 1,
+          "informationen" : "französisch, Café, europäisch, für Vegetarier geeignet, vegane Speisen, glutenfreie Speisen",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Baguett‘s",
+          "oeffnungszeiten" : "Montag - Mittwoch 08:30 - 17:00  Donnerstag – Samstag 08:30 - 22:00 Sonntag 09:30 - 17:30",
+          "preise" : "€€€"
+        },
+        "Cezembre" : {
+          "abends" : "true",
+          "adresse" : "4-20 Rue Grégoire de Tours, 75006 Paris",
+          "informationen" : " Französisch",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "Cezembre",
+          "oeffnungszeiten" : "Mittwoch – Sonntag: 12:30 – 14:00 und 19:30 – 21:30",
+          "preise" : "€€"
+        },
+        "Ciasa Mia" : {
+          "abends" : "true",
+          "adresse" : "19 Rue Laplace, 75005 Paris",
+          "informationen" : " Italienisches Restaurant, sorgfältig ausgewählte Speisen, Spezialitäten aus Tirol",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "Ciasa Mia",
+          "oeffnungszeiten" : "Montag - Samstag von 19:00 - 21:30 Freitag auch mittags von 12:00 - 14:00",
+          "preise" : "€€€"
+        },
+        "Cloud Cakes" : {
+          "abends" : "true",
+          "adresse" : "6 rue Mandar, 75002 Paris",
+          "informationen" : "Café, für Vegetarier & Veganer geeignet, Frühstück, Mittagessen, Brunch",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Cloud Cakes",
+          "oeffnungszeiten" : "Montag - Freitag 09:00 - 19:00 Samstag 09:30 - 19:00 Sonntag 11:30 - 17:30",
+          "preise" : "€€ - €€€"
+        },
+        "Guy Savoy" : {
+          "abends" : "true",
+          "adresse" : "Monnaie de Paris, 11 Quai de Conti, 75006 Paris",
+          "dreamday" : 6,
+          "informationen" : "Französisches Restaurant mit Haute Cuisine",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "Guy Savoy",
+          "oeffnungszeiten" : "Dienstag – Freitag: 12:00 – 13:30 und 19:00  – 22:30 Samstag: 19:00 – 22:30",
+          "preise" : "€€€€"
+        },
+        "Le Pain Quotidien" : {
+          "abends" : "true",
+          "adresse" : "68 rue Pierre Charron, 75008 Paris",
+          "informationen" : "Französisch, für Vegetarier geeignet, glutenfreie Speisen",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Le Pain Quotidien",
+          "oeffnungszeiten" : "Sonntag - Samstag 08:00 - 18:00",
+          "preise" : "€€ - €€€"
+        },
+        "Les Climats" : {
+          "abends" : "true",
+          "adresse" : "41 Rue de Lille, 75007 Paris",
+          "dreamday" : 4,
+          "informationen" : "Die erfinderische und saisonale Küche erneuert sich regelmäßig ",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "Les Climats",
+          "oeffnungszeiten" : "Dienstag – Samstag: 12:00 - 14:30 und 19:00 - 22:30",
+          "preise" : "€€€€"
+        },
+        "L’Arôme" : {
+          "abends" : "true",
+          "adresse" : "3 Rue Saint-Philippe du Roule, 75008 Paris",
+          "informationen" : "Französisches Restaurant mit Haute Cuisine",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "L’Arôme",
+          "oeffnungszeiten" : "Dienstag – Freitag: 12:00 – 13:45 und 19:30 – 21:30",
+          "preise" : "€€€€€"
+        }
+      },
+      "sehenswuerdigkeiten" : {
+        "Arc de Triomphe" : {
+          "abends" : "true",
+          "adresse" : "Place Charles de Gaulle, 75008 Paris",
+          "dreamday" : 3,
+          "dreamdayMorgens3" : true,
+          "informationen" : "Monumentales Denkmal beauftragt durch Napoleon, der seinen Truppen nach der Schlacht von Austerlitz versprach, durch Triumphbögen heimzukehren. Am besten früh morgens oder spät abends gehen",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Arc de Triomphe",
+          "oeffnungszeiten" : "10:00 - 22:30",
+          "preise" : "Erwachsene 12 Euro, Personen unter 26 kostenlos"
+        },
+        "Centre Pompidou" : {
+          "abends" : "true",
+          "adresse" : "Place Georges-Pompidou, 75004 Paris",
+          "informationen" : "Architektonisch interessantes staatliches Kunst- und Kulturzentrum im 4. Arrondissement. Am späten Nachmittag oder abends hingehenv",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Centre Pompidou",
+          "oeffnungszeiten" : "Mittwoch bis Montag 11:00 – 21:00",
+          "preise" : "Erwachsene 14 Euro, Jugendliche 18 bis 25 Jahre 11 Euro, unter 18 kostenlos"
+        },
+        "Eiffelturm" : {
+          "abends" : "true",
+          "adresse" : "Champ de Mars, 5 Avenue Anatole France, 75007 Paris",
+          "dreamday" : 5,
+          "informationen" : "Eisenfachwerkturm, 324 Meter hoch. Am besten früh morgens oder spät abends gehen",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Eiffelturm",
+          "oeffnungszeiten" : "09:30 - 23:45",
+          "preise" : "Kombiticket für Erwachsene 19,40 Euro (ab 25 Jahre), Kombiticket für Jugendliche 9,70 Euro (12-24 Jahre),Kombiticket Vergünstigter Tarif 4,90 Euro (Kinder 4-11 Jahre) "
+        },
+        "Louvre" : {
+          "abends" : "true",
+          "adresse" : "Rue de Rivoli, 75001 Paris",
+          "informationen" : "Eines der größten und berühmtesten Museen weltweit. Ticket online kaufen und unter der Woche gehen",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Louvre",
+          "oeffnungszeiten" : "Mittwoch bis Montag geöffnet (Dienstag Ruhetag), jeweils von 9:00 Uhr bis 18:00 Uhr",
+          "preise" : "17 Euro, unter 26 kostenlos"
+        },
+        "Sacré Coeur" : {
+          "abends" : "true",
+          "adresse" : "35 Rue du Chevalier de la Barre, 75018 Paris",
+          "dreamday" : 2,
+          "informationen" : "Eine römisch-katholische Wallfahrtskirche auf dem Montmartre ",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Sacré Coeur",
+          "oeffnungszeiten" : "365 Tage im Jahr geöffnet, 6:00 Uhr bis 22:30 Uhr ",
+          "preise" : "Kostenlos"
+        }
+      }
+    },
+    "rom" : {
+      "bars" : {
+        "CIPASSO" : {
+          "abends" : "true",
+          "adresse" : "Via Dell'Orso 71, 00186 Rom, Italien",
+          "dreamday" : 7,
+          "informationen" : "Italian, International, Mediterranean",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "CIPASSO",
+          "oeffnungszeiten" : "Sonntag - Samstag: 10:00 - 2:00",
+          "preise" : "€€-€€€"
+        },
+        "Largo8" : {
+          "abends" : "true",
+          "adresse" : "Largo Saluzzo 7/8, 00182 Rom, Italien",
+          "informationen" : "Italian, Mediterranean, Wine Bar",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "Largo8",
+          "oeffnungszeiten" : "Montag - Samstag: 12:00 - 3:00 ",
+          "preise" : "€€"
+        },
+        "Press Play" : {
+          "abends" : "true",
+          "adresse" : "Via Antonio Pacinotti 63, 00146 Rom, Italien",
+          "informationen" : "Cocktail Bars, Wine Bars, Italian",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "Press Play",
+          "oeffnungszeiten" : "Montag – Freitag: 16:00 - 2:00",
+          "preise" : "€€"
+        }
+      },
+      "restaurants" : {
+        "Dar Bruttone (Roma San Giovanni)" : {
+          "abends" : "true",
+          "adresse" : "Via Taranto 118",
+          "dreamday" : 3,
+          "informationen" : "xx",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Dar Bruttone (Roma San Giovanni)",
+          "oeffnungszeiten" : "09:00 - 23:00",
+          "preise" : "€€-€€€"
+        },
+        "La Forchetta d`Oro" : {
+          "abends" : "true",
+          "adresse" : "Via di S. Martino Ai Monti",
+          "dreamday" : 1,
+          "informationen" : "xx",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "La Forchetta d`Oro",
+          "oeffnungszeiten" : "08:00 - 10:00",
+          "preise" : "€"
+        },
+        "Max Roma" : {
+          "abends" : "true",
+          "adresse" : "Viale Aventino 20",
+          "informationen" : "xx",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Max Roma",
+          "oeffnungszeiten" : "xx",
+          "preise" : "€€-€€€"
+        },
+        "Mizos Street Food" : {
+          "abends" : "true",
+          "adresse" : "Via Degli Zigari 54A",
+          "dreamday" : 6,
+          "informationen" : "xx",
+          "mittags" : "true",
+          "morgens" : "false",
+          "name" : "Mizos Street Food",
+          "oeffnungszeiten" : "12:00 - 22:00",
+          "preise" : "€"
+        },
+        "Pier Eur Roma" : {
+          "abends" : "true",
+          "adresse" : "Piazza Guglielmo Marconi 6",
+          "informationen" : "xx",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Pier Eur Roma",
+          "oeffnungszeiten" : "xx",
+          "preise" : "€€€€"
+        },
+        "ROME CAVALIERI" : {
+          "abends" : "false",
+          "adresse" : "Via Alberto Cadlolo, 101",
+          "informationen" : "xx",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "ROME CAVALIERI",
+          "oeffnungszeiten" : "xx",
+          "preise" : "€€€€"
+        },
+        "Ristorante Allesio" : {
+          "abends" : "false",
+          "adresse" : "Via del Viminale",
+          "informationen" : "xx",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Ristorante Allesio",
+          "oeffnungszeiten" : "xx",
+          "preise" : "€€€"
+        },
+        "Tavolinetto" : {
+          "abends" : "false",
+          "adresse" : "Piazza Massimo D'Azeglio",
+          "informationen" : "xx",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Tavolinetto",
+          "oeffnungszeiten" : "xx",
+          "preise" : "€€"
+        },
+        "Vulio" : {
+          "abends" : "false",
+          "adresse" : "Via Degli Scipioni 55",
+          "informationen" : "xx",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Vulio",
+          "oeffnungszeiten" : "xx",
+          "preise" : "€"
+        }
+      },
+      "sehenswuerdigkeiten" : {
+        "Engelsburg" : {
+          "abends" : "true",
+          "adresse" : "Lungotevere Castello, 50",
+          "informationen" : "xx",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Engelsburg",
+          "oeffnungszeiten" : "09:00-19:30",
+          "preise" : "65€"
+        },
+        "Forum Romanum" : {
+          "abends" : "true",
+          "adresse" : "Via della Salara Vecchia, 5/6,",
+          "dreamday" : 2,
+          "informationen" : "Sonnenschutz ist empfohlen",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Forum Romanum",
+          "oeffnungszeiten" : "09:00-1:00",
+          "preise" : "Kostenlos"
+        },
+        "Kapitol" : {
+          "abends" : "true",
+          "adresse" : "Piazza del Campidoglio",
+          "dreamday" : 5,
+          "informationen" : "Michelagelo",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Kapitol",
+          "oeffnungszeiten" : "24h",
+          "preise" : "Kostenlos"
+        },
+        "Kolosseum" : {
+          "abends" : "true",
+          "adresse" : "Piazza del Colosseo, 1, 00184 Roma RM, Italien",
+          "informationen" : "Sonnenschutz empfohlen",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Kolosseum",
+          "oeffnungszeiten" : "8:30-19:00",
+          "preise" : "18€"
+        },
+        "Palatin" : {
+          "abends" : "true",
+          "adresse" : "äußerhalb roms",
+          "informationen" : "xx",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Palatin",
+          "oeffnungszeiten" : "24h",
+          "preise" : "Kostenlos"
+        },
+        "Pantheon" : {
+          "abends" : "true",
+          "adresse" : "Piazza della Rotonda",
+          "informationen" : "xx",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Pantheon",
+          "oeffnungszeiten" : "09:00-18:00",
+          "preise" : "6€"
+        },
+        "Petersdom" : {
+          "abends" : "true",
+          "adresse" : "Piazza San Pietro",
+          "informationen" : "xx",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Petersdom",
+          "oeffnungszeiten" : "07:00-19:00",
+          "preise" : "27€"
+        },
+        "Petersplatz" : {
+          "abends" : "true",
+          "adresse" : "Piazzo San Pietro",
+          "informationen" : "festes Schuhwerk",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Petersplatz",
+          "oeffnungszeiten" : "24h",
+          "preise" : "Kostenlos"
+        },
+        "Piazza de Popolo" : {
+          "abends" : "true",
+          "adresse" : "Piazza de Poppolo",
+          "informationen" : "xx",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Piazza de Popolo",
+          "oeffnungszeiten" : "24h",
+          "preise" : "Kostenlos"
+        },
+        "Sixtinische Kapelle" : {
+          "abends" : "false",
+          "adresse" : "Vatican City",
+          "informationen" : "xx",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Sixtinische Kapelle",
+          "oeffnungszeiten" : "09:00-16:00",
+          "preise" : "2,50€"
+        },
+        "Spanische Treppe" : {
+          "abends" : "true",
+          "adresse" : "Piazza di Spagna",
+          "dreamday" : 4,
+          "informationen" : "xx",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Spanische Treppe",
+          "oeffnungszeiten" : "24h",
+          "preise" : "Kostenlos"
+        },
+        "Trevi Brunnen" : {
+          "abends" : "true",
+          "adresse" : "Piazza di Trevi",
+          "informationen" : "Festes Schuhwerk",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Trevi Brunnen",
+          "oeffnungszeiten" : "24h",
+          "preise" : "Kostenlos"
+        },
+        "Vatikanische Museum" : {
+          "abends" : "false",
+          "adresse" : "Viale Vaticano",
+          "informationen" : "xx",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Vatikanische Museum",
+          "oeffnungszeiten" : "09:00-16:00",
+          "preise" : "23,50€"
+        },
+        "Villa Borghese" : {
+          "abends" : "true",
+          "adresse" : "Piazzale Napoleone 1",
+          "informationen" : "xx",
+          "mittags" : "true",
+          "morgens" : "true",
+          "name" : "Villa Borghese",
+          "oeffnungszeiten" : "24h",
+          "preise" : "Kostenlos"
+        }
+      }
+    }
+  },
+  "zitate" : [ "<h3>Reisen ist das beste, ja das einzige Heilmittel gegen Kummer.</h3><em>-Alfred de Musset</em>", "<h3>Zögere nie, weit fortzugehen, hinter alle Meere, alle Grenzen, alle Länder, allen Glaubens.</h3><em>- Amin Maalouf</em>", "<h3>Was ist Reisen? Ein Ortswechsel? Keineswegs! Beim Reisen wechselt man seine Meinungen und Vorurteile.</h3><em>-  Anatole France</em>", "<h3>Man entdeckt keine neuen Erdteile, ohne den Mut zu haben, alte Küsten aus den Augen zu verlieren.</h3><em>-  André Gide</em>", "<h3>Eine lange Reise hört nicht am Ziel auf. Ein Stück von uns wird im Geiste immer weiterreisen.</h3><em>-  Andreas Bechstein</em>", "<h3>Das Reisen lehrt Toleranz. </h3><em>- Benjamin Disraeli</em>", "<h3>Wir reisen an weit entfernte Orte um fasziniert die Menschen zu beobachten, die wir daheim zu ignorieren. </h3><em>- Dagobert D. Runes</em>", "<h3>Einmal im Jahr solltest du einen Ort besuchen, an dem du noch nie warst.</h3><em>- Dalai Lama</em>", "<h3>Abenteuer ohne Risiko ist Disneyland.</h3><em>- Doug Coupland</em>", "<h3>Die beste Bildung findet ein gescheiter Mensch auf Reisen.</h3><em>- Johann Wolfgang von Goethe</em>", "<h3>Die Welt ist wie ein Buch. Wer nie reist, sieht nur eine Seite davon.</h3><em>- Augustinus Aurelius</em>" ]
+}
