@@ -267,7 +267,7 @@ function drucken() {
 }
 //delete
 function removeDiv(elem){
-    $(elem).parent('div').remove();
+    $(elem).parents('div').eq(1).remove();
 }
 
 //Erfolgreich hinzugefügt
