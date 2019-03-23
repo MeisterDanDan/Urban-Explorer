@@ -14,9 +14,11 @@ body {
 .navbar-brand img {
     max-width: 50px;
     height: auto;
+    margin-bottom: 4px;
 }
 .navbar-brand-folgeseiten img{
     max-height: 50px;
+    margin-bottom: 4px;
 }
 .navbar h2 {
     margin-bottom: 0px;
