@@ -13,8 +13,9 @@ Es muss ausschließlich der folgende Ablauf chronologisch durchgegangen werden:
 * Ordner "Code" öffnen
 * Doppelclick auf die Datei "index.html"
 
-Die Website sollte sich jetzt im Standardbrowser öffnen.
-Hierbei gilt zu beachten, dass die Webanwendung für Firefox und die mobile Ansicht optimiert ist.
+Die Website sollte sich jetzt im Standardbrowser öffnen. Hierbei gilt folgendes zu beachten:
+Derzeit ist die Suche für die Städte **Amsterdam**, **Dubai**, **New York**, **Paris** und **Rom** mögliche.
+Die Webanwendung ist für Firefox und eine mobile Ansicht optimiert.
 
 ## Autoren
 * **Daniel Wenzl** - [MeisterDanDan](https://github.com/MeisterDanDan)
