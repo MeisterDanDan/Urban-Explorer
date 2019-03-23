@@ -11,11 +11,11 @@ Es muss ausschließlich der folgende Ablauf chronologisch durchgegangen werden:
 
 * Repository/ Projektordner "Urban-Explorer" herunterladen
 * Ordner "Code" öffnen
-* Doppelclick auf die Datei "index.html"
+* Doppelklick auf die Datei "index.html"
 
-Die Website sollte sich jetzt im Standardbrowser öffnen. Hierbei gilt folgendes zu beachten:
-Die Suche ist für die Städte **Amsterdam**, **Dubai**, **New York**, **Paris** und **Rom** möglich.
-Die Webanwendung ist für Firefox und eine mobile Ansicht optimiert.
+Die Webseite sollte sich jetzt im Standardbrowser öffnen. Hierbei gilt folgendes zu beachten:
+**Die Suche** ist für die Städte **Amsterdam**, **Dubai**, **New York**, **Paris** und **Rom** möglich.
+Optimiert für Firefox und die mobile Ansicht.
 
 ## Autoren
 * **Daniel Wenzl** - [MeisterDanDan](https://github.com/MeisterDanDan)
