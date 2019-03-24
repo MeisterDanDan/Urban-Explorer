@@ -48,41 +48,6 @@ function start() {
             writeHtmlAbends(element, stadtName);
         });
 
-        /*
-        morgensArray.forEach(function (element) {
-            let name1 = element.name.replace(/ /g,'');
-            let sPath1 = name1;
-            sPath1 = sPath1.toLowerCase();
-            sPath1 = sPath1 +'.jpg';
-                firebase.storage().ref(stadtName + "/").child(sPath1).getDownloadURL().then(url => {
-                    console.log("Die Morgens-URL: " +url);
-                    document.getElementById(name1).src = url;
-                });
-        });
-
-        mittagsArray.forEach(function (element) {
-            let name2 = element.name.replace(/ /g,'');
-            let sPath2 = name2;
-            sPath2 = sPath2.toLowerCase();
-            sPath2 = sPath2 +'.jpg';
-                firebase.storage().ref(stadtName + "/").child(sPath2).getDownloadURL().then(url => {
-                    console.log("Die Mittags-URL: " +url);
-                    document.getElementById(name2).src = url;
-                });
-        });
-
-        abendsArray.forEach(function (element) {
-            let name3 = element.name.replace(/ /g,'');
-            let sPath3= name3;
-            sPath3 = sPath3.toLowerCase();
-            sPath3 = sPath3 +'.jpg';
-                firebase.storage().ref(stadtName + "/").child(sPath3).getDownloadURL().then(url => {
-                    console.log("Die Abends-URL: " +url);
-                    document.getElementById(name3).src = url;
-                });
-        });
-*/
-
         document.getElementById("carousel1").innerHTML = htmlListe1;
         document.getElementById("carousel2").innerHTML = htmlListe2;
         document.getElementById("carousel3").innerHTML = htmlListe3;
@@ -294,3 +259,10 @@ function infoAbends (){
   document.getElementById("add3").style.display = "none";               
 },1500);
     }
+
+$(document).ready(function () {
+    $('.suche-box ul li a').click(function (ev) {
+        $('.suche-box ul li').removeClass('selected');
+        $(ev.currentTarget).parent('li').addClass('selected');
+    });
+});

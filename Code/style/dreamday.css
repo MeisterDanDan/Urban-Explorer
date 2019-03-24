@@ -41,3 +41,20 @@
     #druckBtn{ display: none}
     #home-tab {display: none}
 }
+
+@media (max-width:991px){
+    .liste img {
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+}
+@media (max-width:767px){
+    .liste{
+        display: block;
+    }
+    .liste img{
+        width: 100% !important;
+        height: 250px;
+        
+    }
+}
